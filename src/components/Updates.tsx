@@ -32,7 +32,7 @@ const Updates = () => {
   return (
     <div className="px-10">
       <div className="text-center text-xl font-semibold mt-24 mb-7">
-        What's New at Hotz Group
+        What&apos;s New at Hotz Group
       </div>
 
       <div className="flex w-full gap-7">
