@@ -80,16 +80,14 @@ const page = () => {
               className="flex flex-col justify-between w-1/4 p-5 h-96 border border-black-20"
             >
               <img
-                src="/images/values1.png"
+                src={value.image}
                 alt="Integrity"
                 className="w-16 object-cover"
               />
 
               <div>
-                <h1 className="text-xl mb-1">Integrity</h1>
-                <h1 className="text-[#727272]">
-                  Doing business with trust and transparency
-                </h1>
+                <h1 className="text-xl mb-1">{value.name}</h1>
+                <h1 className="text-[#727272]">{value.text}</h1>
               </div>
             </div>
           ))}
