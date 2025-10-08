@@ -124,3 +124,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .bg-gradient-footer {
+    background: linear-gradient(135deg, #db0a0a 25%, #350a38 55%, #1c2476 100%);
+  }
+}

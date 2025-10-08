@@ -1,17 +1,45 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Stats from "@/components/Stats";
+import Updates from "@/components/Updates";
 import React from "react";
 
 const page = () => {
+  const values = [
+    {
+      id: 1,
+      name: "Integrity",
+      text: "Doing business with trust and transparency",
+      image: "/images/values1.png",
+    },
+    {
+      id: 2,
+      name: "Excellence",
+      text: "Striving for the highest standards",
+      image: "/images/values2.png",
+    },
+    {
+      id: 3,
+      name: "Innovation",
+      text: "Adapting to shape the future",
+      image: "/images/values3.png",
+    },
+    {
+      id: 4,
+      name: "Impact",
+      text: "Creating value for people & communities",
+      image: "/images/values4.png",
+    },
+  ];
   return (
     <>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <div className="flex-1 bg-gray-400"></div>
+        <div className="bg-[url('/images/heroimage.jpg')] flex-1 bg-cover bg-no-repeat "></div>
       </div>
 
       <div className="flex gap-12 px-10 pt-24">
-        <div className="w-1/2 text-4xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+        <div className="w-1/2 text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
           A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
         </div>
         <div>
@@ -20,7 +48,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="flex py-24 h-96">
+      <div className="flex my-24 h-96">
         <div className="w-1/2 ">
           <img
             src="/images/about1.png"
@@ -41,9 +69,121 @@ const page = () => {
         </div>
       </div>
 
-      <div className="pt-24">
+      <div>
+        <div className="text-center text-xl font-semibold mb-7">
+          CORE VALUES
+        </div>
+        <div className="flex px-10">
+          {values.map((value) => (
+            <div
+              key={value.id}
+              className="flex flex-col justify-between w-1/4 p-5 h-96 border border-black-20"
+            >
+              <img
+                src="/images/values1.png"
+                alt="Integrity"
+                className="w-16 object-cover"
+              />
+
+              <div>
+                <h1 className="text-xl mb-1">Integrity</h1>
+                <h1 className="text-[#727272]">
+                  Doing business with trust and transparency
+                </h1>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-24 flex justify-between items-center px-10">
+        <div className="w-2/5 flex flex-col justify-start items-start">
+          <img src="/images/icon.png" alt="About Us" className="w-24" />
+
+          <h1 className="text-2xl font-semibold mt-5">
+            At Hotz Group, our foundation has always been trust. Over the
+            decades, we have grown not just in Business, but in
+            relationships—building legacies that stand the test of time.
+          </h1>
+
+          <h1 className=" text-[#727272] mt-5">- Chairman</h1>
+        </div>
+
+        <div className="relative w-1/2 flex justify-center items-center py-10">
+          <img
+            src="/images/aboutvector.png"
+            alt="Decorative vector"
+            className="absolute top-0 right-0 w-1/2 z-10"
+          />
+
+          <img
+            src="/images/chairman.png"
+            alt="Chairman"
+            className="relative ml-24 w-1/2 z-20"
+          />
+        </div>
+      </div>
+
+      <div>
         <Stats />
       </div>
+
+      <div className="w-full">
+        <img
+          src="/images/about2.png"
+          alt="Footer Image"
+          className="w-full h-96 object-cover"
+        />
+      </div>
+
+      <div className="my-16">
+        <div className="text-center text-xl font-semibold mb-2">
+          Our Commitment Beyond Business
+        </div>
+
+        <div className="flex justify-center w-full text-center">
+          <div className="max-w-3xl text-[#727272]">
+            At Hotz Group, we believe education is the foundation of progress.
+            Our initiatives focus on providing access to quality learning,
+            scholarships, and skill development programs that empower students
+            to achieve their full potential.
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-16 gap-24">
+          <div className="flex flex-col justify-center items-center text-center gap-5">
+            <img
+              src="/images/book-check.png"
+              alt="Book Check"
+              className="w-11"
+            />
+
+            <h1>
+              Scholarships for<br></br>underprivileged students
+            </h1>
+          </div>
+
+          <div className="flex flex-col justify-center items-center text-center gap-5">
+            <img src="/images/monitor.png" alt="Book Check" className="w-11" />
+
+            <h1>
+              Support for schools and<br></br>digital learning infrastructure
+            </h1>
+          </div>
+
+          <div className="flex flex-col justify-center items-center text-center gap-5">
+            <img src="/images/person.png" alt="Book Check" className="w-11" />
+
+            <h1>
+              Vocational training &<br></br>skill-building workshops
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Updates />
+      </div>
+      <Footer />
     </>
   );
 };

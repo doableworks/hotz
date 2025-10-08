@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <div className="w-full py-2 px-10 flex justify-between items-center">
       <div className="w-1/3">
-        <img src="/images/logo.png" alt="Logo" className="h-12" />
+        <Link href="/">
+          <img src="/images/logo.png" alt="Logo" className="h-12" />
+        </Link>
       </div>
       <div className="flex items-center justify-center gap-7 w-1/3 text-xs">
         <Link href="/about-us">ABOUT</Link>
