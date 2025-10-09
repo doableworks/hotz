@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import { ArrowRight, Star } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Page = () => {
   const values = [
@@ -24,6 +25,27 @@ const Page = () => {
       id: 4,
       name: "Values-Driven",
       text: "Integrity, innovation, and impact at the core.",
+    },
+  ];
+
+  const jobs = [
+    {
+      id: 1,
+      title: "Regional Head",
+      department: "Operations",
+      type: "Full Time",
+    },
+    {
+      id: 2,
+      title: "Product Manager",
+      department: "Account",
+      type: "Full Time",
+    },
+    {
+      id: 3,
+      title: "Junior Accountant",
+      department: "Finance",
+      type: "Full time",
     },
   ];
 
@@ -119,7 +141,73 @@ const Page = () => {
             </div>
           ))}
         </div>
+
+        <div className="flex flex-col gap-3 py-3 mt-5">
+          {jobs.map((job) => (
+            <div key={job.id}>
+              <div
+                key={job.id}
+                className="flex justify-between items-center my-5 pb-3"
+              >
+                <h1 className="text-2xl font-medium w-1/4">{job.title}</h1>
+                <h1 className="text-[#727272] text-sm w-1/4 flex justify-center">
+                  {job.department}
+                </h1>
+                <h1 className="text-[#727272] text-sm w-1/4 flex justify-center">
+                  {job.type}
+                </h1>
+                <h1 className="flex gap-3 justify-end items-center text-[#DB0A0A] cursor-pointer hover:underline w-1/4">
+                  View Details <ArrowRight size={16} />
+                </h1>
+              </div>
+              <div className="w-full h-px bg-[#727272]/10"></div>
+            </div>
+          ))}
+        </div>
+        <div className="w-full flex">
+          <div className="flex justify-center mt-10 px-6 py-3 rounded-full bg-[#DB0A0A] text-white text-sm">
+            View More
+          </div>
+        </div>
       </div>
+      <div className="w-full bg-[#B9041A] h-96 mt-10 mb-10 flex justify-center">
+        <div className="flex justify-between">
+          <img
+            src="/images/iconWhite.png"
+            alt="Career"
+            className=" h-48 left-28 absolute"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center text-white items-center gap-6">
+          <div>
+            <div className="mb-5 italic font-extralight">
+              Voices of Our People
+            </div>
+
+            <div className="text-3xl">
+              At Hotz Group, I have found not just a<br></br>career, but a
+              community that values<br></br>growth and impact.”
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col items-center justify-center mt-24 py-7">
+        <h1 className="text-4xl font-medium">Did not find a role that fits?</h1>
+        <h1 className="text-center mt-3 text-[#727272]">
+          Share your resume with us, and we will connect<br></br>when
+          opportunities arise.
+        </h1>
+
+        <div className="w-full flex justify-center ">
+          <div className="flex justify-center mt-10 px-7 py-4 rounded-full bg-[#B9041A] text-white text-sm">
+            SUBMIT YOUR RESUME
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </>
   );
 };
