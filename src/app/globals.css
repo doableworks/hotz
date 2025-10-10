@@ -47,7 +47,7 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --background-2 : #BC1F1F;
+  --background-2: #bc1f1f;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -78,8 +78,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --gradient-1: linear-gradient(248.68deg, #F86565 30.98%, #3B2C89 100%);
-  --gradient-2: linear-gradient(290.31deg, #170B50 16.15%, #322283 92.97%);
+  --gradient-1: linear-gradient(248.68deg, #f86565 30.98%, #3b2c89 100%);
+  --gradient-2: linear-gradient(290.31deg, #170b50 16.15%, #322283 92.97%);
 }
 
 .dark {
@@ -122,5 +122,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-footer {
+    background: linear-gradient(135deg, #db0a0a 25%, #350a38 55%, #1c2476 100%);
   }
 }
