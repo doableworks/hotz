@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Business = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const cards = [
     { image: "/images/financial.png", title: "Financial Services" },
@@ -17,20 +18,39 @@ const Business = () => {
   const totalCards = cards.length;
   const expandedWidth = 40;
   const collapsedWidth = (95 - expandedWidth) / (totalCards - 1);
+  const expandedHeight = 40;
+  const collapsedHeight = (95 - expandedHeight) / (totalCards - 1);
+
+  // Detect screen size once on mount
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const handleInteraction = (index: number) => {
+    if (isMobile) {
+      setActiveIndex(activeIndex === index ? -1 : index);
+    } else {
+      setActiveIndex(index);
+    }
+  };
 
   return (
-    <div className="px-10">
+    <div className="px-4 md:px-10">
       <div className="text-center text-xl font-semibold mt-24 mb-7">
         OUR BUSINESS
       </div>
 
-      <div className="flex items-center gap-3 w-full h-96 overflow-hidden">
+      <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[95vh] overflow-hidden">
         {cards.map((card, index) => (
           <motion.div
             key={index}
             layout
-            onMouseEnter={() => setActiveIndex(index)}
-            onMouseLeave={() => setActiveIndex(0)}
+            onMouseEnter={() => !isMobile && setActiveIndex(index)}
+            onMouseLeave={() => !isMobile && setActiveIndex(0)}
+            onClick={() => handleInteraction(index)}
             transition={{
               layout: {
                 duration: 0.6,
@@ -39,11 +59,16 @@ const Business = () => {
                 damping: 25,
               },
             }}
-            className="relative h-full flex-shrink-0"
+            className="relative flex-shrink-0 w-full md:h-full overflow-hidden rounded-lg cursor-pointer"
             style={{
-              width: `${
-                activeIndex === index ? expandedWidth : collapsedWidth
-              }%`,
+              width: isMobile
+                ? "100%"
+                : `${activeIndex === index ? expandedWidth : collapsedWidth}%`,
+              height: isMobile
+                ? `${
+                    activeIndex === index ? expandedHeight : collapsedHeight
+                  }vh`
+                : "100%",
               opacity: activeIndex === index ? 1 : 0.8,
             }}
           >
@@ -55,9 +80,11 @@ const Business = () => {
               }`}
             />
 
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/30" />
 
-            <div className="absolute bottom-0 left-0 w-full p-4 font-medium text-xl text-white">
+            {/* Title */}
+            <div className="absolute bottom-0 left-0 w-full p-4 font-medium text-lg md:text-xl text-white">
               {card.title}
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const Leaders = () => {
@@ -29,12 +30,12 @@ const Leaders = () => {
   ];
 
   return (
-    <div className="px-10">
+    <div className="px-5 lg:px-10">
       <div className="text-center text-xl font-semibold mt-16 mb-7">
         Guided by visionaries, Driven by values.
       </div>
 
-      <div className="flex w-full gap-7">
+      <div className="hidden md:flex w-full gap-7">
         {leaders.map((leader) => (
           <div key={leader.id} className="w-1/4">
             <div className="bg-amber-300 h-96">
@@ -50,8 +51,27 @@ const Leaders = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-10 ">
-        <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm ">
+      <div className="flex md:hidden overflow-x-auto gap-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
+        {leaders.map((leader) => (
+          <div
+            key={leader.id}
+            className="min-w-[70%] snap-center flex-shrink-0"
+          >
+            <div className="h-80 overflow-hidden">
+              <img
+                src={leader.image}
+                alt={leader.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h1 className="mt-3 text-lg">{leader.name}</h1>
+            <h1 className="text-sm text-gray-500">{leader.role}</h1>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center mt-10">
+        <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
           MEET OUR LEADERS
         </button>
       </div>
