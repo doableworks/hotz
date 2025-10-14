@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-gradient-footer text-center text-white py-16 px-10 mt-24 w-full flex items-start">
       <div className="w-1/4">
-        <img src="/images/logowhite.png" alt="Logo" className=" mb-4 w-28" />
+        <img src="/images/Hotz.png" alt="Logo" className="h-16 mb-4" />
       </div>
       <div className="w-2/4 flex justify-around mt-7 gap-16 text-sm">
         <div className="flex flex-col gap-2 items-start">
