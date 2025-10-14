@@ -12,16 +12,14 @@ export default function Home() {
     <div>
       <div className="w-full h-screen flex flex-col">
         <Navbar />
-        <div className="flex-1">
-          <Hero />
-        </div>
+        <Hero />
       </div>
       <About />
       <Business />
       <Stats />
       <Leaders />
       <Updates />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
