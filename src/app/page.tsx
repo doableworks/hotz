@@ -1,3 +1,5 @@
+import ParallaxScroll from "@/animations/ParallaxWrapper";
+import TransitionVertical from "@/animations/TransitionVertical";
 import About from "@/components/About";
 import Business from "@/components/Business";
 import Footer from "@/components/Footer";
@@ -10,10 +12,12 @@ import Updates from "@/components/Updates";
 export default function Home() {
   return (
     <div>
-      <div className="w-full h-screen flex flex-col">
-        <Navbar />
-        <Hero />
-      </div>
+      <ParallaxScroll>
+        <div className="w-full h-screen flex flex-col">
+          <Navbar />
+          <Hero />
+        </div>
+      </ParallaxScroll>
       <About />
       <Business />
       <Stats />

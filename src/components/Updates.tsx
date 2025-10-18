@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { Eye } from "lucide-react";
-
+import TransitionHorizontal from "@/animations/TransitionHorizontal";
+import TransitionVertical from "@/animations/TransitionVertical";
 const Updates = () => {
   const Updates = [
     {
@@ -32,6 +33,7 @@ const Updates = () => {
 
   return (
     <div className="px-5 lg:px-10">
+      <TransitionVertical>
       <div className="text-center text-xl font-semibold mt-24 mb-7">
         What&apos;s New at Hotz Group
       </div>
@@ -76,9 +78,12 @@ const Updates = () => {
 
       <div className="flex justify-center mt-10">
         <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
-          EXPLORE ALL UPDATES
+          <TransitionHorizontal>
+            EXPLORE ALL UPDATES
+          </TransitionHorizontal>
         </button>
       </div>
+      </TransitionVertical>
     </div>
   );
 };
