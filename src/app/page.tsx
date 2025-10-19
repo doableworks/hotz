@@ -8,8 +8,11 @@ import Leaders from "@/components/Leaders";
 import Navbar from "@/components/Navbar";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
+import { getBusiness } from "@/lib/sanityQueries";
 
-export default function Home() {
+export default async function Home() {
+  const businesses = await getBusiness();
+
   return (
     <div>
       <ParallaxScroll>
@@ -19,7 +22,7 @@ export default function Home() {
         </div>
       </ParallaxScroll>
       <About />
-      <Business />
+      <Business businesses={businesses} />
       <Stats />
       <Leaders />
       <Updates />

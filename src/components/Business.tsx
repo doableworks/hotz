@@ -2,33 +2,30 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import TransitionVertical from "@/animations/TransitionVertical";
+import { OurBusiness } from "@/lib/types/business";
 
-const Business = () => {
+interface BusinessProps {
+  businesses: OurBusiness[];
+}
+
+const Business = ({ businesses }: BusinessProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  const cards = [
-    { image: "/images/financial.png", title: "Financial Services" },
-    { image: "/images/realestate.png", title: "Real Estate" },
-    { image: "/images/hospitality.png", title: "Hospitality" },
-    { image: "/images/education.png", title: "Education" },
-    { image: "/images/art.png", title: "Art" },
-    { image: "/images/ventures.png", title: "New Ventures" },
-  ];
-
-  const totalCards = cards.length;
-  const expandedWidth = 40;
-  const collapsedWidth = (95 - expandedWidth) / (totalCards - 1);
-  const expandedHeight = 40;
-  const collapsedHeight = (95 - expandedHeight) / (totalCards - 1);
-
-  // Detect screen size once on mount
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth < 768);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
+
+  const totalCards = businesses.length;
+  const expandedWidth = 40;
+  const collapsedWidth =
+    totalCards > 1 ? (95 - expandedWidth) / (totalCards - 1) : 95;
+  const expandedHeight = 40;
+  const collapsedHeight =
+    totalCards > 1 ? (95 - expandedHeight) / (totalCards - 1) : 95;
 
   const handleInteraction = (index: number) => {
     if (isMobile) {
@@ -45,9 +42,9 @@ const Business = () => {
       </div>
       <TransitionVertical>
         <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[95vh] overflow-hidden">
-          {cards.map((card, index) => (
+          {businesses.map((card: OurBusiness, index: number) => (
             <motion.div
-              key={index}
+              key={card._id}
               layout
               onMouseEnter={() => !isMobile && setActiveIndex(index)}
               onMouseLeave={() => !isMobile && setActiveIndex(0)}
@@ -64,20 +61,16 @@ const Business = () => {
               style={{
                 width: isMobile
                   ? "100%"
-                  : `${
-                      activeIndex === index ? expandedWidth : collapsedWidth
-                    }%`,
+                  : `${activeIndex === index ? expandedWidth : collapsedWidth}%`,
                 height: isMobile
-                  ? `${
-                      activeIndex === index ? expandedHeight : collapsedHeight
-                    }vh`
+                  ? `${activeIndex === index ? expandedHeight : collapsedHeight}vh`
                   : "100%",
                 opacity: activeIndex === index ? 1 : 0.8,
               }}
             >
               <img
-                src={card.image}
-                alt={card.title}
+                src={card.coverImageUrl}
+                alt={card.linkTitle}
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
                   activeIndex === index ? "grayscale-0" : "grayscale"
                 }`}
@@ -88,7 +81,7 @@ const Business = () => {
 
               {/* Title */}
               <div className="absolute bottom-0 left-0 w-full p-4 font-medium text-lg md:text-xl text-white">
-                {card.title}
+                {card.linkTitle}
               </div>
             </motion.div>
           ))}

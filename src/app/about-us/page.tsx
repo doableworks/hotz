@@ -8,7 +8,7 @@ import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
 import React from "react";
 
-const page = () => {
+async function page(){
   const values = [
     {
       id: 1,
@@ -35,6 +35,7 @@ const page = () => {
       image: "/images/values4.png",
     },
   ];
+  
   return (
     <>
         <div className="h-fullflex flex-col">
