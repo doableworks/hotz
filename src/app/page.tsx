@@ -1,5 +1,4 @@
 import ParallaxScroll from "@/animations/ParallaxWrapper";
-import TransitionVertical from "@/animations/TransitionVertical";
 import About from "@/components/About";
 import Business from "@/components/Business";
 import Footer from "@/components/Footer";

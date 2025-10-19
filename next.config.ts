@@ -2,14 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'd299alzxgdp6.cloudfront.net',
-      port: '',
-      pathname: '/**',
-    },
-  ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'd299alzxgdp6.cloudfront.net',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   
 };
 
