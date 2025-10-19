@@ -7,10 +7,12 @@ import Leaders from "@/components/Leaders";
 import Navbar from "@/components/Navbar";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
-import { getBusiness } from "@/lib/sanityQueries";
+import { getBusiness, getStats, getTeamLeaders } from "@/lib/sanityQueries";
 
 export default async function Home() {
   const businesses = await getBusiness();
+  const stats = await getStats();
+  const leaders = await getTeamLeaders();
 
   return (
     <div>
@@ -22,8 +24,8 @@ export default async function Home() {
       </ParallaxScroll>
       <About />
       <Business businesses={businesses} />
-      <Stats />
-      <Leaders />
+      <Stats statsData={stats} />
+      <Leaders leaders={leaders} />
       <Updates />
       <Footer />
     </div>

@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import VideoSection from "@/components/pagespecific/about-us/VideoSection";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
+import { getStats } from "@/lib/sanityQueries";
 import React from "react";
 
 async function page(){
@@ -35,7 +36,9 @@ async function page(){
       image: "/images/values4.png",
     },
   ];
-  
+
+  const stats = await getStats();
+
   return (
     <>
         <div className="h-fullflex flex-col">
@@ -139,7 +142,7 @@ async function page(){
       </div>
 
       <ParallaxScroll>
-        <Stats />
+        <Stats statsData={stats} />
       </ParallaxScroll>
 
       <div className="w-full relative z-20 bg-white">

@@ -110,7 +110,6 @@ interface SlotMachineCounterProps {
 // Reusable Slot Machine Counter Component with Children Support
 export const SlotMachineCounter = ({ 
   targetValue, 
-  suffix = '', 
   prefix = '',
   duration = 2000,
   delay = 0,
@@ -136,7 +135,7 @@ export const SlotMachineCounter = ({
     return num.toLocaleString();
   };
 
-  const animatedValue = `${prefix}${formatValue(currentValue)}${suffix}`;
+  const animatedValue = `${prefix}${formatValue(currentValue)}+`;
 
   // If children are provided, clone them and inject the animated value
   if (children) {

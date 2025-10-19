@@ -6,3 +6,11 @@ export interface OurBusiness {
   ctaUrl: string;
   tag?: 'ourBusinesses'; // optional, if you include it in the GROQ projection
 }
+
+export interface TeamLeader {
+  _id: string;
+  title: string;
+  designation: string;
+  imageUrl: string; // resolved from image.asset->url in GROQ
+  tag?: 'teamLeaders'; // optional, if you include it in the GROQ projection
+}
