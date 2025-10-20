@@ -1,13 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Search, Phone, ChevronDown, X, Menu } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
-    <div className="bg-white w-full py-2 px-5 lg:px-10 flex justify-between items-center z-20">
+    <div className="bg-white w-full py-2 px-5 lg:px-10 flex justify-between items-center z-50">
       <div className="w-1/3">
         <Link href="/">
           <img src="/images/logo.png" alt="Logo" className="h-12" />
@@ -16,7 +28,8 @@ const Navbar = () => {
       <div className="hidden md:flex items-center justify-center gap-7 w-1/3 text-xs">
         <Link href="/about-us">ABOUT</Link>
         <h1 className="flex items-center gap-1 ">
-          BUSINESS <ChevronDown color="#2B2B2B" size={20} strokeWidth="1.5" />{" "}
+          BUSINESS{" "}
+          <ChevronDown color="#2B2B2B" size={20} strokeWidth="1.5" />{" "}
         </h1>
         <h1>NEWSROOM</h1>
         <Link href="/career">CAREER</Link>
@@ -33,7 +46,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed w-full inset-0 bg-white/20 backdrop-blur-xl z-50 flex flex-col items-center py-4 gap-3 animate-slideDown">
+        <div className="fixed w-full inset-0 bg-white/20 backdrop-blur-xl z-50 flex flex-col items-center py-4 gap-3 animate-slideDown overflow-y-hidden">
           <div className="flex justify-end items-center w-full px-5 py-2">
             <button onClick={() => setIsOpen(false)}>
               <X size={20} color="#2B2B2B" />

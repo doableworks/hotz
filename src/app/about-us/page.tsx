@@ -1,10 +1,15 @@
+import ParallaxScroll from "@/animations/ParallaxWrapper";
+import TransitionHorizontal from "@/animations/TransitionHorizontal";
+import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import VideoSection from "@/components/pagespecific/about-us/VideoSection";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
+import { getStats } from "@/lib/sanityQueries";
 import React from "react";
 
-const page = () => {
+async function page() {
   const values = [
     {
       id: 1,
@@ -31,115 +36,151 @@ const page = () => {
       image: "/images/values4.png",
     },
   ];
+
+  const stats = await getStats();
+
   return (
     <>
-      <div className="min-h-screen flex flex-col">
+      <div className="h-fullflex flex-col">
         <Navbar />
-        <div className="bg-[url('/images/heroimage.jpg')] flex-1 bg-cover bg-no-repeat "></div>
+        <VideoSection cloudfrontUrl="d299alzxgdp6.cloudfront.net" />
       </div>
-
-      <div className="flex gap-12 px-10 pt-24">
-        <div className="w-1/2 text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-          A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-24 relative z-30 bg-white">
+          <div className="w-full lg:w-1/2 text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+            A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
+          </div>
+          <div className="w-full lg:w-1/2">
+            Since 1900, Hotz Group has been shaping industries, creating
+            opportunities, and building experiences that last generations.
+          </div>
         </div>
-        <div>
-          Since 1900, Hotz Group has been shaping industries, creating
-          opportunities, and building experiences that last generations.
-        </div>
-      </div>
+      </TransitionVertical>
 
-      <div className="flex my-24 h-96">
-        <div className="w-1/2 ">
-          <img
-            src="/images/about1.png"
-            alt="About Us"
-            className="w-full object-cover h-96"
-          />
-        </div>
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col my-24 lg:h-96 relative z-30 bg-white">
+          <div className="lg:w-1/2 w-full">
+            <img
+              src="/images/about1.png"
+              alt="About Us"
+              className="w-full object-cover h-96"
+            />
+          </div>
 
-        <div className="w-1/2 h-96 px-7 text-white flex flex-col justify-center bg-[#BC1F1F]">
-          <h1 className="text-lg">OUR STORY</h1>
-          <h1 className="text-white/60 mt-3">
-            Founded with a vision to redefine excellence, Hotz Group has evolved
-            into a multi-sector enterprise spanning financial services, real
-            estate, hospitality, education, art, and warehousing. Rooted in
-            trust and guided by innovation, our journey is built on creating
-            value that impacts lives and communities.
-          </h1>
+          <div className="lg:w-1/2 w-full h-96 px-7 text-white flex flex-col justify-center bg-[#BC1F1F]">
+            <TransitionHorizontal>
+              <h1 className="text-lg">OUR STORY</h1>
+              <h1 className="text-white/60 mt-3">
+                Founded with a vision to redefine excellence, Hotz Group has
+                evolved into a multi-sector enterprise spanning financial
+                services, real estate, hospitality, education, art, and
+                warehousing. Rooted in trust and guided by innovation, our
+                journey is built on creating value that impacts lives and
+                communities.
+              </h1>
+            </TransitionHorizontal>
+          </div>
         </div>
-      </div>
+      </TransitionVertical>
 
-      <div>
+      <TransitionVertical>
         <div className="text-center text-xl font-semibold mb-7">
           CORE VALUES
         </div>
-        <div className="flex px-10">
+
+        {/* 💻 Desktop View */}
+        <div className="hidden md:flex px-10 gap-7">
           {values.map((value) => (
             <div
               key={value.id}
-              className="flex flex-col justify-between w-1/4 p-5 h-96 border border-black-20"
+              className="flex flex-col justify-between w-1/4 p-5 h-96 border border-black/20"
             >
               <img
                 src={value.image}
-                alt="Integrity"
+                alt={value.name}
                 className="w-16 object-cover"
               />
-
-              <div>
+              <TransitionHorizontal>
                 <h1 className="text-xl mb-1">{value.name}</h1>
                 <h1 className="text-[#727272]">{value.text}</h1>
-              </div>
+              </TransitionHorizontal>
             </div>
           ))}
         </div>
-      </div>
 
-      <div className="mt-24 flex justify-between items-center px-10">
-        <div className="w-2/5 flex flex-col justify-start items-start">
+        {/* 📱 Mobile View */}
+        <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
+          {values.map((value) => (
+            <div
+              key={value.id}
+              className="min-w-[70%] snap-center flex-shrink-0 border border-black/20 p-5 h-80 flex flex-col justify-between"
+            >
+              <img
+                src={value.image}
+                alt={value.name}
+                className="w-16 object-cover"
+              />
+              <TransitionHorizontal>
+                <h1 className="text-lg mb-1">{value.name}</h1>
+                <h1 className="text-[#727272] text-sm">{value.text}</h1>
+              </TransitionHorizontal>
+            </div>
+          ))}
+        </div>
+      </TransitionVertical>
+
+      <div className="mt-24 flex lg:flex-row flex-col justify-between items-center px-10">
+        <div className="w-full lg:w-2/5 flex flex-col justify-start items-start">
           <img src="/images/icon.png" alt="About Us" className="w-24" />
+          <TransitionVertical>
+            <h1 className="text-2xl font-semibold mt-5">
+              At Hotz Group, our foundation has always been trust. Over the
+              decades, we have grown not just in Business, but in
+              relationships—building legacies that stand the test of time.
+            </h1>
+          </TransitionVertical>
 
-          <h1 className="text-2xl font-semibold mt-5">
-            At Hotz Group, our foundation has always been trust. Over the
-            decades, we have grown not just in Business, but in
-            relationships—building legacies that stand the test of time.
-          </h1>
-
-          <h1 className=" text-[#727272] mt-5">- Chairman</h1>
+          <TransitionVertical>
+            <h1 className=" text-[#727272] mt-5">- Chairman</h1>
+          </TransitionVertical>
         </div>
 
-        <div className="relative w-1/2 flex justify-center items-center py-10">
-          <img
-            src="/images/aboutvector.png"
-            alt="Decorative vector"
-            className="absolute top-0 right-0 w-1/2 z-10"
-          />
-
-          <img
-            src="/images/chairman.png"
-            alt="Chairman"
-            className="relative ml-24 w-1/2 z-20"
-          />
+        <div className="relative w-full lg:w-1/2 flex lg:justify-center lg:items-center py-10">
+          <TransitionVertical>
+            <img
+              src="/images/aboutvector.png"
+              alt="Decorative vector"
+              className="absolute top-0 right-0 w-3/4 lg:w-1/2 z-10"
+            />
+            <img
+              src="/images/chairman.png"
+              alt="Chairman"
+              className="relative lg:ml-24 w-full lg:w-1/2 z-20"
+            />
+          </TransitionVertical>
         </div>
       </div>
 
-      <div>
-        <Stats />
+      <ParallaxScroll>
+        <Stats statsData={stats} />
+      </ParallaxScroll>
+
+      <div className="w-full relative z-20 bg-white">
+        <ParallaxScroll>
+          <img
+            src="/images/about2.png"
+            alt="Footer Image"
+            className="w-full h-96 object-cover"
+          />
+        </ParallaxScroll>
       </div>
 
-      <div className="w-full">
-        <img
-          src="/images/about2.png"
-          alt="Footer Image"
-          className="w-full h-96 object-cover"
-        />
-      </div>
-
-      <div className="my-16">
+      <div className="my-16 relative bg-white z-30 pt-16">
         <div className="text-center text-xl font-semibold mb-2">
           Our Commitment Beyond Business
         </div>
 
-        <div className="flex justify-center w-full text-center">
+        <div className="px-5 flex justify-center w-full text-center">
           <div className="max-w-3xl text-[#727272]">
             At Hotz Group, we believe education is the foundation of progress.
             Our initiatives focus on providing access to quality learning,
@@ -147,36 +188,41 @@ const page = () => {
             to achieve their full potential.
           </div>
         </div>
+        <TransitionVertical>
+          <div className="flex lg:flex-row flex-col justify-center mt-16 gap-7 lg:gap-24">
+            <div className="flex flex-col justify-center items-center text-center gap-5">
+              <img
+                src="/images/book-check.png"
+                alt="Book Check"
+                className="w-11"
+              />
 
-        <div className="flex justify-center mt-16 gap-24">
-          <div className="flex flex-col justify-center items-center text-center gap-5">
-            <img
-              src="/images/book-check.png"
-              alt="Book Check"
-              className="w-11"
-            />
+              <h1>
+                Scholarships for<br></br>underprivileged students
+              </h1>
+            </div>
 
-            <h1>
-              Scholarships for<br></br>underprivileged students
-            </h1>
+            <div className="flex flex-col justify-center items-center text-center gap-5">
+              <img
+                src="/images/monitor.png"
+                alt="Book Check"
+                className="w-11"
+              />
+
+              <h1>
+                Support for schools and<br></br>digital learning infrastructure
+              </h1>
+            </div>
+
+            <div className="flex flex-col justify-center items-center text-center gap-5">
+              <img src="/images/person.png" alt="Book Check" className="w-11" />
+
+              <h1>
+                Vocational training &<br></br>skill-building workshops
+              </h1>
+            </div>
           </div>
-
-          <div className="flex flex-col justify-center items-center text-center gap-5">
-            <img src="/images/monitor.png" alt="Book Check" className="w-11" />
-
-            <h1>
-              Support for schools and<br></br>digital learning infrastructure
-            </h1>
-          </div>
-
-          <div className="flex flex-col justify-center items-center text-center gap-5">
-            <img src="/images/person.png" alt="Book Check" className="w-11" />
-
-            <h1>
-              Vocational training &<br></br>skill-building workshops
-            </h1>
-          </div>
-        </div>
+        </TransitionVertical>
       </div>
       <div>
         <Updates />
@@ -184,6 +230,6 @@ const page = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default page;

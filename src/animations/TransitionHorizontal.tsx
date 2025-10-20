@@ -10,10 +10,10 @@ export default function TransitionHorizontal({ children }: { children: React.Rea
         whileInView={{ x: "0%" }}
         transition={{
           ease: "easeInOut",
-          duration: 2,
+          duration: 1,
           delayChildren: 0.3,
         }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         className="w-full"
       >
         {children}

@@ -1,3 +1,4 @@
+import TransitionVertical from "@/animations/TransitionVertical";
 import React from "react";
 
 const Hero = () => {
@@ -5,7 +6,8 @@ const Hero = () => {
     <div className="flex flex-col justify-center items-center h-full w-full bg-[url('/images/heroMobile.png')] lg:bg-[url('/images/heroimage.jpg')] bg-cover bg-no-repeat text-white">
       <div className="absolute inset-0 bg-black/20"></div>
 
-      <div className="text-center z-10">
+      <div className="text-center z-30">
+              <TransitionVertical>
         <h1 className=" font-bold text-4xl lg:text-5xl">
           A WORLD OF<br className="md:hidden"></br> BUSINESS.
         </h1>
@@ -20,6 +22,7 @@ const Hero = () => {
         <button className="mt-6 px-8 py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-bold">
           EXPLORE OUR BUSINESS
         </button>
+        </TransitionVertical>
       </div>
     </div>
   );
