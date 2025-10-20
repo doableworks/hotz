@@ -57,27 +57,27 @@ const Page = () => {
       <div className="h-screen flex flex-col">
         <Navbar />
 
-        <div className="flex-1 h-full w-full justify-center items-center flex flex-col">
-          <h1 className=" text-center text-6xl font-medium bg-gradient-to-r from-[#3B2C89]  to-[#F86565] bg-clip-text  text-transparent">
+        <div className="px-5 flex-1 h-full w-full justify-center items-center flex flex-col">
+          <h1 className=" text-center text-5xl lg:text-6xl font-medium bg-gradient-to-r from-[#3B2C89]  to-[#F86565] bg-clip-text  text-transparent">
             Grow With Us.<br></br>Build The Future.
           </h1>
 
-          <h1 className="text-center w-xl mt-8 text-lg">
+          <h1 className="text-center lg:w-xl mt-8 text-lg">
             At Hotz Group, we believe our people are the driving force behind
             our success. We empower talent with opportunities, learning, and a
             culture of trust.
           </h1>
 
-          <h1 className="flex text-[#DB0A0A] justify-center items-center gap-4 text-center w-xl mt-8 text-lg">
+          <h1 className="flex text-[#DB0A0A] justify-center items-center gap-4 text-center lg:w-xl mt-8 text-lg">
             View open positions <ArrowRight />
           </h1>
         </div>
       </div>
 
-      <div className="w-full bg-[#F3F3F3] py-20 px-10 flex flex-col gap-12">
+      <div className="w-full bg-[#F3F3F3] py-20 px-5 md:px-10 flex flex-col gap-12">
         <h1 className="text-3xl text-center font-medium">Why Work With Us</h1>
 
-        <div className="flex gap-7 px-10">
+        <div className="hidden md:flex gap-7 px-10">
           {values.map((value) => (
             <div
               key={value.id}
@@ -92,27 +92,44 @@ const Page = () => {
             </div>
           ))}
         </div>
+
+        {/* 📱 Mobile View */}
+        <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
+          {values.map((value) => (
+            <div
+              key={value.id}
+              className="w-[90%] snap-center flex-shrink-0 bg-white p-5 h-96 flex flex-col justify-between"
+            >
+              <Star size={36} className="text-[#DB0A0A] mb-3" />
+
+              <div>
+                <h1 className="text-lg mb-1">{value.name}</h1>
+                <h1 className="text-[#727272] text-sm">{value.text}</h1>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="w-full py-20 px-10 flex flex-col gap-12">
-        <h1 className="text-3xl text-center font-medium">Why Work With Us</h1>
+      <div className="w-full py-20 px-5 lg:px-10 flex flex-col gap-12">
+        <h1 className="text-3xl text-center font-medium">Life at Hotz Group</h1>
 
-        <div className="w-full flex gap-7">
-          <div className="w-1/3">
+        <div className="w-full flex lg:flex-row flex-col gap-7">
+          <div className="lg:w-1/3 w-full">
             <img
               src="/images/life1.png"
               alt="Career"
               className=" h-80 object-cover"
             />
           </div>
-          <div className="w-1/3">
+          <div className="lg:w-1/3 w-full">
             <img
               src="/images/life2.png"
               alt="Career"
               className=" h-96 object-cover"
             />
           </div>
-          <div className="w-1/3">
+          <div className="lg:w-1/3 w-full">
             <img
               src="/images/life3.png"
               alt="Career"
@@ -122,15 +139,15 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="w-full px-10 py-20 flex flex-col">
-        <h1 className="text-3xl font-medium mb-5">We are hiring</h1>
+      <div className="w-full px-5 lg:px-10 py-20 flex flex-col">
+        <h1 className="text-2xl lg:text-3xl font-medium mb-5">We are hiring</h1>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
           {categories.map((category) => (
             <div
               key={category}
               onClick={() => setSelected(category)}
-              className={`px-8 py-2 border-2 rounded-full cursor-pointer transition-all duration-200
+              className={`lg:px-8 py-2 lg:text-base text-sm px-5 border-2 rounded-full cursor-pointer transition-all duration-200
             ${
               selected === category
                 ? "border-[#DB0A0A] text-[#DB0A0A]"
@@ -145,10 +162,7 @@ const Page = () => {
         <div className="flex flex-col gap-3 py-3 mt-5">
           {jobs.map((job) => (
             <div key={job.id}>
-              <div
-                key={job.id}
-                className="flex justify-between items-center my-5 pb-3"
-              >
+              <div className="hidden md:flex justify-between items-center my-5 pb-3">
                 <h1 className="text-2xl font-medium w-1/4">{job.title}</h1>
                 <h1 className="text-[#727272] text-sm w-1/4 flex justify-center">
                   {job.department}
@@ -160,41 +174,57 @@ const Page = () => {
                   View Details <ArrowRight size={16} />
                 </h1>
               </div>
-              <div className="w-full h-px bg-[#727272]/10"></div>
+
+              <div className="flex flex-col md:hidden my-4 pb-3 border-b border-[#727272]/10">
+                <h1 className="text-lg font-semibold mb-2">{job.title}</h1>
+                <div className="flex justify-between text-sm text-[#727272] mb-3">
+                  <span>{job.department}</span>
+                  <span>{job.type}</span>
+                </div>
+                <div className="text-[#DB0A0A] text-sm flex items-center gap-2 cursor-pointer hover:underline">
+                  View Details <ArrowRight size={14} />
+                </div>
+              </div>
+
+              <div className="hidden md:block w-full h-px bg-[#727272]/10"></div>
             </div>
           ))}
         </div>
+
         <div className="w-full flex">
           <div className="flex justify-center mt-10 px-6 py-3 rounded-full bg-[#DB0A0A] text-white text-sm">
             View More
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#B9041A] h-96 mt-10 mb-10 flex justify-center">
+      <div className="w-full bg-[#B9041A] h-96 mt-10 mb-10 px-5 flex justify-center">
         <div className="flex justify-between">
           <img
             src="/images/iconWhite.png"
             alt="Career"
-            className=" h-48 left-28 absolute"
+            className="h-32 lg:h-48 left-12 lg:left-28 absolute"
           />
         </div>
 
-        <div className="flex flex-col justify-center text-white items-center gap-6">
+        <div className="lg:mt-0 mt-16 flex flex-col justify-center text-white items-center gap-6">
           <div>
             <div className="mb-5 italic font-extralight">
               Voices of Our People
             </div>
 
-            <div className="text-3xl">
-              At Hotz Group, I have found not just a<br></br>career, but a
-              community that values<br></br>growth and impact.”
+            <div className="text-2xl lg:text-3xl">
+              At Hotz Group, I have found not just a
+              <br className="hidden lg:flex"></br>career, but a community that
+              values<br className="hidden lg:flex"></br>growth and impact.”
             </div>
           </div>
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center mt-24 py-7">
-        <h1 className="text-4xl font-medium">Did not find a role that fits?</h1>
+      <div className=" px-5 w-full flex flex-col items-center justify-center mt-24 py-7">
+        <h1 className="text-4xl font-medium text-center">
+          Did not find a role that fits?
+        </h1>
         <h1 className="text-center mt-3 text-[#727272]">
           Share your resume with us, and we will connect<br></br>when
           opportunities arise.

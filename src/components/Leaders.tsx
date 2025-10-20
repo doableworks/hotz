@@ -4,7 +4,6 @@ import TransitionVertical from "@/animations/TransitionVertical";
 import { TeamLeader } from "@/lib/types/business";
 import React from "react";
 
-
 const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
   // const leaders = [
   //   {
@@ -35,7 +34,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
 
   return (
     <div className="px-5 lg:px-10">
-      <div className="text-center text-xl font-semibold mt-16 mb-7">
+      <div className="text-center text-xl font-semibold lg:mt-16 mb-7">
         Guided by visionaries, Driven by values.
       </div>
       <TransitionVertical>

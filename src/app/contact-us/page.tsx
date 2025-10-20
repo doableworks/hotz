@@ -11,9 +11,11 @@ const page = () => {
         <img src="/images/contact.png" className="h-80 w-full object-cover" />
       </div>
 
-      <div className="w-full px-10 py-16 flex">
-        <div className="w-1/2 text-4xl font-semibold">Contact Us</div>
-        <div className="w-1/2 flex flex-col gap-7">
+      <div className="w-full px-5 lg:px-10 py-7 lg:py-16 flex lg:flex-row flex-col">
+        <div className="lg:w-1/2 w-full text-3xl lg:text-4xl font-semibold">
+          Contact Us
+        </div>
+        <div className="lg:w-1/2 w-full flex flex-col gap-7 mt-7 lg:mt-0">
           <div className=" flex gap-5 items-start">
             <MapPin
               strokeWidth={1}

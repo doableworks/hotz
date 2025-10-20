@@ -41,7 +41,7 @@ const Business = ({ businesses }: BusinessProps) => {
         OUR BUSINESS
       </div>
       <TransitionVertical>
-        <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[95vh] overflow-hidden">
+        <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[100vh] overflow-hidden">
           {businesses.map((card: OurBusiness, index: number) => (
             <motion.div
               key={card._id}
