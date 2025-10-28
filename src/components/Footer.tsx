@@ -29,18 +29,18 @@ const Footer = () => {
         <div className="w-full lg:w-2/4 flex lg:flex-row flex-col justify-around mt-7 lg:mt-7 lg:gap-16 gap-10 text-sm">
           <div className="flex flex-col gap-2 items-start">
             <h1 className="text-white/70">Quick Links</h1>
-            <h1>ABOUT US</h1>
-            <h1>BUSINESS</h1>
-            <h1>OUR TEAM</h1>
-            <h1>CAREER</h1>
-            <h1>NEWSROOM</h1>
+            <h1>About Us</h1>
+            <h1>Business</h1>
+            <h1>Our Team</h1>
+            <h1>Career</h1>
+            <h1>Newsroom</h1>
           </div>
 
           <div className="flex flex-col gap-2 items-start pr-16">
             <h1 className=" text-white/70">Information</h1>
-            <h1>SITEMAP</h1>
-            <h1>TERMS AND CONDITIONS</h1>
-            <h1>PRIVACY POLICY</h1>
+            <h1>Sitemap</h1>
+            <h1>Terms and Conditions</h1>
+            <h1>Privacy Policy</h1>
           </div>
         </div>
 
