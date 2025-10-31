@@ -15,7 +15,7 @@ const Hero = () => {
           ONE TRUSTED<br className="md:hidden"></br> NAME.
         </h1>
         <h1 className="text-base lg:text-lg mt-2">
-          From finance to hospitality,<br className="md:hidden"></br> education
+          From finance to hospitality,<br className="md:hidden"></br> art and education
           to real estate
         </h1>
 

@@ -14,6 +14,7 @@ const About = () => {
         />
         <div>
           <TransitionVertical>
+            <h1 className="text-white/70 mb-10 text-xl">Setting New Standards Everyday</h1>
             <h1 className="text-white text-2xl lg:text-3xl font-light w-4/5">
               Since 1900, Hotz Group has been at the heart of growth and
               transformation delivering trust, innovation, and impact across India
