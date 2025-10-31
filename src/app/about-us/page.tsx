@@ -52,8 +52,8 @@ async function page() {
             A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
           <div className="w-full lg:w-1/2">
-            Hotz Group's journey began in the early 1900s, founded by Swiss
-            nationals who introduced world-class hospitality to India's northern
+            Hotz Group&apos;s journey began in the early 1900s, founded by Swiss
+            nationals who introduced world-class hospitality to India&apos;s northern
             hills. Over time, the Group evolved from its European-inspired roots
             into a diversified Indian enterprise, driven by the belief that
             progress must be built on trust, integrity, and innovation.{" "}
