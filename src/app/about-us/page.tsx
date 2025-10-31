@@ -3,6 +3,7 @@ import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Timeline from "@/components/pagespecific/about-us/Timeline";
 import VideoSection from "@/components/pagespecific/about-us/VideoSection";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
@@ -51,8 +52,18 @@ async function page() {
             A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
           <div className="w-full lg:w-1/2">
-            Since 1900, Hotz Group has been shaping industries, creating
-            opportunities, and building experiences that last generations.
+            Hotz Group's journey began in the early 1900s, founded by Swiss
+            nationals who introduced world-class hospitality to India's northern
+            hills. Over time, the Group evolved from its European-inspired roots
+            into a diversified Indian enterprise, driven by the belief that
+            progress must be built on trust, integrity, and innovation.{" "}
+            <br></br>
+            <br></br>Since then, Hotz has expanded its footprint across multiple
+            sectors—real estate, financial services, manufacturing, industrial
+            gases, and warehousing—each venture reflecting a commitment to
+            quality and lasting value. Guided by a vision for tomorrow, we
+            continue to build with purpose, shaping experiences, environments,
+            and opportunities that endure across generations.
           </div>
         </div>
       </TransitionVertical>
@@ -71,12 +82,19 @@ async function page() {
             <TransitionHorizontal>
               <h1 className="text-lg">OUR STORY</h1>
               <h1 className="text-white/60 mt-3">
-                Founded with a vision to redefine excellence, Hotz Group has
-                evolved into a multi-sector enterprise spanning financial
-                services, real estate, hospitality, education, art, and
-                warehousing. Rooted in trust and guided by innovation, our
-                journey is built on creating value that impacts lives and
-                communities.
+                Established in 1952 as Hotz Industries Limited, the company
+                began with a focus on hospitality before expanding into
+                investment, leasing, industrial gases, and real estate
+                development. This spirit of diversification and reinvention has
+                defined Hotz through every era—enabling the Group to adapt,
+                innovate, and lead across industries. <br></br>
+                <br></br> What drives us is a deep respect for people,
+                partnerships, and performance. From creating advanced
+                warehousing and industrial infrastructure to supporting
+                education and the arts, Hotz continues to balance business
+                excellence with social responsibility. Today, we stand as a
+                future-ready enterprise—rooted in legacy, powered by innovation,
+                and united by a purpose to create meaningful impact.
               </h1>
             </TransitionHorizontal>
           </div>
@@ -161,9 +179,9 @@ async function page() {
         </div>
       </div>
 
-      <ParallaxScroll>
-        <Stats statsData={stats} />
-      </ParallaxScroll>
+      <Stats statsData={stats} />
+
+      {/* <Timeline /> */}
 
       <div className="w-full relative z-20 bg-white">
         <ParallaxScroll>
