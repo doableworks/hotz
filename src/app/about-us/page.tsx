@@ -78,7 +78,7 @@ async function page() {
             />
           </div>
 
-          <div className="lg:w-1/2 w-full h-96 px-7 text-white flex flex-col justify-center bg-[#BC1F1F]">
+          <div className="lg:w-1/2 w-full min-h-96 px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
               <h1 className="text-lg">OUR STORY</h1>
               <h1 className="text-white/60 mt-3">
@@ -181,19 +181,15 @@ async function page() {
 
       <Stats statsData={stats} />
 
-      {/* <Timeline /> */}
+      <Timeline />
 
-      <div className="w-full relative z-20 bg-white">
-        <ParallaxScroll>
-          <img
-            src="/images/about2.png"
-            alt="Footer Image"
-            className="w-full h-96 object-cover"
-          />
-        </ParallaxScroll>
-      </div>
+      <img
+        src="/images/about2.png"
+        alt="Footer Image"
+        className="w-full h-96 object-cover"
+      />
 
-      <div className="my-16 relative bg-white z-30 pt-16">
+      <div className="my-5 lg:my-16 relative bg-white z-30 pt-5 lg:pt-16">
         <div className="text-center text-xl font-semibold mb-2">
           Our Commitment Beyond Business
         </div>
