@@ -42,7 +42,7 @@ async function page() {
 
   return (
     <>
-      <div className="h-fullflex flex-col">
+      <div className="h-full flex flex-col">
         <Navbar />
         <VideoSection cloudfrontUrl="d299alzxgdp6.cloudfront.net" />
       </div>
@@ -53,11 +53,11 @@ async function page() {
           </div>
           <div className="w-full lg:w-1/2">
             Hotz Group&apos;s journey began in the early 1900s, founded by Swiss
-            nationals who introduced world-class hospitality to India&apos;s northern
-            hills. Over time, the Group evolved from its European-inspired roots
-            into a diversified Indian enterprise, driven by the belief that
-            progress must be built on trust, integrity, and innovation.{" "}
-            <br></br>
+            nationals who introduced world-class hospitality to India&apos;s
+            northern hills. Over time, the Group evolved from its
+            European-inspired roots into a diversified Indian enterprise, driven
+            by the belief that progress must be built on trust, integrity, and
+            innovation. <br></br>
             <br></br>Since then, Hotz has expanded its footprint across multiple
             sectors—real estate, financial services, manufacturing, industrial
             gases, and warehousing—each venture reflecting a commitment to
