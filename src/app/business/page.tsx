@@ -4,6 +4,7 @@ import React from "react";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
+import TransitionVertical from "@/animations/TransitionVertical";
 
 function page() {
   const businesses = [
@@ -71,34 +72,44 @@ function page() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
           <div className="absolute bottom-7 left-5 lg:left-10">
-            <h1 className="text-white text-xl lg:text-3xl font-medium">
-              Diverse Business. One Trusted Group.
-            </h1>
+            <TransitionHorizontal>
+              <h1 className="text-white text-xl lg:text-3xl font-medium">
+                Diverse Business. One Trusted Group.
+              </h1>
+            </TransitionHorizontal>
           </div>
         </div>
 
         <div className="px-5 lg:px-10 pt-10">
-          <h1 className="text-2xl font-medium mb-5">Our Businesses</h1>
+          <TransitionVertical>
+            <h1 className="text-2xl font-medium mb-5">Our Businesses</h1>
+          </TransitionVertical>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {businesses.map((card) => (
-              <div key={card.id} className="w-full">
-                <div className="w-full bg-amber-200 h-96">
-                  <img
-                    src={card.image}
-                    alt={card.linkTitle}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h1 className="mt-3 font-medium text-lg">{card.linkTitle}</h1>
-                <p className="text-[#727272] text-sm">{card.description}</p>
+              <TransitionHorizontal key={card.id}>
+                <div className="w-full">
+                  <div className="w-full bg-amber-200 h-96">
+                    <img
+                      src={card.image}
+                      alt={card.linkTitle}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <TransitionVertical>
+                    <h1 className="mt-3 font-medium text-lg">
+                      {card.linkTitle}
+                    </h1>
+                    <p className="text-[#727272] text-sm">{card.description}</p>
+                  </TransitionVertical>
 
-                <Link href={card.ctaUrl}>
-                  <h1 className="mt-3 flex gap-3 items-center cursor-pointer">
-                    Explore <MoveRight />
-                  </h1>
-                </Link>
-              </div>
+                  <Link href={card.ctaUrl}>
+                    <h1 className="mt-3 flex gap-3 items-center cursor-pointer">
+                      Explore <MoveRight />
+                    </h1>
+                  </Link>
+                </div>
+              </TransitionHorizontal>
             ))}
           </div>
         </div>

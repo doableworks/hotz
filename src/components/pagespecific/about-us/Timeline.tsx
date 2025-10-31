@@ -1,3 +1,4 @@
+import TransitionVertical from "@/animations/TransitionVertical";
 import React from "react";
 
 interface TimelineEvent {
@@ -137,9 +138,11 @@ const CurvedTimeline: React.FC = () => {
   return (
     <div className="w-full h-full bg-[#f3f3f3] pt-12 pb-10 lg:pb-44 px-4">
       <div>
-        <h1 className="text-lg font-semibold text-center my-5">
-          OUR JOURNEY THROUGH TIME
-        </h1>
+        <TransitionVertical>
+          <h1 className="text-lg font-semibold text-center my-5">
+            OUR JOURNEY THROUGH TIME
+          </h1>
+        </TransitionVertical>
       </div>
 
       <div className="relative hidden lg:block mx-auto w-full">

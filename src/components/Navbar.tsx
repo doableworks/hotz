@@ -33,6 +33,7 @@ const Navbar = () => {
         </Link>
         <Link href="/newsroom">NEWSROOM</Link>
         <Link href="/career">CAREER</Link>
+        <Link href="/contact-us">CONTACT US</Link>
       </div>
       <div className="hidden md:flex items-center justify-end gap-5 w-1/3">
         <Search size={20} color="#2B2B2B" strokeWidth="1" />
@@ -65,6 +66,9 @@ const Navbar = () => {
             </Link>
             <Link href="/career" onClick={() => setIsOpen(false)}>
               CAREER
+            </Link>
+            <Link href="/contact-us" onClick={() => setIsOpen(false)}>
+              CONTACT US
             </Link>
           </div>
 
