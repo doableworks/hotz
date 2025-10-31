@@ -1,4 +1,5 @@
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
+import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Check } from "lucide-react";
@@ -75,41 +76,51 @@ const page = () => {
         />
       </div>
 
-      <div className="w-full h-80 flex justify-center items-center text-center px-5">
-        <div>
-          <h1 className="text-4xl font-medium">Real Estate</h1>
-          <p className="w-full lg:max-w-3xl text-[#727272] mt-3">
-            Hotz Group is engaged in real estate development with a focus on
-            large-scale, well-planned projects that deliver value and long-term
-            growth. Our developments combine strategic locations, strong
-            infrastructure, and sustainable planning to meet the evolving needs
-            of Business.
-          </p>
+      <TransitionVertical>
+        <div className="w-full h-80 flex justify-center items-center text-center px-5">
+          <div>
+            <h1 className="text-4xl font-medium">Real Estate</h1>
+            <p className="w-full lg:max-w-3xl text-[#727272] mt-3">
+              Hotz Group is engaged in real estate development with a focus on
+              large-scale, well-planned projects that deliver value and
+              long-term growth. Our developments combine strategic locations,
+              strong infrastructure, and sustainable planning to meet the
+              evolving needs of Business.
+            </p>
+          </div>
         </div>
-      </div>
+      </TransitionVertical>
 
       <div className="px-5 lg:px-10 py-10 bg-[#f3f3f3] block lg:flex justify-between items-start">
         <div className="w-full lg:w-1/2">
-          <h1 className="text-3xl font-medium">Our projects</h1>
+          <TransitionVertical>
+            <h1 className="text-3xl font-medium">Our projects</h1>
+          </TransitionVertical>
         </div>
 
         <div className="w-full lg:w-1/2 pr-0 lg:pr-20 mt-10 lg:mt-0">
-          <h1 className="text-xl font-medium">Warehouse Facility</h1>
+          <TransitionVertical>
+            <h1 className="text-xl font-medium">Warehouse Facility</h1>
+          </TransitionVertical>
 
-          <p className="text-[#3a3a3a] text-sm mt-3">
-            Our flagship development is a world-class warehouse facility spread
-            across 13 acres in EECO II, Udyog Vihar, Greater Noida, with a
-            built-up area of approx. 2,75,000 sq. ft. Leased to Samsung India
-            for storage and distribution operations.
-          </p>
+          <TransitionVertical>
+            <p className="text-[#3a3a3a] text-sm mt-3">
+              Our flagship development is a world-class warehouse facility
+              spread across 13 acres in EECO II, Udyog Vihar, Greater Noida,
+              with a built-up area of approx. 2,75,000 sq. ft. Leased to Samsung
+              India for storage and distribution operations.
+            </p>
+          </TransitionVertical>
 
           <div className="mt-12 space-y-7">
             {highlights.map((item) => (
               <div key={item.id}>
-                <div className="flex items-center gap-5">
-                  <Check color="#DB0A0A" />
-                  <p>{item.text}</p>
-                </div>
+                <TransitionVertical>
+                  <div className="flex items-center gap-5">
+                    <Check color="#DB0A0A" />
+                    <p>{item.text}</p>
+                  </div>
+                </TransitionVertical>
                 <div className="w-full h-px bg-[#888888]/10 my-5"></div>
               </div>
             ))}

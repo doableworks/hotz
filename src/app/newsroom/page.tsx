@@ -1,3 +1,4 @@
+import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Eye } from "lucide-react";
@@ -47,38 +48,42 @@ function page() {
         <img src="/images/contact.png" className="h-80 w-full object-cover" />
       </div>
 
-      <div className="px-5 text-center text-xl font-semibold mt-16 mb-7">
-        What&apos;s New at Hotz Group
-      </div>
+      <TransitionVertical>
+        <div className="px-5 text-center text-xl font-semibold mt-16 mb-7">
+          What&apos;s New at Hotz Group
+        </div>
+      </TransitionVertical>
 
       <div className="px-5 lg:px-48 w-full flex flex-col gap-16">
         {Updates.map((item) => (
-          <div key={item.id}>
-            <div className="flex lg:flex-row flex-col-reverse w-full justify-between items-start">
-              <div className="w-full lg:w-3/4 flex flex-col gap-2">
-                <h1 className="text-[#727272] mt-7 lg:mt-0">{item.date}</h1>
+          <TransitionVertical key={item.id}>
+            <div>
+              <div className="flex lg:flex-row flex-col-reverse w-full justify-between items-start">
+                <div className="w-full lg:w-3/4 flex flex-col gap-2">
+                  <h1 className="text-[#727272] mt-7 lg:mt-0">{item.date}</h1>
 
-                <h1 className="text-2xl">{item.title}</h1>
+                  <h1 className="text-2xl">{item.title}</h1>
 
-                <p className="text-[#727272]">{item.description}</p>
+                  <p className="text-[#727272]">{item.description}</p>
 
-                <div className="flex items-center gap-3">
-                  <Eye size={12} />
-                  <h1 className="text-sm">Read more</h1>
+                  <div className="flex items-center gap-3">
+                    <Eye size={12} />
+                    <h1 className="text-sm">Read more</h1>
+                  </div>
+                </div>
+
+                <div className="w-full lg:w-1/4">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
               </div>
 
-              <div className="w-full lg:w-1/4">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
+              <div className="w-full h-px bg-[#E6E6E6] mt-7"></div>
             </div>
-
-            <div className="w-full h-px bg-[#E6E6E6] mt-7"></div>
-          </div>
+          </TransitionVertical>
         ))}
       </div>
 
