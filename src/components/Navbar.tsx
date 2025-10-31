@@ -31,7 +31,7 @@ const Navbar = () => {
           BUSINESS
           <ChevronDown color="#2B2B2B" size={20} strokeWidth="1.5" />{" "}
         </Link>
-        <h1>NEWSROOM</h1>
+        <Link href="/newsroom">NEWSROOM</Link>
         <Link href="/career">CAREER</Link>
       </div>
       <div className="hidden md:flex items-center justify-end gap-5 w-1/3">
