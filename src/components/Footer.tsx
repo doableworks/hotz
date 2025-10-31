@@ -1,5 +1,6 @@
 import React from "react";
 import { Instagram, Youtube, Facebook } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -29,11 +30,12 @@ const Footer = () => {
         <div className="w-full lg:w-2/4 flex lg:flex-row flex-col justify-around mt-7 lg:mt-7 lg:gap-16 gap-10 text-sm">
           <div className="flex flex-col gap-2 items-start">
             <h1 className="text-white/70">Quick Links</h1>
-            <h1>About Us</h1>
-            <h1>Business</h1>
-            <h1>Our Team</h1>
-            <h1>Career</h1>
-            <h1>Newsroom</h1>
+            <Link href="/">Home</Link>
+            <Link href="/about-us">About Us</Link>
+            <Link href="/business">Business</Link>
+            <Link href="/contact-us">Contact Us</Link>
+            <Link href="/career">Career</Link>
+            <Link href="/newsroom">Newsroom</Link>
           </div>
 
           <div className="flex flex-col gap-2 items-start pr-16">

@@ -57,7 +57,6 @@ const Page = () => {
 
   return (
     <>
-      {" "}
       <ParallaxScroll>
         <div className="h-screen flex flex-col">
           <Navbar />
@@ -85,48 +84,50 @@ const Page = () => {
         </div>
       </ParallaxScroll>
       <ParallaxScroll>
-      <div className="w-full bg-[#F3F3F3] py-20 px-5 md:px-10 flex flex-col gap-12 relative z-20">
-        <TransitionVertical>
-          <h1 className="text-3xl text-center font-medium">Our Values</h1>
-        </TransitionVertical>
-        <TransitionVertical>
-          <h1 className="text-3xl text-center font-medium">Why Work With Us</h1>
-        </TransitionVertical>
-        <TransitionVertical>
-        <div className="hidden md:flex gap-7 px-10">
-          {values.map((value) => (
-            <div
-              key={value.id}
-              className="flex flex-col justify-between w-1/4 p-5 h-96 bg-white"
-            >
-              <Star size={40} className="text-[#DB0A0A] mb-4" />
+        <div className="w-full bg-[#F3F3F3] py-20 px-5 md:px-10 flex flex-col gap-12 relative z-20">
+          <TransitionVertical>
+            <h1 className="text-3xl text-center font-medium">Our Values</h1>
+          </TransitionVertical>
+          <TransitionVertical>
+            <h1 className="text-3xl text-center font-medium">
+              Why Work With Us
+            </h1>
+          </TransitionVertical>
+          <TransitionVertical>
+            <div className="hidden md:flex gap-7 px-10">
+              {values.map((value) => (
+                <div
+                  key={value.id}
+                  className="flex flex-col justify-between w-1/4 p-5 h-96 bg-white"
+                >
+                  <Star size={40} className="text-[#DB0A0A] mb-4" />
 
-              <TransitionHorizontal>
-                <h1 className="text-xl mb-1">{value.name}</h1>
-                <h1 className="text-[#727272]">{value.text}</h1>
-              </TransitionHorizontal>
+                  <TransitionHorizontal>
+                    <h1 className="text-xl mb-1">{value.name}</h1>
+                    <h1 className="text-[#727272]">{value.text}</h1>
+                  </TransitionHorizontal>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        </TransitionVertical>
+          </TransitionVertical>
 
-        {/* 📱 Mobile View */}
-        <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
-          {values.map((value) => (
-            <div
-              key={value.id}
-              className="w-[90%] snap-center flex-shrink-0 bg-white p-5 h-96 flex flex-col justify-between"
-            >
-              <Star size={36} className="text-[#DB0A0A] mb-3" />
+          {/* 📱 Mobile View */}
+          <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
+            {values.map((value) => (
+              <div
+                key={value.id}
+                className="w-[90%] snap-center flex-shrink-0 bg-white p-5 h-96 flex flex-col justify-between"
+              >
+                <Star size={36} className="text-[#DB0A0A] mb-3" />
 
-              <div>
-                <h1 className="text-lg mb-1">{value.name}</h1>
-                <h1 className="text-[#727272] text-sm">{value.text}</h1>
+                <div>
+                  <h1 className="text-lg mb-1">{value.name}</h1>
+                  <h1 className="text-[#727272] text-sm">{value.text}</h1>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
       </ParallaxScroll>
       <div className="w-full py-20 px-5 lg:px-10 flex flex-col gap-12 bg-white z-30 relative">
         <h1 className="text-3xl text-center font-medium">Life at Hotz Group</h1>
