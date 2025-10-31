@@ -42,7 +42,7 @@ async function page() {
 
   return (
     <>
-      <div className="h-fullflex flex-col">
+      <div className="h-full flex flex-col">
         <Navbar />
         <VideoSection cloudfrontUrl="d299alzxgdp6.cloudfront.net" />
       </div>
@@ -53,11 +53,11 @@ async function page() {
           </div>
           <div className="w-full lg:w-1/2">
             Hotz Group&apos;s journey began in the early 1900s, founded by Swiss
-            nationals who introduced world-class hospitality to India&apos;s northern
-            hills. Over time, the Group evolved from its European-inspired roots
-            into a diversified Indian enterprise, driven by the belief that
-            progress must be built on trust, integrity, and innovation.{" "}
-            <br></br>
+            nationals who introduced world-class hospitality to India&apos;s
+            northern hills. Over time, the Group evolved from its
+            European-inspired roots into a diversified Indian enterprise, driven
+            by the belief that progress must be built on trust, integrity, and
+            innovation. <br></br>
             <br></br>Since then, Hotz has expanded its footprint across multiple
             sectors—real estate, financial services, manufacturing, industrial
             gases, and warehousing—each venture reflecting a commitment to
@@ -78,7 +78,7 @@ async function page() {
             />
           </div>
 
-          <div className="lg:w-1/2 w-full h-96 px-7 text-white flex flex-col justify-center bg-[#BC1F1F]">
+          <div className="lg:w-1/2 w-full min-h-96 px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
               <h1 className="text-lg">OUR STORY</h1>
               <h1 className="text-white/60 mt-3">
@@ -181,19 +181,15 @@ async function page() {
 
       <Stats statsData={stats} />
 
-      {/* <Timeline /> */}
+      <Timeline />
 
-      <div className="w-full relative z-20 bg-white">
-        <ParallaxScroll>
-          <img
-            src="/images/about2.png"
-            alt="Footer Image"
-            className="w-full h-96 object-cover"
-          />
-        </ParallaxScroll>
-      </div>
+      <img
+        src="/images/about2.png"
+        alt="Footer Image"
+        className="w-full h-96 object-cover"
+      />
 
-      <div className="my-16 relative bg-white z-30 pt-16">
+      <div className="my-5 lg:my-16 relative bg-white z-30 pt-5 lg:pt-16">
         <div className="text-center text-xl font-semibold mb-2">
           Our Commitment Beyond Business
         </div>

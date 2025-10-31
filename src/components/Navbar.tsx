@@ -27,11 +27,11 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex items-center justify-center gap-7 w-1/3 text-xs">
         <Link href="/about-us">ABOUT</Link>
-        <h1 className="flex items-center gap-1 ">
-          BUSINESS{" "}
+        <Link href="/business" className="flex items-center gap-1 ">
+          BUSINESS
           <ChevronDown color="#2B2B2B" size={20} strokeWidth="1.5" />{" "}
-        </h1>
-        <h1>NEWSROOM</h1>
+        </Link>
+        <Link href="/newsroom">NEWSROOM</Link>
         <Link href="/career">CAREER</Link>
       </div>
       <div className="hidden md:flex items-center justify-end gap-5 w-1/3">
@@ -57,9 +57,9 @@ const Navbar = () => {
             <Link href="/about-us" onClick={() => setIsOpen(false)}>
               ABOUT
             </Link>
-            <h1 className="flex items-center gap-1">
+            <Link href="/business" className="flex items-center gap-1">
               BUSINESS <ChevronDown size={18} strokeWidth="1" />
-            </h1>
+            </Link>
             <Link href="/newsroom" onClick={() => setIsOpen(false)}>
               NEWSROOM
             </Link>

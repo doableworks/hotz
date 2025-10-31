@@ -5,33 +5,6 @@ import { TeamLeader } from "@/lib/types/business";
 import React from "react";
 
 const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
-  // const leaders = [
-  //   {
-  //     id: 1,
-  //     name: "John Doe",
-  //     role: "Founder",
-  //     image: "/images/leader1.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Jane Smith",
-  //     role: "Founder",
-  //     image: "/images/leader2.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Michael Lee",
-  //     role: "Founder",
-  //     image: "/images/leader3.png",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Sophia Brown",
-  //     role: "Founder",
-  //     image: "/images/leader4.png",
-  //   },
-  // ];
-
   return (
     <div className="px-5 lg:px-10">
       <div className="text-center text-xl font-semibold lg:mt-16 mb-7">
