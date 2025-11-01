@@ -22,7 +22,7 @@ const Navbar = () => {
     <div className="bg-white w-full py-2 px-5 lg:px-10 flex justify-between items-center z-50">
       <div className="w-1/3">
         <Link href="/">
-          <img src="/images/logo.png" alt="Logo" className="h-12" />
+          <img src="/images/HotzLogo.png" alt="Logo" className="h-12" />
         </Link>
       </div>
       <div className="hidden md:flex items-center justify-center gap-7 w-1/3 text-xs">
