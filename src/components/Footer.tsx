@@ -7,7 +7,11 @@ const Footer = () => {
     <div className="bg-gradient-footer text-center text-white pt-7 lg:pt-16 pb-5 lg:pb-5 px-5 lg:px-10 mt-24">
       <div className="w-full flex lg:flex-row flex-col items-start">
         <div className="w-full lg:w-1/4">
-          <img src="/images/footerlogo1.png" alt="Logo" className="h-24 mb-4" />
+          <img
+            src="/images/HotzLogoWhite.png"
+            alt="Logo"
+            className="h-32 mb-4"
+          />
         </div>
 
         <div className="flex w-full lg:hidden flex-col items-start text-sm my-3">

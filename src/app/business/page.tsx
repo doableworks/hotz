@@ -5,58 +5,61 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
+import { getBusiness } from "@/lib/sanityQueries";
 
-function page() {
-  const businesses = [
-    {
-      id: 1,
-      linkTitle: "Financial Services",
-      description:
-        "Empowering growth through transparent and reliable financial solutions.",
-      image: "/images/financial.png",
-      ctaUrl: "/business/financial-services",
-    },
-    {
-      id: 2,
-      linkTitle: "Real Estate",
-      description:
-        "Creating iconic residential and warehousing spaces that redefine modern living.",
-      image: "/images/realestate.png",
-      ctaUrl: "/business/real-estate",
-    },
-    {
-      id: 3,
-      linkTitle: "Hospitality",
-      description:
-        "Delivering comfort and memorable experience with premium stays and services.",
-      image: "/images/hospitality.png",
-      ctaUrl: "/business/hospitality",
-    },
-    {
-      id: 4,
-      linkTitle: "Art",
-      description:
-        "Celebrating creativity, culture, and heritage through curated initiatives.",
-      image: "/images/art.png",
-      ctaUrl: "/business/art",
-    },
-    {
-      id: 5,
-      linkTitle: "Education",
-      description:
-        "Inspiring future generations with quality learning and leadership programs.",
-      image: "/images/education.png",
-      ctaUrl: "/business/education",
-    },
-    {
-      id: 6,
-      linkTitle: "New Ventures",
-      description:
-        "Providing scalable, efficient, and future-ready logistics infrastructure.",
-      image: "/images/ventures.png",
-      ctaUrl: "/business/new-ventures",
-    },
-  ];
+async function page() {
+  // const businesses = [
+  //   {
+  //     id: 1,
+  //     linkTitle: "Financial Services",
+  //     description:
+  //       "Empowering growth through transparent and reliable financial solutions.",
+  //     image: "/images/financial.png",
+  //     ctaUrl: "/business/financial-services",
+  //   },
+  //   {
+  //     id: 2,
+  //     linkTitle: "Real Estate",
+  //     description:
+  //       "Creating iconic residential and warehousing spaces that redefine modern living.",
+  //     image: "/images/realestate.png",
+  //     ctaUrl: "/business/real-estate",
+  //   },
+  //   {
+  //     id: 3,
+  //     linkTitle: "Hospitality",
+  //     description:
+  //       "Delivering comfort and memorable experience with premium stays and services.",
+  //     image: "/images/hospitality.png",
+  //     ctaUrl: "/business/hospitality",
+  //   },
+  //   {
+  //     id: 4,
+  //     linkTitle: "Art",
+  //     description:
+  //       "Celebrating creativity, culture, and heritage through curated initiatives.",
+  //     image: "/images/art.png",
+  //     ctaUrl: "/business/art",
+  //   },
+  //   {
+  //     id: 5,
+  //     linkTitle: "Education",
+  //     description:
+  //       "Inspiring future generations with quality learning and leadership programs.",
+  //     image: "/images/education.png",
+  //     ctaUrl: "/business/education",
+  //   },
+  //   {
+  //     id: 6,
+  //     linkTitle: "New Ventures",
+  //     description:
+  //       "Providing scalable, efficient, and future-ready logistics infrastructure.",
+  //     image: "/images/ventures.png",
+  //     ctaUrl: "/business/new-ventures",
+  //   },
+  // ];
+
+  const businesses = await getBusiness();
 
   return (
     <>
@@ -87,11 +90,11 @@ function page() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {businesses.map((card) => (
-              <TransitionHorizontal key={card.id}>
+              <TransitionHorizontal key={card._id}>
                 <div className="w-full">
                   <div className="w-full bg-amber-200 h-96">
                     <img
-                      src={card.image}
+                      src={card.coverImageUrl}
                       alt={card.linkTitle}
                       className="w-full h-full object-cover"
                     />
@@ -100,10 +103,10 @@ function page() {
                     <h1 className="mt-3 font-medium text-lg">
                       {card.linkTitle}
                     </h1>
-                    <p className="text-[#727272] text-sm">{card.description}</p>
+                    <p className="text-[#727272] text-sm">{card.getInTouchText}</p>
                   </TransitionVertical>
 
-                  <Link href={card.ctaUrl}>
+                  <Link href={`/business/${card.slug}`} className="inline-block">
                     <h1 className="mt-3 flex gap-3 items-center cursor-pointer">
                       Explore <MoveRight />
                     </h1>

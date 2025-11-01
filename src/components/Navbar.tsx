@@ -2,9 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { Search, Phone, ChevronDown, X, Menu } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const page = usePathname();
 
   useEffect(() => {
     if (isOpen) {
@@ -22,18 +24,49 @@ const Navbar = () => {
     <div className="bg-white w-full py-2 px-5 lg:px-10 flex justify-between items-center z-50">
       <div className="w-1/3">
         <Link href="/">
-          <img src="/images/logo.png" alt="Logo" className="h-12" />
+          <img src="/images/HotzLogo.png" alt="Logo" className="h-12" />
         </Link>
       </div>
-      <div className="hidden md:flex items-center justify-center gap-7 w-1/3 text-xs">
-        <Link href="/about-us">ABOUT</Link>
-        <Link href="/business" className="flex items-center gap-1 ">
-          BUSINESS
-          <ChevronDown color="#2B2B2B" size={20} strokeWidth="1.5" />{" "}
+      <div className="hidden md:flex items-center justify-center gap-7 w-full text-xs">
+        <Link
+          href="/about-us"
+          className={page === "/about-us" ? "text-red-600" : ""}
+        >
+          ABOUT
         </Link>
-        <Link href="/newsroom">NEWSROOM</Link>
-        <Link href="/career">CAREER</Link>
-        <Link href="/contact-us">CONTACT US</Link>
+        <Link
+          href="/business"
+          className={`flex items-center gap-1 ${
+            page === "/business" ? "text-red-600" : ""
+          }`}
+        >
+          BUSINESS
+          {/* <ChevronDown color="#2B2B2B" size={20} strokeWidth="1.5" />{" "} */}
+        </Link>
+        <Link
+          href="/newsroom"
+          className={page === "/newsroom" ? "text-red-600" : ""}
+        >
+          NEWSROOM
+        </Link>
+        <Link
+          href="/career"
+          className={page === "/career" ? "text-red-600" : ""}
+        >
+          CAREER
+        </Link>
+        <Link
+          href="/contact-us"
+          className={page === "/contact-us" ? "text-red-600" : ""}
+        >
+          CONTACT US
+        </Link>
+                <Link
+          href="/csr"
+          className={page === "/csr" ? "text-red-600" : ""}
+        >
+          CSR
+        </Link>
       </div>
       <div className="hidden md:flex items-center justify-end gap-5 w-1/3">
         <Search size={20} color="#2B2B2B" strokeWidth="1" />
@@ -55,20 +88,48 @@ const Navbar = () => {
           </div>
 
           <div className="flex w-full flex-col items-center gap-5 mt-2 text-xs text-[#2B2B2B]">
-            <Link href="/about-us" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/about-us"
+              onClick={() => setIsOpen(false)}
+              className={page === "/about-us" ? "text-red-600" : ""}
+            >
               ABOUT
             </Link>
-            <Link href="/business" className="flex items-center gap-1">
+            <Link
+              href="/business"
+              className={`flex items-center gap-1 ${
+                page === "/business" ? "text-red-600" : ""
+              }`}
+            >
               BUSINESS <ChevronDown size={18} strokeWidth="1" />
             </Link>
-            <Link href="/newsroom" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/newsroom"
+              onClick={() => setIsOpen(false)}
+              className={page === "/newsroom" ? "text-red-600" : ""}
+            >
               NEWSROOM
             </Link>
-            <Link href="/career" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/career"
+              onClick={() => setIsOpen(false)}
+              className={page === "/career" ? "text-red-600" : ""}
+            >
               CAREER
             </Link>
-            <Link href="/contact-us" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/contact-us"
+              onClick={() => setIsOpen(false)}
+              className={page === "/contact-us" ? "text-red-600" : ""}
+            >
               CONTACT US
+            </Link>
+            <Link
+              href="/csr"
+              onClick={() => setIsOpen(false)}
+              className={page === "/csr" ? "text-red-600" : ""}
+            >
+              CSR
             </Link>
           </div>
 

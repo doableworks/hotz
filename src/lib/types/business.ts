@@ -3,7 +3,8 @@ export interface OurBusiness {
   _type: 'ourBusinesses';
   linkTitle: string;
   coverImageUrl: string; // resolved from coverImage.asset->url in GROQ
-  ctaUrl: string;
+  slug: string;
+  getInTouchText: string;
   tag?: 'ourBusinesses'; // optional, if you include it in the GROQ projection
 }
 
@@ -22,6 +23,7 @@ export interface BusinessDetail {
   description?: string;
   coverImageUrl?: string;
   bannerImageUrl?: string;
+  businessTitle?: string;
   projectsTitle?: string;
   projectsDescription?: string;
   projectPoints?: string[];

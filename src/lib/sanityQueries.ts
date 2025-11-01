@@ -11,7 +11,8 @@ export async function getBusiness() {
   _type,
   linkTitle,
   "coverImageUrl": coverImage.asset->url,
-  ctaUrl
+  getInTouchText,
+  "slug": slug.current
 }
 `,
     tags: ["ourBusinesses"],
@@ -51,6 +52,7 @@ export async function getBusinessDetail(slug: string) {
         description,
         "coverImageUrl": coverImage.asset->url,
         "bannerImageUrl": bannerImage.asset->url,
+        "businessTitle": BusinessHeading,
         projectsTitle,
         projectsDescription,
         projectPoints,
