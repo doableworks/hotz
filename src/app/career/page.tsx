@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import TransitionVertical from "@/animations/TransitionVertical";
 import ParallaxScroll from "@/animations/ParallaxWrapper";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Page = () => {
   const values = [
@@ -54,7 +56,7 @@ const Page = () => {
 
   const categories = ["All", "Finance", "Operations", "Account"];
   const [selected, setSelected] = useState("All");
-
+  const router = useRouter();
   return (
     <>
       <ParallaxScroll>
@@ -187,9 +189,9 @@ const Page = () => {
                 <h1 className="text-[#727272] text-sm w-1/4 flex justify-center">
                   {job.type}
                 </h1>
-                <h1 className="flex gap-3 justify-end items-center text-[#DB0A0A] cursor-pointer hover:underline w-1/4">
+                <Link href={`/career/indi`} className="flex gap-3 justify-end items-center text-[#DB0A0A] cursor-pointer hover:underline w-1/4">
                   View Details <ArrowRight size={16} />
-                </h1>
+                </Link>
               </div>
 
               <div className="flex flex-col md:hidden my-4 pb-3 border-b border-[#727272]/10">
@@ -198,9 +200,9 @@ const Page = () => {
                   <span>{job.department}</span>
                   <span>{job.type}</span>
                 </div>
-                <div className="text-[#DB0A0A] text-sm flex items-center gap-2 cursor-pointer hover:underline">
+                <Link href={`/career/indi`} className="text-[#DB0A0A] text-sm flex items-center gap-2 cursor-pointer hover:underline">
                   View Details <ArrowRight size={14} />
-                </div>
+                </Link>
               </div>
 
               <div className="hidden md:block w-full h-px bg-[#727272]/10"></div>

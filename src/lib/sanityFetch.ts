@@ -1,5 +1,4 @@
 import 'server-only'
-
 import type {QueryParams} from '@sanity/client'
 import {createClient} from 'next-sanity'
 
@@ -11,7 +10,7 @@ const client = createClient({
   projectId,
   dataset,
   apiVersion, // https://www.sanity.io/docs/api-versioning
-  useCdn: false, // Important for revalidation to work properly
+  useCdn: true, // Important for revalidation to work properly
 })
 
 const DEFAULT_PARAMS = {} as QueryParams
@@ -30,7 +29,6 @@ export async function sanityFetch<QueryResponse>({
   const allTags = ['content', ...tags]
   
   return client.fetch<QueryResponse>(query, params, {
-    cache: 'force-cache',
     next: {
       tags: allTags, // for tag-based revalidation
     },

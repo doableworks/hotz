@@ -3,6 +3,7 @@ import React from "react";
 import { Eye } from "lucide-react";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
+import Link from "next/link";
 const Updates = () => {
   const Updates = [
     {
@@ -77,9 +78,9 @@ const Updates = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
+        <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm" >
           <TransitionHorizontal>
-            EXPLORE ALL UPDATES
+            <Link href="/newsroom">EXPLORE ALL UPDATES</Link>
           </TransitionHorizontal>
         </button>
       </div>

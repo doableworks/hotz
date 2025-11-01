@@ -2,6 +2,7 @@ import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Eye } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 function page() {
@@ -57,7 +58,7 @@ function page() {
       <div className="px-5 lg:px-48 w-full flex flex-col gap-16">
         {Updates.map((item) => (
           <TransitionVertical key={item.id}>
-            <div>
+            <Link href={"newsroom/indi"}>
               <div className="flex lg:flex-row flex-col-reverse w-full justify-between items-start">
                 <div className="w-full lg:w-3/4 flex flex-col gap-2">
                   <h1 className="text-[#727272] mt-7 lg:mt-0">{item.date}</h1>
@@ -82,7 +83,7 @@ function page() {
               </div>
 
               <div className="w-full h-px bg-[#E6E6E6] mt-7"></div>
-            </div>
+            </Link>
           </TransitionVertical>
         ))}
       </div>

@@ -339,12 +339,16 @@ const CurvedTimeline: React.FC = () => {
                         }),
                       }}
                     >
+                      <TransitionVertical>
                       <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
                         {event.title}
                       </h3>
+                      </TransitionVertical>
+                      <TransitionVertical>
                       <p className="text-xs text-gray-600 leading-relaxed">
                         {event.description}
                       </p>
+                      </TransitionVertical>
                     </div>
                   </div>
                 );
