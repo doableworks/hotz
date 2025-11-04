@@ -1,8 +1,8 @@
 // Example usage of sanityFetch with tag-based revalidation
 import { sanityFetch } from "@/lib/sanityFetch";
 import { OurBusiness, TeamLeader, BusinessDetail } from "./types/business";
-import { CareerListItem,CareerDetail } from "./types/careers";
-import { BlogListItem,BlogDetail } from "./types/blogs";
+import { CareerListItem, CareerDetail } from "./types/careers";
+import { BlogListItem, BlogDetail } from "./types/blogs";
 
 export async function getBusiness() {
   return await sanityFetch<OurBusiness[]>({
@@ -58,6 +58,16 @@ export async function getBusinessDetail(slug: string) {
         projectPoints,
         "businessImages": businessImages[].asset->url,
         getInTouchText,
+        locationUrl,
+          address[]{
+    address,
+    url
+  },
+        partners[]->{
+          _id,
+          title,
+          "imageUrl":image.asset->url
+        },
         ctaUrl,
         "seo": {
           metaTitle,
@@ -144,7 +154,3 @@ export async function getBlogDetail(slug: string) {
     tags: ["post"],
   });
 }
-
-
-
-

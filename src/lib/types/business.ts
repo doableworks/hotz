@@ -16,6 +16,12 @@ export interface TeamLeader {
   tag?: 'teamLeaders'; // optional, if you include it in the GROQ projection
 }
 
+interface Partner {
+  _id: string;
+  title: string;
+  imageUrl: string; // resolved from image.asset->url in GROQ
+}
+
 export interface BusinessDetail {
   _id: string;
   _type: 'ourBusinesses';
@@ -29,6 +35,9 @@ export interface BusinessDetail {
   projectPoints?: string[];
   businessImages?: string[];
   getInTouchText?: string;
+  locationUrl?: string;
+  partners?: Partner[];
+  address?: { address: string; url: string }[];
   ctaUrl?: string;
   seo?: {
     metaTitle?: string;

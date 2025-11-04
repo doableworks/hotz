@@ -71,6 +71,14 @@ const partners = [
     id: 9,
     image: "/images/partnerLogo.png",
   },
+  {
+    id: 10,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 11,
+    image: "/images/partnerLogo.png",
+  },
 ];
 
 async function page({ params }: { params: Promise<{ slug: string }> }) {
@@ -78,7 +86,6 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
   const business: BusinessDetail = await getBusinessDetail(slug);
-
   return (
     <>
       <Navbar />
@@ -183,59 +190,75 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
         </div>
       </div>
 
-      <div className="px-5 lg:px-10 mt-7 lg:mt-16">
-        <h1 className="text-2xl lg:text-3xl text-center font-medium">
-          Find us at our premises
-        </h1>
+      {/* Only show the location section if either address or locationUrl is available */}
+      {((business.address && business.address.length > 0) || business.locationUrl) && (
+        <div className="px-5 lg:px-10 mt-7 lg:mt-16">
+          <h1 className="text-2xl lg:text-3xl text-center font-medium">
+            Find us at our premises
+          </h1>
 
-        <div className="flex lg:flex-row flex-col justify-between mt-5 lg:mt-12">
-          <div className="lg:w-1/2 w-full flex gap-5 items-start mb-7">
-            <MapPin
-              strokeWidth={1}
-              color="#727272"
-              size={20}
-              className="mt-1"
-            />
-            <div>
-              <h1 className="text-sm mb-1">Address</h1>
-              <h1>703 Chiranjiv Tower, 43 Nehru Place New Delhi 110019, IN</h1>
-              <h1 className="text-[#DB0A0A] flex gap-2 mt-2 items-center">
-                Get directions <ArrowRight strokeWidth={1} size={16} />
-              </h1>
-            </div>
-          </div>
+          <div className={`flex lg:flex-row flex-col mt-5 lg:mt-12 ${
+            (business.address && business.address.length > 0) && business.locationUrl 
+              ? 'justify-center' 
+              : 'justify-center'
+          }`}>
+            {business.address && business.address.length > 0 && (
+              <div className="lg:w-1/2 w-full flex gap-5 items-start mb-7">
+                <MapPin
+                  strokeWidth={1}
+                  color="#727272"
+                  size={20}
+                  className="mt-1"
+                />
 
-          <div className="lg:w-1/2 w-full">
-            <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.6669218211805!2d77.2500906!3d28.549729599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38c302afd73%3A0x429ab85324f6cf1b!2s43%20Chiranjiv%20Tower!5e0!3m2!1sen!2sin!4v1761926454808!5m2!1sen!2sin"
-              width="100%"
-              height="400"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+                <div>
+                  <h1 className="text-sm mb-1">Address</h1>
+                  <h1>{business.address?.[0]?.address}</h1>
+                  <h1 className="text-[#DB0A0A] flex gap-2 mt-2 items-center">
+                    Get directions <ArrowRight strokeWidth={1} size={16} />
+                  </h1>
+                </div>
+              </div>
+            )}
+
+            {business.locationUrl && (
+              <div className="lg:w-1/2 w-full">
+                <iframe
+                  title="Google Map"
+                  src={business.locationUrl}
+                  width="100%"
+                  height="400"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            )}
           </div>
         </div>
-      </div>
+      )}
 
-      <h1 className="text-2xl mt-12 lg:text-3xl text-center font-medium">
-        Projects
-      </h1>
+      {business.partners && business.partners.length > 0 && (
+        <h1 className="text-2xl mt-12 lg:text-3xl text-center font-medium">
+          Projects
+        </h1>
+      )}
       <div className="px-5 lg:px-10  overflow-x-auto">
         <div className="grid grid-rows-2 auto-cols-[250px] grid-flow-col gap-7 mt-5">
-          {partners.map((partner) => (
-            <div
-              key={partner.id}
-              className="flex items-center justify-center bg-[#F9F9F9] h-32 w-48 rounded-md flex-shrink-0"
-            >
-              <img
-                src={partner.image}
-                alt={`Partner ${partner.id}`}
-                className="h-12 object-contain"
-              />
-            </div>
-          ))}
+          {business.partners &&
+            business.partners.length > 0 &&
+            business.partners.map((partner) => (
+              <div
+                key={partner._id}
+                className="flex items-center justify-center bg-[#F9F9F9] h-32 w-48 rounded-md flex-shrink-0"
+              >
+                <img
+                  src={partner.imageUrl}
+                  alt={`Partner ${partner.title}`}
+                  className="h-12 object-contain"
+                />
+              </div>
+            ))}
         </div>
       </div>
 
@@ -256,8 +279,11 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
           </div>
           <div>
             <h1 className="text-xl lg:text-3xl font-medium text-white">
-              Partner with us in shaping <br className="hidden md:block"></br>
-              industries and opportunities
+              {/* Partner with us in shaping <br className="hidden md:block"></br>
+              industries and opportunities */}
+              {business.getInTouchText
+                ? business.getInTouchText
+                : "Get in Touch"}
             </h1>
 
             <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm">
