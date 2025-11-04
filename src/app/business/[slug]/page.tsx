@@ -105,7 +105,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
       <Navbar />
       <div className="w-full h-80">
         <img
-          src={business.coverImageUrl}
+          src={business.bannerImageUrl}
           className="w-full h-80 object-cover"
         />
       </div>
