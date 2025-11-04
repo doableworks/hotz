@@ -34,14 +34,16 @@ const CurvedTimeline: React.FC = () => {
     },
     {
       year: 2014,
-      title: "Playful Minds Preschool founded to promote holistic early learning",
+      title:
+        "Playful Minds Preschool founded to promote holistic early learning",
       side: "left",
       x: 620,
       y: 270,
     },
     {
       year: "present",
-      title: " Continued partnership with schools, art foundations, and welfare organizations to expand access to education and culture",
+      title:
+        " Continued partnership with schools, art foundations, and welfare organizations to expand access to education and culture",
       side: "left",
       x: 522,
       y: 11,
@@ -175,7 +177,13 @@ const CurvedTimeline: React.FC = () => {
                           top: "30px",
                           width: "250px",
                         }),
-                        ...(![1953, "1970s-1980s", 2014, "present", 1921].includes(event.year) && {
+                        ...(![
+                          1953,
+                          "1970s-1980s",
+                          2014,
+                          "present",
+                          1921,
+                        ].includes(event.year) && {
                           [isLeft ? "right" : "left"]: "20px",
                           top: "-20px",
                           width: "230px",
@@ -183,12 +191,9 @@ const CurvedTimeline: React.FC = () => {
                       }}
                     >
                       <TransitionVertical>
-                      <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
-                        {event.title}
-                      </h3>
-                                      <p className="text-xs text-gray-600 leading-relaxed">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquid voluptates error tempore perspiciatis impedit. Animi maxime sed vero qui.
-                                        </p>
+                        <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
+                          {event.title}
+                        </h3>
                       </TransitionVertical>
                     </div>
                   </div>
@@ -218,7 +223,9 @@ const CurvedTimeline: React.FC = () => {
                   {event.title}
                 </h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil expedita consequuntur totam est quibusdam quaerat inventore hic porro reprehenderit iste!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  expedita consequuntur totam est quibusdam quaerat inventore
+                  hic porro reprehenderit iste!
                 </p>
               </div>
             </div>

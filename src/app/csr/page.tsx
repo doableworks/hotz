@@ -150,38 +150,6 @@ async function page() {
         </div>
       </TransitionVertical>
 
-      <div className="mt-24 flex lg:flex-row flex-col justify-between items-center px-10">
-        <div className="w-full lg:w-2/5 flex flex-col justify-start items-start">
-          <img src="/images/icon.png" alt="About Us" className="w-24" />
-          <TransitionVertical>
-            <h1 className="text-2xl font-semibold mt-5">
-              At Hotz Group, our foundation has always been trust. Over the
-              decades, we have grown not just in Business, but in
-              relationships—building legacies that stand the test of time.
-            </h1>
-          </TransitionVertical>
-
-          <TransitionVertical>
-            <h1 className=" text-[#727272] mt-5">- Chairman</h1>
-          </TransitionVertical>
-        </div>
-
-        <div className="relative w-full lg:w-1/2 flex lg:justify-center lg:items-center py-10">
-          <TransitionVertical>
-            <img
-              src="/images/aboutvector.png"
-              alt="Decorative vector"
-              className="absolute top-0 right-0 w-3/4 lg:w-1/2 z-10"
-            />
-            <img
-              src="/images/chairman.png"
-              alt="Chairman"
-              className="relative lg:ml-24 w-full lg:w-1/2 z-20"
-            />
-          </TransitionVertical>
-        </div>
-      </div>
-
       <Stats statsData={stats} />
 
       <CurvedTimeline />

@@ -2,7 +2,7 @@ import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { Check } from "lucide-react";
+import { ArrowRight, Check, MapPin } from "lucide-react";
 import React from "react";
 import { getBusinessDetail } from "@/lib/sanityQueries";
 import { BusinessDetail } from "@/lib/types/business";
@@ -34,71 +34,50 @@ const imageGridConfig = [
   },
 ];
 
+const partners = [
+  {
+    id: 1,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 2,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 3,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 4,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 5,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 6,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 7,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 8,
+    image: "/images/partnerLogo.png",
+  },
+  {
+    id: 9,
+    image: "/images/partnerLogo.png",
+  },
+];
+
 async function page({ params }: { params: Promise<{ slug: string }> }) {
   // 2. Awaited params to get the slug
   const { slug } = await params;
 
   const business: BusinessDetail = await getBusinessDetail(slug);
-
-  const highlights = [
-    {
-      id: 1,
-      text: "Ample open space & dedicated truck/vehicle parking",
-    },
-    {
-      id: 2,
-      text: "24x7 power backup and water supply",
-    },
-    {
-      id: 3,
-      text: "Strategic location with highway connectivity",
-    },
-    {
-      id: 4,
-      text: "Modern security and surveillance systems",
-    },
-    {
-      id: 5,
-      text: "Customizable infrastructure as per client needs",
-    },
-    {
-      id: 6,
-      text: "Eco-friendly and sustainable construction practices",
-    },
-  ];
-
-  const businessImages = [
-    {
-      id: 0,
-      image: "/images/financial.png",
-      position: "col-start-1 row-start-1",
-    },
-    {
-      id: 1,
-      image: "/images/realestate.png",
-      position: "col-start-2 row-start-1 row-span-2",
-    },
-    {
-      id: 2,
-      image: "/images/hospitality.png",
-      position: "col-start-3 row-start-1",
-    },
-    {
-      id: 3,
-      image: "/images/art.png",
-      position: "col-start-1 row-start-2 row-span-2",
-    },
-    {
-      id: 4,
-      image: "/images/education.png",
-      position: "col-start-2 row-start-3",
-    },
-    {
-      id: 5,
-      image: "/images/ventures.png",
-      position: "col-start-3 row-start-2 row-span-2",
-    },
-  ];
 
   return (
     <>
@@ -167,38 +146,95 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
         </div>
       </div>
       {/* Desktop Image Grid */}
-{business.businessImages && business.businessImages.length > 0 && (
-      <TransitionVertical>
-      <div className="hidden px-5 lg:px-10 lg:grid grid-cols-3 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-5 h-[600px]">
-        {imageGridConfig.map((item, index) => (
-          
-            <div
-              key={item.id}
-              className={`${item.position} bg-gray-300 overflow-hidden`}
-            >
+      {business.businessImages && business.businessImages.length > 0 && (
+        <TransitionVertical>
+          <div className="hidden px-5 lg:px-10 lg:grid grid-cols-3 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-5 h-[600px]">
+            {imageGridConfig.map((item, index) => (
+              <div
+                key={item.id}
+                className={`${item.position} bg-gray-300 overflow-hidden`}
+              >
                 <img
                   src={business.businessImages?.[index] || ""}
                   alt={`business-${item.id}`}
                   className="w-full h-full object-cover"
                 />
+              </div>
+            ))}
           </div>
-          
-        ))}
-      </div>
-      </TransitionVertical>)}
+        </TransitionVertical>
+      )}
 
       <div className="lg:hidden flex flex-col gap-3 w-full px-5">
         <div>
-          {business.businessImages && business.businessImages.length > 0 && business.businessImages.map((item, index) => (
-            <TransitionVertical key={index}>
-              <div key={index} className={"overflow-hidden"}>
-                <img
-                  src={item}
-                  alt={`business-${index}`}
-                  className="w-full h-64 object-cover my-2"
-                />
-              </div>
-            </TransitionVertical>
+          {business.businessImages &&
+            business.businessImages.length > 0 &&
+            business.businessImages.map((item, index) => (
+              <TransitionVertical key={index}>
+                <div key={index} className={"overflow-hidden"}>
+                  <img
+                    src={item}
+                    alt={`business-${index}`}
+                    className="w-full h-64 object-cover my-2"
+                  />
+                </div>
+              </TransitionVertical>
+            ))}
+        </div>
+      </div>
+
+      <div className="px-5 lg:px-10 mt-7 lg:mt-16">
+        <h1 className="text-2xl lg:text-3xl text-center font-medium">
+          Find us at our premises
+        </h1>
+
+        <div className="flex lg:flex-row flex-col justify-between mt-5 lg:mt-12">
+          <div className="lg:w-1/2 w-full flex gap-5 items-start mb-7">
+            <MapPin
+              strokeWidth={1}
+              color="#727272"
+              size={20}
+              className="mt-1"
+            />
+            <div>
+              <h1 className="text-sm mb-1">Address</h1>
+              <h1>703 Chiranjiv Tower, 43 Nehru Place New Delhi 110019, IN</h1>
+              <h1 className="text-[#DB0A0A] flex gap-2 mt-2 items-center">
+                Get directions <ArrowRight strokeWidth={1} size={16} />
+              </h1>
+            </div>
+          </div>
+
+          <div className="lg:w-1/2 w-full">
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.6669218211805!2d77.2500906!3d28.549729599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38c302afd73%3A0x429ab85324f6cf1b!2s43%20Chiranjiv%20Tower!5e0!3m2!1sen!2sin!4v1761926454808!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <h1 className="text-2xl mt-12 lg:text-3xl text-center font-medium">
+        Projects
+      </h1>
+      <div className="px-5 lg:px-10  overflow-x-auto">
+        <div className="grid grid-rows-2 auto-cols-[250px] grid-flow-col gap-7 mt-5">
+          {partners.map((partner) => (
+            <div
+              key={partner.id}
+              className="flex items-center justify-center bg-[#F9F9F9] h-32 w-48 rounded-md flex-shrink-0"
+            >
+              <img
+                src={partner.image}
+                alt={`Partner ${partner.id}`}
+                className="h-12 object-contain"
+              />
+            </div>
           ))}
         </div>
       </div>
