@@ -1,4 +1,5 @@
 import TransitionVertical from "@/animations/TransitionVertical";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -19,9 +20,11 @@ const Hero = () => {
             education to real estate
           </h1>
 
-          <button className="mt-6 px-8 py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-bold">
-            EXPLORE OUR BUSINESS
-          </button>
+          <Link href="/business">
+            <button className="mt-6 px-8 py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-bold cursor-pointer">
+              EXPLORE OUR BUSINESS
+            </button>
+          </Link>
         </TransitionVertical>
       </div>
     </div>

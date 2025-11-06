@@ -57,7 +57,7 @@ async function page() {
     <>
       <div className="h-full flex flex-col">
         <Navbar />
-        <VideoSection cloudfrontUrl="d299alzxgdp6.cloudfront.net" />
+        <VideoSection />
       </div>
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-24 relative z-30 bg-white">

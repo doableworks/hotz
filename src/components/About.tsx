@@ -1,6 +1,7 @@
 import ParallaxScroll from "@/animations/ParallaxWrapper";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
+import Link from "next/link";
 import React from "react";
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
         />
         <div>
           <TransitionVertical>
-            <h1 className="text-white/70 mb-10 text-xl">
+            <h1 className="text-white mb-10 text-2xl font-semibold">
               Setting New Standards Everyday
             </h1>
             <h1 className="text-white text-2xl lg:text-3xl font-light w-4/5">
@@ -29,10 +30,11 @@ const About = () => {
               India and beyond.
             </h1>
           </TransitionVertical>
-
-          <button className="mt-12 px-8 py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm">
-            <TransitionHorizontal>DISCOVER OUR STORY</TransitionHorizontal>
-          </button>
+          <Link href="/about-us">
+            <button className="mt-12 px-8 py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm cursor-pointer">
+              <TransitionHorizontal>DISCOVER OUR STORY</TransitionHorizontal>
+            </button>
+          </Link>
         </div>
       </div>
     </ParallaxScroll>
