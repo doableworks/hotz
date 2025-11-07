@@ -88,7 +88,7 @@ async function page() {
             <h1 className="text-2xl font-medium mb-5">Our Businesses</h1>
           </TransitionVertical>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {businesses.map((card) => (
               <TransitionHorizontal key={card._id}>
                 <div className="w-full">

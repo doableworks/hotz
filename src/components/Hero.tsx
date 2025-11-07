@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="text-center z-30">
         <TransitionVertical>
           <h1 className=" font-bold text-4xl lg:text-5xl">
-            A WORLD OF<br className="md:hidden"></br> BUSINESS.
+            SETTING NEW STANDARDS<br className="md:hidden"></br> EVERYDAY.
           </h1>
           <h1 className="text-4xl lg:text-5xl font-bold mt-2">
             ONE TRUSTED<br className="md:hidden"></br> NAME.
