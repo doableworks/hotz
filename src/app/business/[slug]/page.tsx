@@ -2,10 +2,11 @@ import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { ArrowRight, Check, MapPin } from "lucide-react";
+import { ArrowRight, Check, MapPin,ExternalLink } from "lucide-react";
 import React from "react";
 import { getBusinessDetail } from "@/lib/sanityQueries";
 import { BusinessDetail } from "@/lib/types/business";
+import Link from "next/link";
 
 const imageGridConfig = [
   {
@@ -31,53 +32,6 @@ const imageGridConfig = [
   {
     id: 5,
     position: "col-start-3 row-start-2 row-span-2",
-  },
-];
-
-const partners = [
-  {
-    id: 1,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 2,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 3,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 4,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 5,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 6,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 7,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 8,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 9,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 10,
-    image: "/images/partnerLogo.png",
-  },
-  {
-    id: 11,
-    image: "/images/partnerLogo.png",
   },
 ];
 
@@ -191,35 +145,56 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
       </div>
 
       {/* Only show the location section if either address or locationUrl is available */}
-      {((business.address && business.address.length > 0) || business.locationUrl) && (
+      {((business.address && business.address.length > 0) ||
+        business.locationUrl) && (
         <div className="px-5 lg:px-10 mt-7 lg:mt-16">
           <h1 className="text-2xl lg:text-3xl text-center font-medium">
             Find us at our premises
           </h1>
 
-          <div className={`flex lg:flex-row flex-col mt-5 lg:mt-12 ${
-            (business.address && business.address.length > 0) && business.locationUrl 
-              ? 'justify-center' 
-              : 'justify-center'
-          }`}>
-            {business.address && business.address.length > 0 && (
-              <div className="lg:w-1/2 w-full flex gap-5 items-start mb-7">
-                <MapPin
-                  strokeWidth={1}
-                  color="#727272"
-                  size={20}
-                  className="mt-1"
-                />
+          <div
+            className={`flex lg:flex-row flex-col mt-5 lg:mt-12 ${
+              business.address &&
+              business.address.length > 0 &&
+              business.locationUrl
+                ? "justify-center"
+                : "justify-center"
+            }`}
+          >
+            <div className="w-full flex flex-col lg:w-1/2 gap-5  mb-7">
+              {business.address && business.address.length > 0 && (
+                <div className="w-full flex gap-5 items-start">
+                  <MapPin
+                    strokeWidth={1}
+                    color="#727272"
+                    size={20}
+                    className="mt-1"
+                  />
 
-                <div>
-                  <h1 className="text-sm mb-1">Address</h1>
-                  <h1>{business.address?.[0]?.address}</h1>
-                  <h1 className="text-[#DB0A0A] flex gap-2 mt-2 items-center">
-                    Get directions <ArrowRight strokeWidth={1} size={16} />
-                  </h1>
+                  <div className="flex flex-col">
+                    <h1 className="text-sm mb-1">Address</h1>
+                    <h1>{business.address?.[0]?.address}</h1>
+                    <Link
+                      className="text-[#DB0A0A] flex gap-2 mt-2 items-center"
+                      href={business.address[0]?.url}
+                    >
+                      Get directions <ArrowRight strokeWidth={1} size={16} />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+              {business.ctaUrl && (
+                <div className="w-full flex gap-5 items-center">
+                  <ExternalLink
+                    strokeWidth={1}
+                    color="#727272"
+                    size={20}
+                    // className="mt-1"
+                  />
+                    <Link href={business.ctaUrl} className="underline">Link to Website</Link>
+                </div>
+              )}
+            </div>
 
             {business.locationUrl && (
               <div className="lg:w-1/2 w-full">
@@ -277,7 +252,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
           <div className="absolute top-0 right-0">
             <img src="/images/vectorbusiness2.png" alt="Right Vector" />
           </div>
-          <div>
+          <div className="flex flex-col items-center">
             <h1 className="text-xl lg:text-3xl font-medium text-white">
               {/* Partner with us in shaping <br className="hidden md:block"></br>
               industries and opportunities */}
@@ -285,10 +260,11 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
                 ? business.getInTouchText
                 : "Get in Touch"}
             </h1>
-
-            <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm">
-              <TransitionHorizontal>GET IN TOUCH</TransitionHorizontal>
-            </button>
+            
+              <Link className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex w-fit" href={"/contact-us"}>
+               <TransitionHorizontal> GET IN TOUCH </TransitionHorizontal>
+              </Link>
+            
           </div>
         </div>
       </div>
