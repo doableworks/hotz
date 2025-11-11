@@ -9,6 +9,7 @@ import CurvedTimeline from "@/components/pagespecific/csr/Timeline2";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
 import { getStats } from "@/lib/sanityQueries";
+import Image from "next/image";
 import React from "react";
 
 async function page() {
@@ -57,7 +58,14 @@ async function page() {
     <>
       <div className="h-full flex flex-col">
         <Navbar />
-        <VideoSection />
+        <div className="relative w-full h-[65vh] z-40">
+          <Image
+            src="/images/csrBanner.jpg"
+            alt="About Us"
+            className="object-cover w-full h-full"
+            fill
+          />
+        </div>
       </div>
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-24 relative z-30 bg-white">
@@ -78,7 +86,7 @@ async function page() {
         <div className="flex lg:flex-row flex-col my-24 lg:h-96 relative z-30 bg-white">
           <div className="lg:w-1/2 w-full">
             <img
-              src="/images/about1.png"
+              src="/images/csrOverview.jpg"
               alt="About Us"
               className="w-full object-cover h-96"
             />
