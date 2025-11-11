@@ -219,11 +219,11 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
         </div>
       )}
 
-      {business.partners && business.partners.length > 0 && (
+      {/* {business.partners && business.partners.length > 0 && (
         <h1 className="text-2xl mt-12 lg:text-3xl text-center font-medium">
           Projects
         </h1>
-      )}
+      )} */}
       <div className="px-5 lg:px-10  overflow-x-auto">
         <div className="grid grid-rows-2 auto-cols-[250px] grid-flow-col gap-7 mt-5">
           {business.partners &&
