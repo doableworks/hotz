@@ -77,11 +77,11 @@ const Page = () => {
               </h1>
             </TransitionVertical>
 
-            <TransitionVertical>
+            {/* <TransitionVertical>
               <h1 className="flex text-[#DB0A0A] justify-center items-center gap-4 text-center lg:w-xl mt-8 text-lg">
                 View open positions <ArrowRight />
               </h1>
-            </TransitionVertical>
+            </TransitionVertical> */}
           </div>
         </div>
       </ParallaxScroll>
@@ -189,7 +189,10 @@ const Page = () => {
                 <h1 className="text-[#727272] text-sm w-1/4 flex justify-center">
                   {job.type}
                 </h1>
-                <Link href={`/career/indi`} className="flex gap-3 justify-end items-center text-[#DB0A0A] cursor-pointer hover:underline w-1/4">
+                <Link
+                  href={`/career/indi`}
+                  className="flex gap-3 justify-end items-center text-[#DB0A0A] cursor-pointer hover:underline w-1/4"
+                >
                   View Details <ArrowRight size={16} />
                 </Link>
               </div>
@@ -200,7 +203,10 @@ const Page = () => {
                   <span>{job.department}</span>
                   <span>{job.type}</span>
                 </div>
-                <Link href={`/career/indi`} className="text-[#DB0A0A] text-sm flex items-center gap-2 cursor-pointer hover:underline">
+                <Link
+                  href={`/career/indi`}
+                  className="text-[#DB0A0A] text-sm flex items-center gap-2 cursor-pointer hover:underline"
+                >
                   View Details <ArrowRight size={14} />
                 </Link>
               </div>

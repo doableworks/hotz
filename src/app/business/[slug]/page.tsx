@@ -2,7 +2,7 @@ import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { ArrowRight, Check, MapPin,ExternalLink } from "lucide-react";
+import { ArrowRight, Check, MapPin, ExternalLink } from "lucide-react";
 import React from "react";
 import { getBusinessDetail } from "@/lib/sanityQueries";
 import { BusinessDetail } from "@/lib/types/business";
@@ -173,13 +173,17 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
 
                   <div className="flex flex-col">
                     <h1 className="text-sm mb-1">Address</h1>
-                    <h1>{business.address?.[0]?.address}</h1>
-                    <Link
-                      className="text-[#DB0A0A] flex gap-2 mt-2 items-center"
-                      href={business.address[0]?.url}
-                    >
-                      Get directions <ArrowRight strokeWidth={1} size={16} />
-                    </Link>
+                    <h1>
+                      {business.address?.[0]?.address || "No address available"}
+                    </h1>
+                    {/* {business.address?.[0]?.url && (
+                      <Link
+                        className="text-[#DB0A0A] flex gap-2 mt-2 items-center"
+                        href={business.address[0].url}
+                      >
+                        View on Map
+                      </Link>
+                    )} */}
                   </div>
                 </div>
               )}
@@ -191,7 +195,9 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
                     size={20}
                     // className="mt-1"
                   />
-                    <Link href={business.ctaUrl} className="underline">Link to Website</Link>
+                  <Link href={business.ctaUrl} className="underline">
+                    Link to Website
+                  </Link>
                 </div>
               )}
             </div>
@@ -260,11 +266,13 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
                 ? business.getInTouchText
                 : "Get in Touch"}
             </h1>
-            
-              <Link className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex w-fit" href={"/contact-us"}>
-               <TransitionHorizontal> GET IN TOUCH </TransitionHorizontal>
-              </Link>
-            
+
+            <Link
+              className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex w-fit"
+              href={"/contact-us"}
+            >
+              <TransitionHorizontal> GET IN TOUCH </TransitionHorizontal>
+            </Link>
           </div>
         </div>
       </div>

@@ -22,9 +22,6 @@ const page = () => {
             />
             <div>
               <h1>703 Chiranjiv Tower, 43 Nehru Place New Delhi 110019, IN</h1>
-              <h1 className="text-[#DB0A0A] flex gap-2 mt-2 items-center">
-                Get directions <ArrowRight strokeWidth={1} size={16} />
-              </h1>
             </div>
           </div>
           <div className=" flex gap-5 items-start mt-5">
@@ -58,9 +55,6 @@ const page = () => {
               <h1>
                 11th Floor, Eros Corporate Tower, Nehru Place, New Delhi 110019,
                 IN
-              </h1>
-              <h1 className="text-[#DB0A0A] flex gap-2 mt-2 items-center">
-                Get directions <ArrowRight strokeWidth={1} size={16} />
               </h1>
             </div>
           </div>

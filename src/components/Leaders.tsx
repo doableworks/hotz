@@ -49,11 +49,11 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
         </div>
       </TransitionVertical>
 
-      <div className="flex justify-center mt-10">
+      {/* <div className="flex justify-center mt-10">
         <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
           <TransitionHorizontal>MEET OUR LEADERS</TransitionHorizontal>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
