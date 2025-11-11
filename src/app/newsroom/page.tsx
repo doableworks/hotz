@@ -51,7 +51,7 @@ function page() {
 
       <TransitionVertical>
         <div className="px-5 text-center text-xl font-semibold mt-16 mb-7">
-          What&apos;s New at Hotz Group
+          Hotz Group News
         </div>
       </TransitionVertical>
 
