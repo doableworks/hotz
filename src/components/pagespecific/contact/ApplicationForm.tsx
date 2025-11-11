@@ -10,7 +10,7 @@ export default function ApplicationForm({
   onClose: () => void;
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const appscriptUrl = process.env.APPSCRIPT_URL || "";
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -46,13 +46,10 @@ export default function ApplicationForm({
       data.append("resume", fileData);
       data.append("fileName", file?.name || "");
 
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxRsf_c2InM3onwXbkIqfuw1bkNZbchtnf2Zh_Q_nTjNQX-Phfz6JtDcYxXqABVmyf9ow/exec",
-        {
-          method: "POST",
-          body: data,
-        }
-      );
+      const response = await fetch(appscriptUrl, {
+        method: "POST",
+        body: data,
+      });
 
       const result = await response.json();
 
