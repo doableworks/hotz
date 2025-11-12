@@ -119,31 +119,31 @@ export async function getCareerDetail(slug: string) {
 export async function getBlogList(offset: number = 0) {
   return await sanityFetch<BlogListItem[]>({
     query: `
-      *[_type == "post"] | order(publishedAt desc)[$offset...$offset + 10]{
+      *[_type == "blog"] | order(date desc)[$offset...$offset + 10]{
         _id,
         title,
-        publishedAt,
+        date,
         intro,
+        "imageUrl": coverImage.asset->url,
         "slug": slug.current
       }
     `,
     params: { offset },
-    tags: ["post"],
+    tags: ["blog"],
   });
 }
 
 export async function getBlogDetail(slug: string) {
   return await sanityFetch<BlogDetail>({
     query: `
-      *[_type == "post" && slug.current == $slug][0]{
+      *[_type == "blog" && slug.current == $slug][0]{
         _id,
         title,
-        publishedAt,
+        date,
         intro,
-        body,
+        content,
         "slug": slug.current,
-        "coverImageUrl": mainImage.asset->url,
-        "seo": {
+        "seo": seo{
           metaTitle,
           metaDescription,
           keywords
@@ -151,6 +151,6 @@ export async function getBlogDetail(slug: string) {
       }
     `,
     params: { slug },
-    tags: ["post"],
+    tags: ["blog"],
   });
 }

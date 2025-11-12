@@ -1,46 +1,21 @@
 import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { getBlogList } from "@/lib/sanityQueries";
 import { Eye } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-function page() {
-  const Updates = [
-    {
-      id: 1,
-      title: "Build Better Todays",
-      date: "10 July, 2024",
-      image: "/images/update1.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iusto, cum doloribus perspiciatis quis cumque repudiandae, quae consequatur at modi incidunt aspernatur nostrum. Distinctio, praesentium accusamus quia, velit consequatur facere voluptas asperiores reiciendis cupiditate adipisci iusto, dolorum dolore neque recusandae.",
-    },
-    {
-      id: 2,
-      title: "Why is Holtz the largest greenfield Indian investor in the US?",
-      date: "24 October, 2024",
-      image: "/images/update2.png",
-      description:
-        "Holtz Group continues to expand its international presence by being a leading investor in greenfield projects across the United States, emphasizing sustainability and innovation.",
-    },
-    {
-      id: 3,
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, do...",
-      date: "11 January, 2024",
-      image: "/images/update3.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur perspiciatis voluptates ad doloremque qui mollitia molestiae quidem.",
-    },
-    {
-      id: 4,
-      title: "Excepteur sint occaecat cupidatat non proident.",
-      date: "09 February, 2024",
-      image: "/images/update4.png",
-      description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-  ];
+const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+};
 
+ async function page() {
+ const Updates = await getBlogList();
   return (
     <>
       <Navbar />
@@ -57,15 +32,15 @@ function page() {
 
       <div className="px-5 lg:px-48 w-full flex flex-col gap-16">
         {Updates.map((item) => (
-          <TransitionVertical key={item.id}>
-            <Link href={"newsroom/indi"}>
+          <TransitionVertical key={item._id}>
+            <Link href={`/newsroom/${item.slug}`}>
               <div className="flex lg:flex-row flex-col-reverse w-full justify-between items-start">
                 <div className="w-full lg:w-3/4 flex flex-col gap-2">
-                  <h1 className="text-[#727272] mt-7 lg:mt-0">{item.date}</h1>
+                  <h1 className="text-[#727272] mt-7 lg:mt-0">{formatDate(item.date)}</h1>
 
                   <h1 className="text-2xl">{item.title}</h1>
 
-                  <p className="text-[#727272]">{item.description}</p>
+                  <p className="text-[#727272]">{item.intro}</p>
 
                   <div className="flex items-center gap-3">
                     <Eye size={12} />
@@ -73,9 +48,9 @@ function page() {
                   </div>
                 </div>
 
-                <div className="w-full lg:w-1/4">
+                <div className="w-full lg:w-1/4 md:ml-4">
                   <img
-                    src={item.image}
+                    src={item.imageUrl}
                     alt={item.title}
                     className="w-full h-48 object-cover"
                   />

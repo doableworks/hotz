@@ -1,20 +1,21 @@
 import { PortableTextBlock } from "next-sanity";
+
 export interface BlogListItem {
   _id: string;
   title: string;
-  publishedAt: string;
+  date: string;
   intro?: string;
+  imageUrl?: string;
   slug: string;
 }
 
 export interface BlogDetail {
   _id: string;
   title: string;
-  publishedAt: string;
+  date: string;
   intro?: string;
   slug: string;
-  body?: PortableTextBlock[]; // Portable Text (can use PortableTextBlock[] type)
-  coverImageUrl?: string;
+  content?: PortableTextBlock[]; // Portable Text content from the schema
   seo?: {
     metaTitle?: string;
     metaDescription?: string;

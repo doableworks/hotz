@@ -1,36 +1,22 @@
-"use client";
 import React from "react";
 import { Eye } from "lucide-react";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
 import Link from "next/link";
-const Updates = () => {
-  const Updates = [
-    {
-      id: 1,
-      title: "Build Better Todays",
-      date: "10 July, 2024",
-      image: "/images/update1.png",
-    },
-    {
-      id: 2,
-      title: "Why is Holtz the largest greenfield Indian investor in the US?",
-      date: "24 October, 2024",
-      image: "/images/update2.png",
-    },
-    {
-      id: 3,
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, do...",
-      date: "11 January, 2024",
-      image: "/images/update3.png",
-    },
-    {
-      id: 4,
-      title: "Excepteur sint occaecat cupidatat non proident.",
-      date: "09 February, 2024",
-      image: "/images/update4.png",
-    },
-  ];
+import { BlogListItem } from "@/lib/types/blogs";
+import { getBlogList } from "@/lib/sanityQueries";
+
+const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+};
+
+async function Updates() {
+
+  const Updates : BlogListItem[] = await getBlogList();
 
   return (
     <div className="px-5 lg:px-10">
@@ -41,39 +27,39 @@ const Updates = () => {
 
         <div className="hidden md:flex w-full gap-7">
           {Updates.map((update) => (
-            <div key={update.id} className="w-1/4">
-              <div className="bg-amber-300 h-48">
+            <Link key={update._id} className="w-full" href={`/newsroom/${update.slug}`}>
+              <div className="bg-amber-300 h-56">
                 <img
-                  src={update.image}
+                  src={update.imageUrl}
                   alt={update.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-sm text-gray-500 mt-2">{update.date}</h1>
+              <h1 className="text-sm text-gray-500 mt-2">{formatDate(update.date)}</h1>
               <h1>{update.title}</h1>
               <h1 className="text-xs flex gap-1 items-center mt-2">
                 <Eye size={12} /> Read More
               </h1>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="flex md:hidden overflow-x-auto gap-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
           {Updates.map((update) => (
-            <div key={update.id} className="w-full snap-center flex-shrink-0">
+            <Link key={update._id} className="w-full snap-center flex-shrink-0" href={`/newsroom/${update.slug}`}>
               <div className="h-52 overflow-hidden">
                 <img
-                  src={update.image}
+                  src={update.imageUrl}
                   alt={update.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-sm text-gray-500 mt-2">{update.date}</h1>
+              <h1 className="text-sm text-gray-500 mt-2">{formatDate(update.date)}</h1>
               <h1 className="text-base font-medium">{update.title}</h1>
               <h1 className="text-xs flex gap-1 items-center mt-2">
                 <Eye size={12} /> Read More
               </h1>
-            </div>
+            </Link>
           ))}
         </div>
 
