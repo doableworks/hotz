@@ -1,6 +1,8 @@
 "use client";
 
+import ToasterComponent from "@/components/reusable/ToasterComponent";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function ApplicationForm({
   positionTitle,
@@ -10,7 +12,7 @@ export default function ApplicationForm({
   onClose: () => void;
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const appscriptUrl = process.env.APPSCRIPT_URL || "";
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -46,7 +48,9 @@ export default function ApplicationForm({
       data.append("resume", fileData);
       data.append("fileName", file?.name || "");
 
-      const response = await fetch(appscriptUrl, {
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string;
+
+      const response = await fetch(scriptUrl, {
         method: "POST",
         body: data,
       });
@@ -54,114 +58,119 @@ export default function ApplicationForm({
       const result = await response.json();
 
       if (result.success) {
-        alert("Form submitted successfully!");
+        toast.success("Application submitted successfully!");
         form.reset();
-        onClose();
+        setTimeout(() => {
+          onClose();
+        }, 1200);
       } else {
-        alert("Error: " + (result.error || "Unknown error"));
+        toast.error("Error submitting form");
       }
     } catch (err) {
-      console.error("Error submitting form:", err);
-      alert("Failed to submit form. Please try again.");
+      toast.error("Error submitting form");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-5 mt-6 bg-white rounded-2xl w-full"
-    >
-      <h2 className="text-lg font-medium text-gray-700 mb-2">
-        Application for: {positionTitle}
-      </h2>
-
-      <div className="lg:flex block gap-4 w-full">
-        <label className="flex flex-col w-full text-gray-700 text-sm">
-          <h1 className="mb-2">First Name</h1>
-          <input
-            name="firstName"
-            type="text"
-            placeholder="First Name"
-            className="border p-3 rounded-sm"
-            required
-          />
-        </label>
-
-        <label className="lg:mt-0 mt-5 flex flex-col w-full text-gray-700 text-sm">
-          <h1 className="mb-2">Last Name</h1>
-          <input
-            name="lastName"
-            type="text"
-            placeholder="Last Name"
-            className="border p-3 rounded-sm"
-            required
-          />
-        </label>
-      </div>
-
-      <label className="flex flex-col text-gray-700 text-sm">
-        <h1 className="mb-2">Email</h1>
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          className="border p-3 rounded-sm"
-          required
-        />
-      </label>
-
-      <label className="flex flex-col text-gray-700 text-sm">
-        <h1 className="mb-2">Phone Number</h1>
-        <input
-          name="phone"
-          type="tel"
-          placeholder="Phone Number"
-          className="border p-3 rounded-sm"
-          required
-        />
-      </label>
-
-      <label className="flex flex-col text-gray-700 text-sm">
-        <h1 className="mb-2">Gender</h1>
-        <select name="gender" className="border p-3 rounded-sm" required>
-          <option value="">Select Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
-        </select>
-      </label>
-
-      <label className="flex flex-col text-gray-700 text-sm">
-        <h1 className="mb-2">Why would you like to work with us?</h1>
-        <textarea
-          name="why"
-          placeholder="Your answer"
-          className="border p-3 rounded-sm"
-          rows={4}
-          required
-        />
-      </label>
-
-      <label className="flex flex-col gap-2 text-gray-700 text-sm">
-        <h1 className="mb-2">Upload your Resume</h1>
-        <input
-          name="resume"
-          type="file"
-          accept=".pdf,.doc,.docx"
-          className="border p-3 rounded-sm bg-gray-50 cursor-pointer"
-          required
-        />
-      </label>
-
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="bg-[#B9041A] text-white py-3 rounded-full mt-2 hover:bg-[#a10417] disabled:opacity-50 disabled:cursor-not-allowed"
+    <>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-5 mt-6 bg-white rounded-2xl w-full"
       >
-        {isSubmitting ? "Submitting..." : "Submit Application"}
-      </button>
-    </form>
+        <h2 className="text-lg font-medium text-gray-700 mb-2">
+          Application for: {positionTitle}
+        </h2>
+
+        <div className="lg:flex block gap-4 w-full">
+          <label className="flex flex-col w-full text-gray-700 text-sm">
+            <h1 className="mb-2">First Name</h1>
+            <input
+              name="firstName"
+              type="text"
+              placeholder="First Name"
+              className="border p-3 rounded-sm"
+              required
+            />
+          </label>
+
+          <label className="lg:mt-0 mt-5 flex flex-col w-full text-gray-700 text-sm">
+            <h1 className="mb-2">Last Name</h1>
+            <input
+              name="lastName"
+              type="text"
+              placeholder="Last Name"
+              className="border p-3 rounded-sm"
+              required
+            />
+          </label>
+        </div>
+
+        <label className="flex flex-col text-gray-700 text-sm">
+          <h1 className="mb-2">Email</h1>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            className="border p-3 rounded-sm"
+            required
+          />
+        </label>
+
+        <label className="flex flex-col text-gray-700 text-sm">
+          <h1 className="mb-2">Phone Number</h1>
+          <input
+            name="phone"
+            type="tel"
+            placeholder="Phone Number"
+            className="border p-3 rounded-sm"
+            required
+          />
+        </label>
+
+        <label className="flex flex-col text-gray-700 text-sm">
+          <h1 className="mb-2">Gender</h1>
+          <select name="gender" className="border p-3 rounded-sm" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label className="flex flex-col text-gray-700 text-sm">
+          <h1 className="mb-2">Why would you like to work with us?</h1>
+          <textarea
+            name="why"
+            placeholder="Your answer"
+            className="border p-3 rounded-sm"
+            rows={4}
+            required
+          />
+        </label>
+
+        <label className="flex flex-col gap-2 text-gray-700 text-sm">
+          <h1 className="mb-2">Upload your Resume</h1>
+          <input
+            name="resume"
+            type="file"
+            accept=".pdf,.doc,.docx"
+            className="border p-3 rounded-sm bg-gray-50 cursor-pointer"
+            required
+          />
+        </label>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="bg-[#B9041A] text-white py-3 rounded-full mt-2 hover:bg-[#a10417] disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? "Submitting..." : "Submit Application"}
+        </button>
+      </form>
+
+      <ToasterComponent />
+    </>
   );
 }

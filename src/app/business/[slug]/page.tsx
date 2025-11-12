@@ -65,7 +65,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
         </div>
       </TransitionVertical>
 
-      <div className="px-5 lg:px-10 py-10 bg-[#f3f3f3] block lg:flex justify-between items-start">
+      <div className="px-5 lg:px-10 py-10 bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c] text-white block lg:flex justify-between items-start">
         <div className="w-full lg:w-1/2">
           <TransitionVertical>
             {business.businessTitle && (
@@ -83,7 +83,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
 
           <TransitionVertical>
             {business.projectsDescription && (
-              <p className="text-[#3a3a3a] text-sm mt-3">
+              <p className="text-[#dfdfdf] text-sm mt-3">
                 {business.projectsDescription}
               </p>
             )}
@@ -96,11 +96,11 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
                 <div key={index}>
                   <TransitionVertical>
                     <div className="flex items-center gap-5">
-                      <Check color="#DB0A0A" />
+                      <Check color="#fff" />
                       <p>{item}</p>
                     </div>
                   </TransitionVertical>
-                  <div className="w-full h-px bg-[#888888]/10 my-5"></div>
+                  <div className="w-full h-px bg-[#fff]/50 my-5"></div>
                 </div>
               ))}
           </div>
@@ -109,7 +109,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
       {/* Desktop Image Grid */}
       {business.businessImages && business.businessImages.length > 0 && (
         <TransitionVertical>
-          <div className="hidden px-5 lg:px-10 lg:grid grid-cols-3 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-5 h-[600px]">
+          <div className="mt-10 hidden px-5 lg:px-10 lg:grid grid-cols-3 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-5 h-[600px]">
             {imageGridConfig.map((item, index) => (
               <div
                 key={item.id}
@@ -224,7 +224,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
           Projects
         </h1>
       )} */}
-      <div className="px-5 lg:px-10  overflow-x-auto">
+      {/* <div className="px-5 lg:px-10  overflow-x-auto">
         <div className="grid grid-rows-2 auto-cols-[250px] grid-flow-col gap-7 mt-5">
           {business.partners &&
             business.partners.length > 0 &&
@@ -241,7 +241,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
               </div>
             ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="px-5 lg:px-10">
         <div

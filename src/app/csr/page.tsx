@@ -98,14 +98,20 @@ async function page() {
               <h1 className="text-white/60 mt-3">
                 Guided by the philosophy of giving back, Hotz Group has long
                 supported initiatives that promote education, inclusion, and
-                cultural development. Our association with the Servants of the
-                People Society, founded in 1921 by Lala Lajpat Rai and
-                inaugurated by Mahatma Gandhi, reflects our deep commitment to
-                nation-building. Through this collaboration, we contribute to
-                Balvantray Mehta Vidya Bhawan Anguridevi Shersingh Memorial
-                Academy, an integrated school for children with and without
-                disabilities, providing them equal opportunities to learn, grow,
-                and thrive.
+                cultural development. The Saat Saath Arts Foundation supports
+                international exchange between India and the rest of the world
+                through the visual arts and education. The Foundation is funded
+                by Aparajita Jain as a non-profit initiative and was founded in
+                2010.
+                <br></br>
+                <br></br>
+                Our association with the Servants of the People Society, founded
+                in 1921 by Lala Lajpat Rai and inaugurated by Mahatma Gandhi,
+                reflects our deep commitment to nation-building. Through this
+                collaboration, we contribute to Balvantray Mehta Vidya Bhawan
+                Anguridevi Shersingh Memorial Academy, an integrated school for
+                children with and without disabilities, providing them equal
+                opportunities to learn, grow, and thrive.
               </h1>
             </TransitionHorizontal>
           </div>
