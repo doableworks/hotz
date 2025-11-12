@@ -65,19 +65,19 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
         </div>
       </TransitionVertical>
 
-      <div className="px-5 lg:px-10 py-10 bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c] text-white block lg:flex justify-between items-start">
+      <div className="px-5 lg:px-10 py-10 bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c] text-white block lg:flex justify-between items-start gap-10">
         <div className="w-full lg:w-1/2">
           <TransitionVertical>
             {business.businessTitle && (
               <h1 className="text-3xl font-medium">{business.businessTitle}</h1>
             )}
           </TransitionVertical>
-        </div>
 
-        <div className="w-full lg:w-1/2 pr-0 lg:pr-20 mt-10 lg:mt-0">
           <TransitionVertical>
             {business.projectsTitle && (
-              <h1 className="text-xl font-medium">{business.projectsTitle}</h1>
+              <h1 className="text-xl font-medium mt-7">
+                {business.projectsTitle}
+              </h1>
             )}
           </TransitionVertical>
 
@@ -88,7 +88,9 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
               </p>
             )}
           </TransitionVertical>
+        </div>
 
+        <div className="w-full lg:w-1/2 pr-0 lg:pr-20 mt-10 lg:mt-0">
           <div className="mt-12 space-y-7">
             {business.projectPoints &&
               business.projectPoints.length > 0 &&

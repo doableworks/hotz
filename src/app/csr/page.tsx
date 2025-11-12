@@ -83,16 +83,18 @@ async function page() {
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col my-24 lg:h-96 relative z-30 bg-white">
+        <div className="flex lg:flex-row flex-col items-stretch justify-center my-24 relative z-30 bg-white">
+          {/* Image Section */}
           <div className="lg:w-1/2 w-full">
             <img
               src="/images/csrOverview.jpg"
               alt="About Us"
-              className="w-full object-cover h-96"
+              className="w-full h-full object-cover"
             />
           </div>
 
-          <div className="lg:w-1/2 w-full min-h-96 px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
+          {/* Text Section */}
+          <div className="lg:w-1/2 w-full px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
               <h1 className="text-lg">OUR COMMITMENT TO SOCIAL IMPACT</h1>
               <h1 className="text-white/60 mt-3">
@@ -103,15 +105,15 @@ async function page() {
                 through the visual arts and education. The Foundation is funded
                 by Aparajita Jain as a non-profit initiative and was founded in
                 2010.
-                <br></br>
-                <br></br>
+                <br />
+                <br />
                 Our association with the Servants of the People Society, founded
                 in 1921 by Lala Lajpat Rai and inaugurated by Mahatma Gandhi,
                 reflects our deep commitment to nation-building. Through this
                 collaboration, we contribute to Balvantray Mehta Vidya Bhawan
                 Anguridevi Shersingh Memorial Academy, an integrated school for
                 children with and without disabilities, providing them equal
-                opportunities to learn, grow, and thrive.
+                opportunities to learn, grow, and thrive
               </h1>
             </TransitionHorizontal>
           </div>
