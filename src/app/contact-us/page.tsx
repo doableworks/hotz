@@ -8,7 +8,7 @@ const page = () => {
     <div>
       <Navbar />
       <div className="w-full h-80 bg-gray-400">
-        <img src="/images/contact.png" className="h-80 w-full object-cover" />
+        <img src="/images/Contact-us.png" className="h-80 w-full object-cover" />
       </div>
 
       <div className="w-full px-5 lg:px-10 py-7 lg:py-16 flex lg:flex-row flex-col gap-7">
