@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import TransitionVertical from "@/animations/TransitionVertical";
 import { OurBusiness } from "@/lib/types/business";
+import { useRouter } from "next/navigation";
 
 interface BusinessProps {
   businesses: OurBusiness[];
@@ -11,6 +12,7 @@ interface BusinessProps {
 const Business = ({ businesses }: BusinessProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth < 768);
@@ -27,11 +29,15 @@ const Business = ({ businesses }: BusinessProps) => {
   const collapsedHeight =
     totalCards > 1 ? (95 - expandedHeight) / (totalCards - 1) : 95;
 
-  const handleInteraction = (index: number) => {
+  const handleInteraction = (index: number, card: OurBusiness) => {
     if (isMobile) {
-      setActiveIndex(activeIndex === index ? -1 : index);
+      if (activeIndex === index) {
+        router.push(`/business/${card.slug}`);
+      } else {
+        setActiveIndex(index);
+      }
     } else {
-      setActiveIndex(index);
+      router.push(`/business/${card.slug}`);
     }
   };
 
@@ -41,14 +47,14 @@ const Business = ({ businesses }: BusinessProps) => {
         OUR BUSINESS
       </div>
       <TransitionVertical>
-        <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[100vh] overflow-hidden">
+        <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[110vh] overflow-hidden">
           {businesses.map((card: OurBusiness, index: number) => (
             <motion.div
               key={card._id}
               layout
               onMouseEnter={() => !isMobile && setActiveIndex(index)}
               onMouseLeave={() => !isMobile && setActiveIndex(0)}
-              onClick={() => handleInteraction(index)}
+              onClick={() => handleInteraction(index, card)}
               transition={{
                 layout: {
                   duration: 0.6,

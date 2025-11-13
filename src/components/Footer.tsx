@@ -10,7 +10,7 @@ const Footer = () => {
           <img
             src="/images/HotzLogoWhite.png"
             alt="Logo"
-            className="h-32 mb-4"
+            className="h-28 lg:h-32 mb-4"
           />
         </div>
 

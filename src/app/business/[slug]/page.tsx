@@ -51,13 +51,13 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
       </div>
 
       <TransitionVertical>
-        <div className="w-full h-80 flex justify-center items-center text-center px-5">
+        <div className="w-full h-full lg:h-80 flex justify-center items-center text-center px-5 py-5">
           <div>
-            <h1 className="text-4xl font-medium">
+            <h1 className="text-3xl lg:text-4xl font-medium">
               {business.linkTitle ? business.linkTitle : "Business Title"}
             </h1>
             {business.description && (
-              <p className="w-full lg:max-w-3xl text-[#727272] mt-3">
+              <p className="lg:text-base text-sm w-full lg:max-w-3xl text-[#727272] mt-3">
                 {business.description}
               </p>
             )}
@@ -198,7 +198,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
                     // className="mt-1"
                   />
                   <Link href={business.ctaUrl} className="underline">
-                    Link to Website
+                    View Website
                   </Link>
                 </div>
               )}

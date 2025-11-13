@@ -12,11 +12,12 @@ import CareerFilters from "@/components/pagespecific/career/CareerFilters";
 
 const Page = async () => {
   const careers = await getCareersList();
-  
+
   // Get unique departments for filtering
-  const departments = careers && careers.length > 0 
-    ? Array.from(new Set(careers.map(career => career.department)))
-    : [];
+  const departments =
+    careers && careers.length > 0
+      ? Array.from(new Set(careers.map((career) => career.department)))
+      : [];
   const categories = ["All", ...departments];
   const values = [
     {
@@ -70,10 +71,7 @@ const Page = async () => {
         </div>
       </ParallaxScroll>
       <ParallaxScroll>
-        <div className="w-full bg-[#F3F3F3] py-20 px-5 md:px-10 flex flex-col gap-12 relative z-20">
-          <TransitionVertical>
-            <h1 className="text-3xl text-center font-medium">Our Values</h1>
-          </TransitionVertical>
+        <div className="w-full bg-[#F3F3F3] py-7 lg:py-20 px-5 md:px-10 flex flex-col gap-5 lg:gap-12 relative z-20">
           <TransitionVertical>
             <h1 className="text-3xl text-center font-medium">
               Why Work With Us
@@ -115,7 +113,7 @@ const Page = async () => {
           </div>
         </div>
       </ParallaxScroll>
-      <div className="w-full py-20 px-5 lg:px-10 flex flex-col gap-12 bg-white z-30 relative">
+      <div className="w-full py-5 lg:py-20 px-5 lg:px-10 flex flex-col gap-12 bg-white z-30 relative">
         <h1 className="text-3xl text-center font-medium">Life at Hotz Group</h1>
 
         <div className="w-full flex lg:flex-row flex-col gap-7">
@@ -142,10 +140,10 @@ const Page = async () => {
           </div>
         </div>
       </div>
-      
+
       <CareerFilters careers={careers} categories={categories} />
-      
-      <div className="w-full bg-[#B9041A] h-96 mt-10 mb-10 px-5 flex justify-center">
+
+      <div className="w-full bg-[#B9041A] h-96 lg:mt-10 mb-10 px-5 flex justify-center">
         <div className="flex justify-between">
           <img
             src="/images/iconWhite.png"

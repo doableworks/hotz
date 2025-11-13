@@ -9,15 +9,16 @@ interface CareerFiltersProps {
   categories: string[];
 }
 
-function CareerFilters ({ careers, categories }: CareerFiltersProps) {
+function CareerFilters({ careers, categories }: CareerFiltersProps) {
   const [selected, setSelected] = useState("All");
 
-  const filteredCareers = selected === "All" 
-    ? careers 
-    : careers.filter(career => career.department === selected);
+  const filteredCareers =
+    selected === "All"
+      ? careers
+      : careers.filter((career) => career.department === selected);
 
   return (
-    <div className="w-full px-5 lg:px-10 py-20 flex flex-col">
+    <div className="w-full px-5 lg:px-10 py-5 lg:py-20 flex flex-col">
       <h1 className="text-2xl lg:text-3xl font-medium mb-5">We are hiring</h1>
 
       <div className="flex flex-wrap items-center gap-4">
@@ -41,7 +42,9 @@ function CareerFilters ({ careers, categories }: CareerFiltersProps) {
         {filteredCareers.map((career) => (
           <div key={career._id}>
             <div className="hidden md:flex justify-between items-center my-5 pb-3">
-              <h1 className="text-2xl font-medium w-1/4">{career.positionTitle}</h1>
+              <h1 className="text-2xl font-medium w-1/4">
+                {career.positionTitle}
+              </h1>
               <h1 className="text-[#727272] text-sm w-1/4 flex justify-center">
                 {career.department}
               </h1>
@@ -56,8 +59,10 @@ function CareerFilters ({ careers, categories }: CareerFiltersProps) {
               </Link>
             </div>
 
-            <div className="flex flex-col md:hidden my-4 pb-3 border-b border-[#727272]/10">
-              <h1 className="text-lg font-semibold mb-2">{career.positionTitle}</h1>
+            <div className="flex flex-col md:hidden my-4 pb-3">
+              <h1 className="text-lg font-semibold mb-2">
+                {career.positionTitle}
+              </h1>
               <div className="flex justify-between text-sm text-[#727272] mb-3">
                 <span>{career.department}</span>
                 <span>{career.type}</span>
@@ -70,7 +75,7 @@ function CareerFilters ({ careers, categories }: CareerFiltersProps) {
               </Link>
             </div>
 
-            <div className="hidden md:block w-full h-px bg-[#727272]/10"></div>
+            {/* <div className="hidden md:block w-full h-px bg-[#727272]/10"></div> */}
           </div>
         ))}
       </div>
@@ -84,6 +89,6 @@ function CareerFilters ({ careers, categories }: CareerFiltersProps) {
       )}
     </div>
   );
-};
+}
 
 export default CareerFilters;
