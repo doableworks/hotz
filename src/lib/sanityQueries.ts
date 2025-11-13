@@ -6,7 +6,7 @@ import { BlogListItem, BlogDetail } from "./types/blogs";
 
 export async function getBusiness() {
   return await sanityFetch<OurBusiness[]>({
-    query: `*[_type == "ourBusinesses"]{
+    query: `*[_type == "ourBusinesses"] | order(order asc){
   _id,
   _type,
   linkTitle,
@@ -32,7 +32,7 @@ export async function getStats() {
 
 export async function getTeamLeaders() {
   return await sanityFetch<TeamLeader[]>({
-    query: `*[_type=='teamLeaders']{
+    query: `*[_type=='teamLeaders'] | order(order asc){
   _id,
   title,
   "imageUrl" : image.asset->url,
