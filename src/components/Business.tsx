@@ -43,11 +43,11 @@ const Business = ({ businesses }: BusinessProps) => {
 
   return (
     <div className="px-4 md:px-10 relative z-40 bg-white">
-      <div className="text-center text-xl font-semibold pt-24 mb-7">
+      <div className="text-center text-xl font-semibold pt-7 lg:pt-24 mb-7">
         OUR BUSINESS
       </div>
       <TransitionVertical>
-        <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96 h-[110vh] overflow-hidden">
+        <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96  overflow-hidden">
           {businesses.map((card: OurBusiness, index: number) => (
             <motion.div
               key={card._id}

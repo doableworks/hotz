@@ -77,7 +77,8 @@ async function page() {
           <div className="absolute bottom-7 left-5 lg:left-10">
             <TransitionHorizontal>
               <h1 className="text-white text-xl lg:text-3xl font-medium">
-                Diverse Business. One Trusted Group.
+                Diverse Business.<br className="md:hidden"></br> One Trusted
+                Group.
               </h1>
             </TransitionHorizontal>
           </div>
@@ -103,10 +104,15 @@ async function page() {
                     <h1 className="mt-3 font-medium text-lg">
                       {card.linkTitle}
                     </h1>
-                    <p className="text-[#727272] text-sm">{card.getInTouchText}</p>
+                    <p className="text-[#727272] text-sm">
+                      {card.getInTouchText}
+                    </p>
                   </TransitionVertical>
 
-                  <Link href={`/business/${card.slug}`} className="inline-block">
+                  <Link
+                    href={`/business/${card.slug}`}
+                    className="inline-block"
+                  >
                     <h1 className="mt-3 flex gap-3 items-center cursor-pointer">
                       Explore <MoveRight />
                     </h1>

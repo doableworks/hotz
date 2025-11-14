@@ -8,18 +8,18 @@ import BlogPortableText from "@/components/reusable/BlogPortableText";
 import { notFound } from "next/navigation";
 
 export const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
 
 async function page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
   const blogPost: BlogDetail = await getBlogDetail(slug);
-  
+
   if (!blogPost) {
     notFound();
   }
@@ -30,7 +30,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
     <>
       <Navbar />
 
-      <div className="px-5 lg:px-56 mt-7 lg:mt-20">
+      <div className="px-5 lg:px-56 mt-24">
         <div className="block lg:flex justify-between items-center gap-7">
           <TransitionVertical>
             <div className="w-full">
@@ -47,9 +47,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
 
         <div className="mt-8 lg:mt-12 max-w-5xl mx-auto text-justify">
           <TransitionVertical>
-            {blogPost.content && (
-              <BlogPortableText value={blogPost.content} />
-            )}
+            {blogPost.content && <BlogPortableText value={blogPost.content} />}
           </TransitionVertical>
         </div>
       </div>
@@ -57,6 +55,6 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
       <Footer />
     </>
   );
-};
+}
 
 export default page;

@@ -20,7 +20,7 @@ async function Updates() {
   return (
     <div className="px-5 lg:px-10">
       <TransitionVertical>
-        <div className="text-center text-xl font-semibold mt-24 mb-7">
+        <div className="text-center text-xl font-semibold mt-10 lg:mt-24 mb-7">
           HOTZ GROUP NEWS
         </div>
 
@@ -74,7 +74,7 @@ async function Updates() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-5 lg:mt-10">
           <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
             <TransitionHorizontal>
               <Link href="/newsroom">EXPLORE ALL UPDATES</Link>

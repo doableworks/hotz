@@ -68,9 +68,9 @@ async function page() {
         </div>
       </div>
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-24 relative z-30 bg-white">
-          <div className="w-full lg:w-1/2 text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-            A Legacy of Care.<br></br> A Vision for<br></br>Change.
+        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-7 lg:pt-24 relative z-30 bg-white">
+          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+            A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
           <div className="w-full lg:w-1/2">
             Since its inception, Hotz Group has believed that true progress is
@@ -83,7 +83,7 @@ async function page() {
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col items-stretch justify-center my-24 relative z-30 bg-white">
+        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
           {/* Image Section */}
           <div className="lg:w-1/2 w-full">
             <img
@@ -96,7 +96,7 @@ async function page() {
           {/* Text Section */}
           <div className="lg:w-1/2 w-full px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
-              <h1 className="text-lg">OUR COMMITMENT TO SOCIAL IMPACT</h1>
+              <h1 className="text-lg">Saat Saath Arts Foundation</h1>
               <h1 className="text-white/60 mt-3">
                 Guided by the philosophy of giving back, Hotz Group has long
                 supported initiatives that promote education, inclusion, and
@@ -105,8 +105,11 @@ async function page() {
                 through the visual arts and education. The Foundation is funded
                 by Aparajita Jain as a non-profit initiative and was founded in
                 2010.
-                <br />
-                <br />
+              </h1>
+              <br />
+              <br />
+              <h1 className="text-lg">Balwant Rai Mehta</h1>
+              <h1 className="text-white/60 mt-3">
                 Our association with the Servants of the People Society, founded
                 in 1921 by Lala Lajpat Rai and inaugurated by Mahatma Gandhi,
                 reflects our deep commitment to nation-building. Through this
@@ -130,7 +133,7 @@ async function page() {
           {values.map((value) => (
             <div
               key={value.id}
-              className="flex flex-col justify-between w-1/4 p-5 h-96 border border-black/20"
+              className="flex flex-col justify-between w-1/4 p-5 h-64 border border-black/20"
             >
               <img
                 src={value.image}
@@ -150,7 +153,7 @@ async function page() {
           {values.map((value) => (
             <div
               key={value.id}
-              className="min-w-[70%] snap-center flex-shrink-0 border border-black/20 p-5 h-80 flex flex-col justify-between"
+              className="w-[80%] snap-center flex-shrink-0 border border-black/20 p-5 h-64 flex flex-col justify-between"
             >
               <img
                 src={value.image}

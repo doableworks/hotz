@@ -58,7 +58,7 @@ const Stats = ({ statsData }: { statsData: statsData[] }) => {
         className=" lg:flex justify-between px-5 lg:px-10 py-7 lg:py-24"
         ref={ref}
       >
-        <div className="text-2xl font-semibold w-full text-center lg:text-left lg:w-1/2">
+        <div className="text-xl lg:text-2xl font-semibold w-full text-center lg:text-left lg:w-1/2">
           <TransitionVertical>
             <h1>DECADES OF IMPACT</h1>
             <h1>A FUTURE OF POSSIBILITIES</h1>
@@ -80,7 +80,7 @@ const Stats = ({ statsData }: { statsData: statsData[] }) => {
                   <h1 className="text-6xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent" />
                 </SlotMachineCounter>
 
-                <h1 className="mt-2">{statsData[0].title}</h1>
+                <h1 className="mt-2 text-center">{statsData[0].title}</h1>
               </div>
               <div className="flex flex-col items-center lg:items-start">
                 <SlotMachineCounter
@@ -94,7 +94,7 @@ const Stats = ({ statsData }: { statsData: statsData[] }) => {
                   <h1 className="text-6xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent" />
                 </SlotMachineCounter>
 
-                <h1 className="mt-2">{statsData[1].title}</h1>
+                <h1 className="mt-2 text-center">{statsData[1].title}</h1>
               </div>
             </div>
             <div className="flex lg:flex-row flex-col w-full lg:gap-0 gap-10 items-center lg:justify-between mt-10 lg:mt-12">
@@ -110,7 +110,7 @@ const Stats = ({ statsData }: { statsData: statsData[] }) => {
                   <h1 className="text-6xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent" />
                 </SlotMachineCounter>
 
-                <h1 className="mt-2">{statsData[2].title}</h1>
+                <h1 className="mt-2 text-center">{statsData[2].title}</h1>
               </div>
 
               <div className="flex flex-col items-center lg:items-start">
@@ -125,7 +125,7 @@ const Stats = ({ statsData }: { statsData: statsData[] }) => {
                   <h1 className="text-6xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent" />
                 </SlotMachineCounter>
 
-                <h1 className="mt-2">{statsData[3].title}</h1>
+                <h1 className="mt-2 text-center">{statsData[3].title}</h1>
               </div>
             </div>
           </TransitionVertical>

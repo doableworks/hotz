@@ -7,15 +7,15 @@ import Link from "next/link";
 import React from "react";
 
 const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 };
 
- async function page() {
- const Updates = await getBlogList();
+async function page() {
+  const Updates = await getBlogList();
   return (
     <>
       <Navbar />
@@ -25,8 +25,8 @@ const formatDate = (dateString: string) => {
       </div>
 
       <TransitionVertical>
-        <div className="px-5 text-center text-xl font-semibold mt-16 mb-7">
-          Hotz Group News
+        <div className="px-5 text-center text-xl font-semibold mt-7 lg:mt-16 mb-3 lg:mb-7">
+          HOTZ GROUP NEWS
         </div>
       </TransitionVertical>
 
@@ -36,9 +36,11 @@ const formatDate = (dateString: string) => {
             <Link href={`/newsroom/${item.slug}`}>
               <div className="flex lg:flex-row flex-col-reverse w-full justify-between items-start">
                 <div className="w-full lg:w-3/4 flex flex-col gap-2">
-                  <h1 className="text-[#727272] mt-7 lg:mt-0">{formatDate(item.date)}</h1>
+                  <h1 className="text-[#727272] mt-7 lg:mt-0">
+                    {formatDate(item.date)}
+                  </h1>
 
-                  <h1 className="text-2xl">{item.title}</h1>
+                  <h1 className="text-xl lg:text-2xl">{item.title}</h1>
 
                   <p className="text-[#727272]">{item.intro}</p>
 

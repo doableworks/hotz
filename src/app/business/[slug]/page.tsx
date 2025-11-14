@@ -53,7 +53,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
       <TransitionVertical>
         <div className="w-full h-full lg:h-80 flex justify-center items-center text-center px-5 py-5">
           <div>
-            <h1 className="text-3xl lg:text-4xl font-medium">
+            <h1 className="text-2xl lg:text-4xl font-medium">
               {business.linkTitle ? business.linkTitle : "Business Title"}
             </h1>
             {business.description && (
@@ -75,7 +75,7 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
 
           <TransitionVertical>
             {business.projectsTitle && (
-              <h1 className="text-xl font-medium mt-7">
+              <h1 className="text-xl font-medium mt-3 lg:mt-7">
                 {business.projectsTitle}
               </h1>
             )}

@@ -21,7 +21,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="bg-white w-full py-2 px-5 lg:px-10 flex justify-between items-center z-50">
+    <div className="fixed top-0 bg-white w-full py-2 px-5 lg:px-10 flex justify-between items-center z-50">
       <div className="w-1/3">
         <Link href="/">
           <img src="/images/HotzLogo.png" alt="Logo" className="h-12" />

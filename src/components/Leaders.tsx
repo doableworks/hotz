@@ -8,7 +8,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
   return (
     <div className="px-5 lg:px-10">
       <div className="text-center text-xl font-semibold mt-5  mb-7">
-        GUIDED BY VISIONARIES, DRIVEN BY VALUES.
+        GUIDED BY VISIONARIES,<br className="md:hidden"></br> DRIVEN BY VALUES.
       </div>
       <TransitionVertical>
         <div className="hidden md:flex w-full gap-7">
