@@ -46,24 +46,6 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
         </div>
       </TransitionVertical>
 
-      <TransitionVertical>
-        <div className="grid grid-cols-2 gap-5 md:hidden">
-          {leaders.map((leader) => (
-            <div key={leader._id} className="w-full">
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={leader.imageUrl}
-                  alt={leader.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h1 className="mt-3 text-lg">{leader.title}</h1>
-              <h1 className="text-sm text-gray-500">{leader.designation}</h1>
-            </div>
-          ))}
-        </div>
-      </TransitionVertical>
-
       {/* <div className="flex justify-center mt-10">
         <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
           <TransitionHorizontal>MEET OUR LEADERS</TransitionHorizontal>
