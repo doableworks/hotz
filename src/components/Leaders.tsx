@@ -46,7 +46,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
         </div>
       </TransitionVertical>
 
-      <TransitionVertical>
+      {/* <TransitionVertical>
         <div className="grid grid-cols-2 gap-5 md:hidden">
           {leaders.map((leader) => (
             <div key={leader._id} className="w-full">
@@ -62,7 +62,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
             </div>
           ))}
         </div>
-      </TransitionVertical>
+      </TransitionVertical> */}
 
       {/* <div className="flex justify-center mt-10">
         <button className="mt-6 px-7 py-4 bg-[#DB0A0A] text-white rounded-full text-sm">
