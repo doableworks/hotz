@@ -31,11 +31,26 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
       <TransitionVertical>
         <div className="flex md:hidden overflow-x-auto gap-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
           {leaders.map((leader) => (
-            <div
-              key={leader._id}
-              className="min-w-[70%] snap-center flex-shrink-0"
-            >
+            <div key={leader._id} className="w-[70%] snap-center flex-shrink-0">
               <div className="h-80 overflow-hidden">
+                <img
+                  src={leader.imageUrl}
+                  alt={leader.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h1 className="mt-3 text-lg">{leader.title}</h1>
+              <h1 className="text-sm text-gray-500">{leader.designation}</h1>
+            </div>
+          ))}
+        </div>
+      </TransitionVertical>
+
+      <TransitionVertical>
+        <div className="grid grid-cols-2 gap-5 md:hidden">
+          {leaders.map((leader) => (
+            <div key={leader._id} className="w-full">
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={leader.imageUrl}
                   alt={leader.title}
