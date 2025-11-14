@@ -44,9 +44,9 @@ const Footer = () => {
 
           <div className="flex flex-col gap-2 items-start pr-16">
             <h1 className=" text-white/70">Information</h1>
-            <h1>Sitemap</h1>
-            <h1>Terms and Conditions</h1>
-            <h1>Privacy Policy</h1>
+            <Link href="/sitemap.xml">Sitemap</Link>
+            <Link href="/terms-and-conditions">Terms and Conditions</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
         </div>
 
