@@ -8,11 +8,15 @@ const page = () => {
     <div>
       <Navbar />
       <div className="w-full h-80 bg-gray-400">
-        <img src="/images/Contact-us.png" className="h-80 w-full object-cover" />
+        <img
+          src="/images/Contact-us.png"
+          className="h-80 w-full object-cover"
+        />
       </div>
 
       <div className="w-full px-5 lg:px-10 py-7 lg:py-16 flex lg:flex-row flex-col gap-7">
         <div className="lg:w-1/2 w-full flex flex-col mt-7 lg:mt-0">
+          <h1 className="text-xl mb-2 underline">Office 1</h1>
           <div className=" flex gap-5 items-start">
             <MapPin
               strokeWidth={1}
@@ -44,6 +48,8 @@ const page = () => {
         </div>
 
         <div className="lg:w-1/2 w-full">
+          <h1 className="text-xl mb-2 underline">Office 2</h1>
+
           <div className=" flex gap-5 items-start">
             <MapPin
               strokeWidth={1}

@@ -77,11 +77,11 @@ const Footer = () => {
             Copyright@2025 Hotz group all rights reserved
           </h1>
 
-          <div className="flex items-center gap-5 lg:mt-0 mt-5">
+          {/* <div className="flex items-center gap-5 lg:mt-0 mt-5">
             <Instagram />
             <Youtube />
             <Facebook />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

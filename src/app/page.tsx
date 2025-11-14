@@ -16,9 +16,9 @@ export default async function Home() {
 
   return (
     <div>
+      <Navbar />
       <ParallaxScroll>
         <div className="w-full h-screen flex flex-col">
-          <Navbar />
           <Hero />
         </div>
       </ParallaxScroll>

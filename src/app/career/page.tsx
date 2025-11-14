@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import React from "react";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Atom, ChartSpline, Goal, Grid, Star } from "lucide-react";
 import Footer from "@/components/Footer";
 import TransitionVertical from "@/animations/TransitionVertical";
 import ParallaxScroll from "@/animations/ParallaxWrapper";
@@ -23,21 +23,28 @@ const Page = async () => {
     {
       id: 1,
       name: "Legacy & Stability",
+      icon: <Goal size={40} className="text-[#DB0A0A]" />,
       text: "Be part of a group with 40+ years of trust.",
     },
     {
       id: 2,
       name: "Diverse Opportunities",
+      icon: <Grid size={40} className="text-[#DB0A0A]" />,
+
       text: "Work across industries from finance to real estate.",
     },
     {
       id: 3,
       name: "Growth & Learning",
+      icon: <ChartSpline size={40} className="text-[#DB0A0A]" />,
+
       text: "Access training, mentorship, and leadership programs.",
     },
     {
       id: 4,
       name: "Values-Driven",
+      icon: <Atom size={40} className="text-[#DB0A0A]" />,
+
       text: "Integrity, innovation, and impact at the core.",
     },
   ];
@@ -83,7 +90,7 @@ const Page = async () => {
                   key={value.id}
                   className="flex flex-col justify-between w-1/4 p-5 h-64 bg-white"
                 >
-                  <Star size={40} className="text-[#DB0A0A] mb-4" />
+                  <div>{value.icon}</div>
 
                   <TransitionHorizontal>
                     <h1 className="text-xl mb-1">{value.name}</h1>
@@ -101,7 +108,7 @@ const Page = async () => {
                 key={value.id}
                 className="w-[90%] snap-center flex-shrink-0 bg-white p-5 h-64 flex flex-col justify-between"
               >
-                <Star size={36} className="text-[#DB0A0A] mb-3" />
+                <div>{value.icon}</div>
 
                 <div>
                   <h1 className="text-lg mb-1">{value.name}</h1>
@@ -171,16 +178,12 @@ const Page = async () => {
         <h1 className="text-2xl lg:text-4xl font-medium text-center">
           Did not find a role that fits?
         </h1>
-        <h1 className="text-center mt-3 text-[#727272]">
-          Share your resume with us, and we will connect
-          <br className="hidden md:block"></br> when opportunities arise.
+        <h1 className="text-center text-[#727272] text-base lg:text-lg mt-3">
+          You may share your CV on this email ID:
+          <span className="text-black font-medium"> deepshikha@hotz.in</span>,
+          <br className="hidden md:block"></br> and we will reach out when there
+          is a suitable opportunity.
         </h1>
-
-        <div className="w-full flex justify-center ">
-          <div className="flex justify-center mt-10 px-7 py-4 rounded-full bg-[#B9041A] text-white text-sm">
-            SUBMIT YOUR RESUME
-          </div>
-        </div>
       </div>
       <Footer />
     </>
