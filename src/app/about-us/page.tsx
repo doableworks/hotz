@@ -171,9 +171,9 @@ async function page() {
               className="absolute top-0 right-0 w-3/4 lg:w-1/2 z-10"
             />
             <img
-              src="/images/chairman.png"
+              src="/images/Chairman.png"
               alt="Chairman"
-              className="relative lg:ml-24 w-full lg:w-1/2 z-20"
+              className="relative lg:ml-24 w-full lg:w-[65%] z-20"
             />
           </TransitionVertical>
         </div>

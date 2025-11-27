@@ -116,7 +116,7 @@ async function page() {
           {/* Image Section */}
           <div className="lg:w-1/2  w-full">
             <img
-              src="/images/csrOverview.jpg"
+              src="/images/csrOverview2.JPG"
               alt="About Us"
               className="w-full h-96 object-cover"
             />
