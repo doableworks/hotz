@@ -82,7 +82,7 @@ const Business = ({ businesses }: BusinessProps) => {
                 }`}
               />
 
-              {activeIndex === index && (
+              {card.isLive === false && (
                 <div className="absolute top-3 right-3 bg-[#DB0A0A] text-white text-xs md:text-sm font-semibold px-3 py-1 rounded-full shadow-lg z-50">
                   Coming Soon
                 </div>

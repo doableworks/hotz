@@ -5,6 +5,7 @@ export interface OurBusiness {
   coverImageUrl: string; // resolved from coverImage.asset->url in GROQ
   slug: string;
   getInTouchText: string;
+  isLive: boolean;
   tag?: 'ourBusinesses'; // optional, if you include it in the GROQ projection
 }
 
@@ -12,6 +13,7 @@ export interface TeamLeader {
   _id: string;
   title: string;
   designation: string;
+  description?: string;
   imageUrl: string; // resolved from image.asset->url in GROQ
   tag?: 'teamLeaders'; // optional, if you include it in the GROQ projection
 }
@@ -26,6 +28,7 @@ export interface BusinessDetail {
   _id: string;
   _type: 'ourBusinesses';
   linkTitle: string;
+  isLive: boolean;
   description?: string;
   coverImageUrl?: string;
   bannerImageUrl?: string;

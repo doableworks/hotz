@@ -9,9 +9,11 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
   const [selectedLeader, setSelectedLeader] = useState<TeamLeader | null>(null);
 
   const handleOpenModal = (leader: TeamLeader) => {
+if (leader.description) {
+
     setSelectedLeader(leader);
-    setOpenModal(true);
-  };
+    setOpenModal(true);}
+  }
 
   const handleCloseModal = () => {
     setOpenModal(false);
@@ -41,7 +43,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
             <div key={leader._id} className="w-1/4">
               <div
                 onClick={() => handleOpenModal(leader)}
-                className="bg-amber-300 h-96"
+                className={`bg-amber-300 h-96 ${leader.description ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 <img
                   src={leader.imageUrl}
@@ -62,7 +64,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
             <div key={leader._id} className="w-[70%] snap-center flex-shrink-0">
               <div
                 onClick={() => handleOpenModal(leader)}
-                className="h-80 overflow-hidden"
+                className={`h-80 overflow-hidden ${leader.description ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 <img
                   src={leader.imageUrl}
@@ -101,14 +103,14 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
         </button>
       </div> */}
 
-      {openModal && selectedLeader && (
+      {openModal && selectedLeader?.description && (
         <div
           onClick={handleCloseModal}
           className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-3"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white pt-12 pb-5 px-5 overflow-auto rounded-lg lg:w-96 w-full relative max-h-[95%]"
+            className="bg-white pt-12 pb-5 px-5 overflow-auto rounded-lg lg:w-[40vw] w-full relative max-h-[95%]"
           >
             {/* Close Button */}
             <button
@@ -122,16 +124,18 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
             <img
               src={selectedLeader.imageUrl}
               alt={selectedLeader.title}
-              className="w-full h-96 object-cover mb-4"
+              className="w-full h-96 object-contain mb-4"
             />
             {/* Leader Title */}
-            <h1 className="text-xl font-semibold">{selectedLeader.title}</h1>
+            <h1 className="text-xl text-center font-semibold">{selectedLeader.title}</h1>
 
-            <h1 className="text-sm text-gray-500 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              exercitationem veniam! Iusto dolorem unde animi rerum? Sit
-              suscipit aut reprehenderit odio, cumque ipsum aperiam inventore
-            </h1>
+            <div className="text-sm text-center text-gray-500 mt-2">
+              {selectedLeader.description.split(/\n+/).filter(paragraph => paragraph.trim()).map((paragraph, index) => (
+                <p key={index} className="mb-3 last:mb-0">
+                  {paragraph.trim()}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       )}
