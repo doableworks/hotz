@@ -44,7 +44,7 @@ async function page() {
     <>
       <div className="h-full flex flex-col">
         <Navbar />
-        <VideoSection />
+        {/* <VideoSection /> */}
       </div>
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-7 lg:pt-24 relative z-30 bg-white">
@@ -69,7 +69,7 @@ async function page() {
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col my-7 lg:my-24 lg:h-96 relative z-30 bg-white">
+        <div className="flex lg:flex-row flex-col my-7 lg:my-20 lg:h-96 relative z-30 bg-white">
           <div className="lg:w-1/2 w-full">
             <img
               src="/images/about1.png"
@@ -179,7 +179,7 @@ async function page() {
         </div>
       </div>
 
-      <Stats statsData={stats} />
+      {/* <Stats statsData={stats} /> */}
 
       <Timeline />
 
@@ -238,9 +238,9 @@ async function page() {
           </div>
         </TransitionVertical>
       </div>
-      <div>
+      {/* <div>
         <Updates />
-      </div>
+      </div> */}
       <Footer />
     </>
   );

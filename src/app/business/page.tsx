@@ -93,26 +93,23 @@ async function page() {
             {businesses.map((card) => (
               <TransitionHorizontal key={card._id}>
                 <div className="w-full">
-                  <div className="w-full bg-amber-200 h-96">
-                    <img
-                      src={card.coverImageUrl}
-                      alt={card.linkTitle}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <TransitionVertical>
-                    <h1 className="mt-3 font-medium text-lg">
-                      {card.linkTitle}
-                    </h1>
-                    <p className="text-[#727272] text-sm">
-                      {card.getInTouchText}
-                    </p>
-                  </TransitionVertical>
+                  <Link href={`/business/${card.slug}`}>
+                    <div className="w-full bg-amber-200 h-96">
+                      <img
+                        src={card.coverImageUrl}
+                        alt={card.linkTitle}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <TransitionVertical>
+                      <h1 className="mt-3 font-medium text-lg">
+                        {card.linkTitle}
+                      </h1>
+                      <p className="text-[#727272] text-sm">
+                        {card.getInTouchText}
+                      </p>
+                    </TransitionVertical>
 
-                  <Link
-                    href={`/business/${card.slug}`}
-                    className="inline-block"
-                  >
                     <h1 className="mt-3 flex gap-3 items-center cursor-pointer">
                       Explore <MoveRight />
                     </h1>

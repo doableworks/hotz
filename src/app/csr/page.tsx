@@ -169,9 +169,9 @@ async function page() {
         </div>
       </TransitionVertical>
 
-      <Stats statsData={stats} />
+      {/* <Stats statsData={stats} /> */}
 
-      <CurvedTimeline />
+      {/* <CurvedTimeline /> */}
 
       <img
         src="/images/about2.png"
@@ -231,9 +231,9 @@ async function page() {
           </div>
         </TransitionVertical>
       </div>
-      <div>
+      {/* <div>
         <Updates />
-      </div>
+      </div> */}
       <Footer />
     </>
   );

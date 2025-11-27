@@ -16,7 +16,7 @@ const page = () => {
 
       <div className="w-full px-5 lg:px-10 py-7 lg:py-16 flex lg:flex-row flex-col gap-7">
         <div className="lg:w-1/2 w-full flex flex-col mt-7 lg:mt-0">
-          <h1 className="text-xl mb-2 underline">Office 1</h1>
+          <h1 className="text-2xl mb-5 font-medium">Registered Office</h1>
           <div className=" flex gap-5 items-start">
             <MapPin
               strokeWidth={1}
@@ -28,7 +28,7 @@ const page = () => {
               <h1>703 Chiranjiv Tower, 43 Nehru Place New Delhi 110019, IN</h1>
             </div>
           </div>
-          <div className=" flex gap-5 items-start mt-5">
+          <div className=" flex gap-5 items-start mt-3">
             <Phone strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
               <h1>+91 11 2644 7971</h1>
@@ -48,7 +48,7 @@ const page = () => {
         </div>
 
         <div className="lg:w-1/2 w-full">
-          <h1 className="text-xl mb-2 underline">Office 2</h1>
+          <h1 className="text-2xl mb-5 font-medium">Corporate Office</h1>
 
           <div className=" flex gap-5 items-start">
             <MapPin
@@ -64,7 +64,7 @@ const page = () => {
               </h1>
             </div>
           </div>
-          <div className=" flex gap-5 items-start mt-5">
+          <div className=" flex gap-5 items-start mt-3">
             <Phone strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
               <h1>+91 11 4315 1943</h1>
