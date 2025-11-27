@@ -94,12 +94,17 @@ async function page() {
               <TransitionHorizontal key={card._id}>
                 <div className="w-full">
                   <Link href={`/business/${card.slug}`}>
-                    <div className="w-full bg-amber-200 h-96">
+                    <div className="relative w-full bg-amber-200 h-96">
                       <img
                         src={card.coverImageUrl}
                         alt={card.linkTitle}
                         className="w-full h-full object-cover"
                       />
+                      {card.isLive === false && (
+                        <div className="absolute top-3 right-3 bg-[#DB0A0A] text-white text-xs md:text-sm font-semibold px-3 py-1 rounded-full shadow-lg z-50">
+                          Coming Soon
+                        </div>
+                      )}
                     </div>
                     <TransitionVertical>
                       <h1 className="mt-3 font-medium text-lg">
