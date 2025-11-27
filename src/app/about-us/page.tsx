@@ -171,7 +171,7 @@ async function page() {
               className="absolute top-0 right-0 w-3/4 lg:w-1/2 z-10"
             />
             <img
-              src="/images/Chairman.png"
+              src="/images/chairman.png"
               alt="Chairman"
               className="relative lg:ml-24 w-full lg:w-[65%] z-20"
             />
