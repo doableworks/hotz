@@ -44,10 +44,10 @@ async function page() {
     <>
       <div className="h-full flex flex-col">
         <Navbar />
-        <VideoSection />
+        {/* <VideoSection /> */}
       </div>
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-7 lg:pt-24 relative z-30 bg-white">
+        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-20 lg:pt-24 relative z-30 bg-white">
           <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
             A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
@@ -69,7 +69,7 @@ async function page() {
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col my-7 lg:my-24 lg:h-96 relative z-30 bg-white">
+        <div className="flex lg:flex-row flex-col my-7 lg:my-20 lg:h-96 relative z-30 bg-white">
           <div className="lg:w-1/2 w-full">
             <img
               src="/images/about1.png"
@@ -173,13 +173,13 @@ async function page() {
             <img
               src="/images/chairman.png"
               alt="Chairman"
-              className="relative lg:ml-24 w-full lg:w-1/2 z-20"
+              className="relative lg:ml-24 w-full lg:w-[65%] z-20"
             />
           </TransitionVertical>
         </div>
       </div>
 
-      <Stats statsData={stats} />
+      {/* <Stats statsData={stats} /> */}
 
       <Timeline />
 
@@ -238,9 +238,9 @@ async function page() {
           </div>
         </TransitionVertical>
       </div>
-      <div>
+      {/* <div>
         <Updates />
-      </div>
+      </div> */}
       <Footer />
     </>
   );

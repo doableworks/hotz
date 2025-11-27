@@ -10,6 +10,7 @@ export async function getBusiness() {
   _id,
   _type,
   linkTitle,
+  isLive,
   "coverImageUrl": coverImage.asset->url,
   getInTouchText,
   "slug": slug.current
@@ -36,6 +37,7 @@ export async function getTeamLeaders() {
   _id,
   title,
   "imageUrl" : image.asset->url,
+  description,
   designation
 }`,
     tags: ["teamLeaders"],
@@ -50,6 +52,7 @@ export async function getBusinessDetail(slug: string) {
         _type,
         linkTitle,
         description,
+        isLive,
         "coverImageUrl": coverImage.asset->url,
         "bannerImageUrl": bannerImage.asset->url,
         "businessTitle": BusinessHeading,

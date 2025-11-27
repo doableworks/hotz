@@ -10,14 +10,7 @@ const Hero = () => {
       <div className="text-center z-30">
         <TransitionVertical>
           <h1 className=" font-bold text-4xl lg:text-5xl">
-            SETTING NEW STANDARDS<br className="md:hidden"></br> EVERYDAY.
-          </h1>
-          <h1 className="text-4xl lg:text-5xl font-bold mt-2">
-            ONE TRUSTED<br className="md:hidden"></br> NAME.
-          </h1>
-          <h1 className="text-base lg:text-lg mt-2">
-            From finance to hospitality,<br className="md:hidden"></br> art and
-            education to real estate
+            Setting New Standards<br className="md:hidden"></br> Everyday
           </h1>
 
           <Link href="/business">

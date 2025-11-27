@@ -82,6 +82,12 @@ const Business = ({ businesses }: BusinessProps) => {
                 }`}
               />
 
+              {card.isLive === false && (
+                <div className="absolute top-3 right-3 bg-[#DB0A0A] text-white text-xs md:text-sm font-semibold px-3 py-1 rounded-full shadow-lg z-50">
+                  Coming Soon
+                </div>
+              )}
+
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/30" />
 

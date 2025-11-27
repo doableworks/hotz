@@ -85,11 +85,11 @@ async function page() {
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
           {/* Image Section */}
-          <div className="lg:w-1/2 w-full">
+          <div className="lg:w-1/2  w-full">
             <img
               src="/images/csrOverview.jpg"
               alt="About Us"
-              className="w-full h-full object-cover"
+              className="w-full h-96 object-cover"
             />
           </div>
 
@@ -106,8 +106,25 @@ async function page() {
                 by Aparajita Jain as a non-profit initiative and was founded in
                 2010.
               </h1>
-              <br />
-              <br />
+            </TransitionHorizontal>
+          </div>
+        </div>
+      </TransitionVertical>
+
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
+          {/* Image Section */}
+          <div className="lg:w-1/2  w-full">
+            <img
+              src="/images/csrOverview2.JPG"
+              alt="About Us"
+              className="w-full h-96 object-cover"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="lg:w-1/2 w-full px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
+            <TransitionHorizontal>
               <h1 className="text-lg">Balwant Rai Mehta</h1>
               <h1 className="text-white/60 mt-3">
                 Our association with the Servants of the People Society, founded
@@ -116,7 +133,7 @@ async function page() {
                 collaboration, we contribute to Balvantray Mehta Vidya Bhawan
                 Anguridevi Shersingh Memorial Academy, an integrated school for
                 children with and without disabilities, providing them equal
-                opportunities to learn, grow, and thrive
+                opportunities to learn, grow, and thrive.
               </h1>
             </TransitionHorizontal>
           </div>
@@ -129,7 +146,7 @@ async function page() {
         </div>
 
         {/* 💻 Desktop View */}
-        <div className="hidden md:flex px-10 gap-7">
+        <div className="hidden md:flex px-10 gap-7 lg:mb-24 mb-5">
           {values.map((value) => (
             <div
               key={value.id}
@@ -169,9 +186,9 @@ async function page() {
         </div>
       </TransitionVertical>
 
-      <Stats statsData={stats} />
+      {/* <Stats statsData={stats} /> */}
 
-      <CurvedTimeline />
+      {/* <CurvedTimeline /> */}
 
       <img
         src="/images/about2.png"
@@ -231,9 +248,9 @@ async function page() {
           </div>
         </TransitionVertical>
       </div>
-      <div>
+      {/* <div>
         <Updates />
-      </div>
+      </div> */}
       <Footer />
     </>
   );

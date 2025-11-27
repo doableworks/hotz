@@ -24,7 +24,7 @@ export default async function Home() {
       </ParallaxScroll>
       <About />
       <Business businesses={businesses} />
-      <Stats statsData={stats} />
+      {/* <Stats statsData={stats} />  */}
       <Leaders leaders={leaders} />
       <Updates />
       <Footer />
