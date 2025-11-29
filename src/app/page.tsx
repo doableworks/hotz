@@ -26,7 +26,7 @@ export default async function Home() {
       <Business businesses={businesses} />
       {/* <Stats statsData={stats} />  */}
       <Leaders leaders={leaders} />
-      <Updates />
+      {/* <Updates /> */}
       <Footer />
     </div>
   );
