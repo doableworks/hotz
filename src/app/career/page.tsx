@@ -127,23 +127,23 @@ const Page = async () => {
         <div className="w-full flex lg:flex-row flex-col gap-7">
           <div className="lg:w-1/3 w-full">
             <img
-              src="/images/life1.png"
+              src="/images/career1.jpg"
               alt="Career"
-              className=" h-80 object-cover"
+              className="w-full object-cover"
             />
           </div>
           <div className="lg:w-1/3 w-full">
             <img
-              src="/images/life2.png"
+              src="/images/career3.jpg"
               alt="Career"
-              className=" h-96 object-cover"
+              className="w-full object-cover"
             />
           </div>
           <div className="lg:w-1/3 w-full">
             <img
-              src="/images/life3.png"
+              src="/images/career2.jpg"
               alt="Career"
-              className=" h-80 object-cover"
+              className="w-full object-cover"
             />
           </div>
         </div>
