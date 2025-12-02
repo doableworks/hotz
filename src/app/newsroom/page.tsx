@@ -20,8 +20,13 @@ async function page() {
     <>
       <Navbar />
 
-      <div className="w-full h-80 bg-gray-400">
-        <img src="/images/contact.png" className="h-80 w-full object-cover" />
+      <div className="my-16"></div>
+
+      <div className="w-full h-48 lg:h-80">
+        <img
+          src="/images/news.jpg"
+          className="h-48 lg:h-80 w-full object-cover"
+        />
       </div>
 
       <TransitionVertical>
