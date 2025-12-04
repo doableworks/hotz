@@ -2,15 +2,17 @@ import ParallaxScroll from "@/animations/ParallaxWrapper";
 import TransitionHorizontal from "@/animations/TransitionHorizontal";
 import TransitionVertical from "@/animations/TransitionVertical";
 import Footer from "@/components/Footer";
+import Leaders from "@/components/Leaders";
 import Navbar from "@/components/Navbar";
 import Timeline from "@/components/pagespecific/about-us/Timeline";
 import VideoSection from "@/components/pagespecific/about-us/VideoSection";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
-import { getStats } from "@/lib/sanityQueries";
+import { getStats, getTeamLeaders } from "@/lib/sanityQueries";
 import React from "react";
 
 async function page() {
+  const leaders = await getTeamLeaders();
   const values = [
     {
       id: 1,
@@ -177,6 +179,10 @@ async function page() {
             />
           </TransitionVertical>
         </div>
+      </div>
+
+      <div>
+        <Leaders leaders={leaders} />
       </div>
 
       {/* <Stats statsData={stats} /> */}

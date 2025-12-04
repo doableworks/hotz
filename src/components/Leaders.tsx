@@ -9,11 +9,11 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
   const [selectedLeader, setSelectedLeader] = useState<TeamLeader | null>(null);
 
   const handleOpenModal = (leader: TeamLeader) => {
-if (leader.description) {
-
-    setSelectedLeader(leader);
-    setOpenModal(true);}
-  }
+    if (leader.description) {
+      setSelectedLeader(leader);
+      setOpenModal(true);
+    }
+  };
 
   const handleCloseModal = () => {
     setOpenModal(false);
@@ -32,7 +32,7 @@ if (leader.description) {
   }, [openModal]);
 
   return (
-    <div className="px-5 lg:px-10 pt-7 lg:pt-24">
+    <div className="px-5 lg:px-10 pb-7 lg:pb-24">
       <div className="text-center text-xl font-semibold mt-5  mb-7">
         GUIDED BY VISIONARY MANAGEMENT,<br className="md:hidden"></br> DRIVEN BY
         VALUES.
@@ -43,7 +43,7 @@ if (leader.description) {
             <div key={leader._id} className="w-1/4">
               <div
                 onClick={() => handleOpenModal(leader)}
-                className={`bg-amber-300 h-96 ${leader.description ? 'cursor-pointer' : 'cursor-default'}`}
+                className={`bg-amber-300 h-96 ${leader.description ? "cursor-pointer" : "cursor-default"}`}
               >
                 <img
                   src={leader.imageUrl}
@@ -64,7 +64,7 @@ if (leader.description) {
             <div key={leader._id} className="w-[70%] snap-center flex-shrink-0">
               <div
                 onClick={() => handleOpenModal(leader)}
-                className={`h-80 overflow-hidden ${leader.description ? 'cursor-pointer' : 'cursor-default'}`}
+                className={`h-80 overflow-hidden ${leader.description ? "cursor-pointer" : "cursor-default"}`}
               >
                 <img
                   src={leader.imageUrl}
@@ -127,14 +127,19 @@ if (leader.description) {
               className="w-full h-96 object-contain mb-4"
             />
             {/* Leader Title */}
-            <h1 className="text-xl text-center font-semibold">{selectedLeader.title}</h1>
+            <h1 className="text-xl text-center font-semibold">
+              {selectedLeader.title}
+            </h1>
 
             <div className="text-sm text-center text-gray-500 mt-2">
-              {selectedLeader.description.split(/\n+/).filter(paragraph => paragraph.trim()).map((paragraph, index) => (
-                <p key={index} className="mb-3 last:mb-0">
-                  {paragraph.trim()}
-                </p>
-              ))}
+              {selectedLeader.description
+                .split(/\n+/)
+                .filter((paragraph) => paragraph.trim())
+                .map((paragraph, index) => (
+                  <p key={index} className="mb-3 last:mb-0">
+                    {paragraph.trim()}
+                  </p>
+                ))}
             </div>
           </div>
         </div>
