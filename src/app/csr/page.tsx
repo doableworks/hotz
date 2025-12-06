@@ -166,7 +166,7 @@ async function page() {
         </div>
 
         {/* 📱 Mobile View */}
-        <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
+        <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory mb-7">
           {values.map((value) => (
             <div
               key={value.id}
