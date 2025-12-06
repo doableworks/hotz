@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import React from "react";
-import { MapPin, ArrowRight, Phone } from "lucide-react";
+import { MapPin, ArrowRight, Phone, Mail } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const page = () => {
@@ -28,10 +28,18 @@ const page = () => {
               <h1>703 Chiranjiv Tower, 43 Nehru Place New Delhi 110019, IN</h1>
             </div>
           </div>
+
           <div className=" flex gap-5 items-start mt-3">
             <Phone strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
               <h1>+91 11 2644 7971</h1>
+            </div>
+          </div>
+
+          <div className=" flex gap-5 items-start mt-3">
+            <Mail strokeWidth={1} color="#727272" size={20} className="mt-1" />
+            <div>
+              <h1>info@hotzinc.com</h1>
             </div>
           </div>
 
@@ -68,6 +76,12 @@ const page = () => {
             <Phone strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
               <h1>+91 11 4315 1943</h1>
+            </div>
+          </div>
+          <div className=" flex gap-5 items-start mt-3">
+            <Mail strokeWidth={1} color="#727272" size={20} className="mt-1" />
+            <div>
+              <h1>info@hotz.in</h1>
             </div>
           </div>
 
