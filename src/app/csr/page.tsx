@@ -10,6 +10,7 @@ import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
 import { getStats } from "@/lib/sanityQueries";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 async function page() {
@@ -83,12 +84,15 @@ async function page() {
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
+        <Link
+          href="/csr/saat-saath-arts-foundation"
+          className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white"
+        >
           {/* Image Section */}
           <div className="lg:w-1/2  w-full">
             <img
               src="/images/csrOverview2.JPG"
-              alt="About Us"
+              alt="Saat Saath Arts Foundation"
               className="w-full h-96 object-cover"
             />
           </div>
@@ -108,16 +112,19 @@ async function page() {
               </h1>
             </TransitionHorizontal>
           </div>
-        </div>
+        </Link>
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
+        <Link
+          href="/csr/balwant-rai-mehta"
+          className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white"
+        >
           {/* Image Section */}
           <div className="lg:w-1/2  w-full">
             <img
               src="/images/csrOverview.jpg"
-              alt="About Us"
+              alt="Balwant Rai Mehta"
               className="w-full h-96 object-cover"
             />
           </div>
@@ -137,7 +144,7 @@ async function page() {
               </h1>
             </TransitionHorizontal>
           </div>
-        </div>
+        </Link>
       </TransitionVertical>
 
       <TransitionVertical>
@@ -145,7 +152,6 @@ async function page() {
           CORE VALUES
         </div>
 
-        {/* 💻 Desktop View */}
         <div className="hidden md:flex px-10 gap-7 lg:mb-24 mb-5">
           {values.map((value) => (
             <div
@@ -165,7 +171,6 @@ async function page() {
           ))}
         </div>
 
-        {/* 📱 Mobile View */}
         <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory mb-7">
           {values.map((value) => (
             <div
