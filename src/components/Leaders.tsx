@@ -43,7 +43,7 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
             <div key={leader._id} className="w-1/4">
               <div
                 onClick={() => handleOpenModal(leader)}
-                className={`bg-amber-300 h-96 ${leader.description ? "cursor-pointer" : "cursor-default"}`}
+                className={`bg-[#F5F5F5] h-96 ${leader.description ? "cursor-pointer" : "cursor-default"}`}
               >
                 <img
                   src={leader.imageUrl}

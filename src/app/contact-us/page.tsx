@@ -16,7 +16,7 @@ const page = () => {
 
       <div className="w-full px-5 lg:px-10 py-7 lg:py-16 flex lg:flex-row flex-col gap-7">
         <div className="lg:w-1/2 w-full flex flex-col mt-7 lg:mt-0">
-          <h1 className="text-2xl mb-5 font-medium">Registered Office</h1>
+          <h1 className="text-2xl mb-5 font-medium">REGISTERED OFFICE</h1>
           <div className=" flex gap-5 items-start">
             <MapPin
               strokeWidth={1}
@@ -56,7 +56,7 @@ const page = () => {
         </div>
 
         <div className="lg:w-1/2 w-full">
-          <h1 className="text-2xl mb-5 font-medium">Corporate Office</h1>
+          <h1 className="text-2xl mb-5 font-medium">CORPORATE OFFICE</h1>
 
           <div className=" flex gap-5 items-start">
             <MapPin

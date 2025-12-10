@@ -19,7 +19,7 @@ function CareerFilters({ careers, categories }: CareerFiltersProps) {
 
   return (
     <div className="w-full px-5 lg:px-10 py-5 lg:py-20 flex flex-col">
-      <h1 className="text-2xl lg:text-3xl font-medium mb-5">We are hiring</h1>
+      <h1 className="text-2xl lg:text-3xl font-medium mb-5">WE ARE HIRING</h1>
 
       <div className="flex flex-wrap items-center gap-4">
         {categories.map((category) => (

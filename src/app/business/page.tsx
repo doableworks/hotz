@@ -86,7 +86,7 @@ async function page() {
 
         <div className="px-5 lg:px-10 pt-10">
           <TransitionVertical>
-            <h1 className="text-2xl font-medium mb-5">Our Businesses</h1>
+            <h1 className="text-2xl font-medium mb-5">OUR BUSINESSES</h1>
           </TransitionVertical>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -145,9 +145,11 @@ async function page() {
               industries and opportunities
             </h1>
 
-            <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm">
-              <TransitionHorizontal>GET IN TOUCH</TransitionHorizontal>
-            </button>
+            <Link href="/contact-us">
+              <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm">
+                <TransitionHorizontal>GET IN TOUCH</TransitionHorizontal>
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -195,9 +195,9 @@ async function page() {
         className="w-full h-96 object-cover"
       />
 
-      <div className="my-5 lg:my-16 relative bg-white z-30 pt-5 lg:pt-16">
+      <div className="my-5 relative bg-white z-30 pt-5 lg:pt-16">
         <div className="text-center text-xl font-semibold mb-2">
-          Our Commitment Beyond Business
+          OUR COMMITMENT BEYOND BUSINESS
         </div>
 
         <div className="px-5 flex justify-center w-full text-center">

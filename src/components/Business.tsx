@@ -44,7 +44,7 @@ const Business = ({ businesses }: BusinessProps) => {
   return (
     <div className="px-4 md:px-10 relative z-40 bg-white">
       <div className="text-center text-xl font-semibold pt-7 lg:pt-24 mb-7">
-        OUR BUSINESS
+        OUR BUSINESSES
       </div>
       <TransitionVertical>
         <div className="flex md:flex-row flex-col items-center md:items-stretch gap-3 w-full md:h-96  overflow-hidden">

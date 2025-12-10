@@ -9,6 +9,7 @@ import CurvedTimeline from "@/components/pagespecific/csr/Timeline2";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
 import { getStats } from "@/lib/sanityQueries";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -84,10 +85,7 @@ async function page() {
       </TransitionVertical>
 
       <TransitionVertical>
-        <Link
-          href="/csr/saat-saath-arts-foundation"
-          className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white"
-        >
+        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
           {/* Image Section */}
           <div className="lg:w-1/2  w-full">
             <img
@@ -110,16 +108,19 @@ async function page() {
                 by Aparajita Jain as a non-profit initiative and was founded in
                 2010.
               </h1>
+
+              <Link href="/csr/saat-saath-arts-foundation">
+                <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex items-center gap-2">
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
             </TransitionHorizontal>
           </div>
-        </Link>
+        </div>
       </TransitionVertical>
 
       <TransitionVertical>
-        <Link
-          href="/csr/balwant-rai-mehta"
-          className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white"
-        >
+        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
           {/* Image Section */}
           <div className="lg:w-1/2  w-full">
             <img
@@ -142,9 +143,15 @@ async function page() {
                 children with and without disabilities, providing them equal
                 opportunities to learn, grow, and thrive.
               </h1>
+
+              <Link href="/csr/balwant-rai-mehta">
+                <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex items-center gap-2">
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
             </TransitionHorizontal>
           </div>
-        </Link>
+        </div>
       </TransitionVertical>
 
       <TransitionVertical>
@@ -201,7 +208,7 @@ async function page() {
         className="w-full h-96 object-cover"
       />
 
-      <div className="my-5 lg:my-16 relative bg-white z-30 pt-5 lg:pt-16">
+      <div className="my-5 relative bg-white z-30 pt-5 lg:pt-16">
         <div className="text-center text-xl font-semibold mb-2">
           Our Commitment Beyond Business
         </div>
