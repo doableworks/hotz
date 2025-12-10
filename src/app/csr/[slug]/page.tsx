@@ -48,7 +48,7 @@ const CSRDetailPage = async ({ params }: CSRPageProps) => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-80">
+      <div className="w-full h-80 mt-16">
         <img src={entry.bannerImage} className="w-full h-80 object-cover" />
       </div>
 
