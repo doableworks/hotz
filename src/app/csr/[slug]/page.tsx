@@ -6,6 +6,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+const imageGridConfig = [
+  {
+    id: 0,
+    position: "col-start-1 row-start-1",
+  },
+  {
+    id: 1,
+    position: "col-start-2 row-start-1 row-span-2",
+  },
+  {
+    id: 2,
+    position: "col-start-3 row-start-1",
+  },
+  {
+    id: 3,
+    position: "col-start-1 row-start-2 row-span-2",
+  },
+  {
+    id: 4,
+    position: "col-start-2 row-start-3",
+  },
+  {
+    id: 5,
+    position: "col-start-3 row-start-2 row-span-2",
+  },
+];
+
 type CSRPageProps = {
   params: { slug: string };
 };
@@ -39,39 +66,81 @@ const CSRDetailPage = async ({ params }: CSRPageProps) => {
         </div>
       </TransitionVertical>
 
-      <TransitionVertical>
-        <div className="w-full px-5 lg:px-10 ">
-          <h1 className="text-2xl lg:text-4xl font-medium mt-8 lg:mt-0">
-            Overview
-          </h1>
-          <p className="mt-3 text-[#727272] whitespace-pre-line">
-            {entry.overview}
-          </p>
-        </div>
-      </TransitionVertical>
-
-      {entry.projectNote ? (
+      <div className="bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c] py-10">
         <TransitionVertical>
-          <div className="w-full px-5 lg:px-10 mt-8">
-            <h2 className="text-2xl lg:text-4xl font-medium">Our Project</h2>
-            <p className="mt-3 text-[#727272] whitespace-pre-line">
-              {entry.projectNote}
+          <div className="w-full px-5 lg:px-10 ">
+            <h1 className="text-2xl lg:text-4xl font-medium mt-8 lg:mt-0 text-white">
+              Overview
+            </h1>
+            <p className="mt-3 text-[#dfdfdf] whitespace-pre-line">
+              {entry.overview}
             </p>
+            <div className="w-full h-px bg-[#fff]/40 my-5 lg:my-7"></div>
           </div>
         </TransitionVertical>
-      ) : null}
 
-      {entry.institutionalBackground ? (
-        <TransitionVertical>
-          <div className="w-full px-5 lg:px-10 mt-8">
-            <h2 className="text-2xl lg:text-4xl font-medium ">
-              Institutional Background
-            </h2>
-            <p className="mt-3 text-[#727272] whitespace-pre-line">
-              {entry.institutionalBackground}
-            </p>
+        {entry.projectNote ? (
+          <TransitionVertical>
+            <div className="w-full px-5 lg:px-10 mt-8">
+              <h2 className="text-2xl lg:text-4xl font-medium text-white">
+                Our Project
+              </h2>
+              <p className="mt-3 text-[#dfdfdf] whitespace-pre-line">
+                {entry.projectNote}
+              </p>
+            </div>
+          </TransitionVertical>
+        ) : null}
+
+        {entry.institutionalBackground ? (
+          <TransitionVertical>
+            <div className="w-full px-5 lg:px-10 mt-8">
+              <h2 className="text-2xl lg:text-4xl font-medium text-white">
+                Institutional Background
+              </h2>
+              <p className="mt-3 text-[#dfdfdf] whitespace-pre-line">
+                {entry.institutionalBackground}
+              </p>
+            </div>
+          </TransitionVertical>
+        ) : null}
+      </div>
+
+      {entry.galleryImages && entry.galleryImages.length > 0 ? (
+        <>
+          <TransitionVertical>
+            <div className="mt-10 hidden px-5 lg:px-10 lg:grid grid-cols-3 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-5 h-[600px]">
+              {imageGridConfig.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`${item.position} bg-gray-300 overflow-hidden`}
+                >
+                  <img
+                    src={entry.galleryImages?.[index] || ""}
+                    alt={`csr-${item.id}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </TransitionVertical>
+
+          <div className="lg:hidden flex flex-col gap-3 w-full px-5">
+            <div>
+              {entry.galleryImages.map((item, index) => (
+                <TransitionVertical key={index}>
+                  <div className={"overflow-hidden"}>
+                    <img
+                      src={item}
+                      alt={`csr-${index}`}
+                      className="w-full h-64 object-cover my-2"
+                    />
+                  </div>
+                </TransitionVertical>
+              ))}
+            </div>
           </div>
-        </TransitionVertical>
+        </>
       ) : null}
 
       <Footer />

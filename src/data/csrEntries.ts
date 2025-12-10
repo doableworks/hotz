@@ -8,6 +8,7 @@ export type CSRDetail = {
   overview: string;
   projectNote?: string;
   institutionalBackground?: string;
+  galleryImages?: string[];
   links?: { label: string; href: string }[];
 };
 
@@ -31,6 +32,14 @@ Supported by the Jaigarh Public Charitable Trust and Jaipur Centre for Art (JCA)
 
 Driven by the belief that art should be accessible and transformative, Saath Saath Arts brings global and Indian artists into iconic environments—reimagining forts, museums, and cultural landmarks as living spaces for creativity. Through exhibitions, research programs, and collaborative initiatives, we continue to nurture artistic dialogue and shape India’s cultural future.`,
     institutionalBackground: "",
+    galleryImages: [
+      "/images/saathsaath1.jpg",
+      "/images/saathsaath2.jpg",
+      "/images/saathsaath3.jpg",
+      "/images/saathsaath4.jpg",
+      "/images/saathsaath5.jpg",
+      "/images/saathsaath6.jpg",
+    ],
   },
   {
     slug: "balwant-rai-mehta",
@@ -50,6 +59,14 @@ Regd No: S - 667 of 1953 - 1954 under the Societies Registration Act of 1860
 The Servants of the People Society, founded at Lahore by Sher-e-Punjab Lala Lajpat Rai and inaugurated by Mahatma Gandhi in 1921, has an unbroken record of dedicated service to the nation for over 88 years. Among its distinguished past Presidents are Babu Purshottam Das Tandon, Shri Balvant Ray Mehta, Shri Lal Bahadur Shastri, and Shri Krishan Kant. After the demise of Shri Krishan Kant, Shri Manu Bhai Patel assumed charge as Chairman of the Society. Shri Inder Kumar Gujral, Former Prime Minister of India, and Shri Rajender Sachhar, Former Chief Justice of India, serve as trustees of the Society.
 
 The Society runs numerous philanthropic projects and educational institutions across India. Balvantray Mehta Vidhya Bhawan Anguridevi Shersingh Memorial Academy is an integrated school for disabled children located at Masjid Moth, G.K. II, New Delhi-48. The Society also manages a Vocational Training Center at Masjid Moth School, a public library, a charitable medical clinic, and a homeopathic dispensary at Lajpat Bhawan, along with a home for senior citizens in Dwarka.`,
+    galleryImages: [
+      "/images/balwant1.jpg",
+      "/images/balwant2.jpg",
+      "/images/balwant3.jpg",
+      "/images/balwant4.jpg",
+      "/images/balwant5.jpg",
+      "/images/balwant6.jpg",
+    ],
     links: [
       {
         label: "Servants of the People Society",
