@@ -22,7 +22,7 @@ const VideoSection = () => {
   }, []);
 
   return (
-    <div className="w-full h-[70vh] relative z-40">
+    <div className="w-full lg:h-[70vh] relative z-40">
       {!isVideoLoaded && (
         <div className="absolute inset-0 z-50">
           <img
