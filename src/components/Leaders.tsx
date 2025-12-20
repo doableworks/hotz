@@ -32,10 +32,9 @@ const Leaders = ({ leaders }: { leaders: TeamLeader[] }) => {
   }, [openModal]);
 
   return (
-    <div className="px-5 lg:px-10 pb-7 lg:pb-24">
+    <div id="management" className="scroll-mt-24 px-5 lg:px-10 pb-7 lg:pb-24">
       <div className="text-center text-xl font-semibold mt-5  mb-7">
-        GUIDED BY VISIONARY MANAGEMENT,<br className="md:hidden"></br> DRIVEN BY
-        VALUES.
+        MANAGEMENT
       </div>
       <TransitionVertical>
         <div className="hidden md:flex w-full gap-7">

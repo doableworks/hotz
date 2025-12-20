@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import { MapPin, ArrowRight, Phone, Mail } from "lucide-react";
 import Footer from "@/components/Footer";
+import InquiryFeedbackForm from "@/components/pagespecific/contact/InquiryFeedbackForm";
 
 const page = () => {
   return (
@@ -14,7 +15,7 @@ const page = () => {
         />
       </div>
 
-      <div className="w-full px-5 lg:px-10 py-7 lg:py-16 flex lg:flex-row flex-col gap-7">
+      <div className="w-full px-5 lg:px-10 py-10 flex lg:flex-row flex-col gap-7">
         <div className="lg:w-1/2 w-full flex flex-col mt-7 lg:mt-0">
           <h1 className="text-2xl mb-5 font-medium">REGISTERED OFFICE</h1>
           <div className=" flex gap-5 items-start">
@@ -96,6 +97,10 @@ const page = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+      </div>
+
+      <div className="w-full px-5 lg:px-10 py-10 flex justify-start">
+        <InquiryFeedbackForm />
       </div>
 
       <Footer />

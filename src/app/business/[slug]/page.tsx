@@ -169,7 +169,9 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
             business.locationUrl) && (
             <div className="px-5 lg:px-10 mt-7 lg:mt-16">
               <h1 className="text-2xl lg:text-3xl text-center font-medium">
-                FIND US AT OUR PREMISES
+                {business.address && business.address.length > 1
+                  ? "LOCATIONS"
+                  : "LOCATION"}
               </h1>
 
               <div

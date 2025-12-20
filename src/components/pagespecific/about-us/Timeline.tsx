@@ -136,11 +136,14 @@ const CurvedTimeline: React.FC = () => {
     "M19 816H605.622C642.5 816 677.5 784.335 677.5 734.58C677.5 684.825 650 650.571 564.43 650.571H416.307C397.5 650.571 343 640 343 573C343 509.5 405 500.374 416.307 500.374H906.515C954.78 500.374 1005 480.465 1005 421.862C1005 348.61 926.487 343.736 844.519 343.736C778.946 343.736 790.222 343.736 769.557 343.736H698C669 343.736 620 324.6 620 273C620 221.4 665 193.5 698 193.5H739.5H797C859.5 193.5 903 150.5 903 98C903 20.5 813 11.8333 797 11H520";
 
   return (
-    <div className="w-full h-full bg-[#f3f3f3] pt-12 pb-10 lg:pb-44 px-4">
+    <div
+      id="milestone"
+      className="scroll-mt-20 w-full h-full bg-[#f3f3f3] pt-12 pb-10 lg:pb-44 px-4"
+    >
       <div>
         <TransitionVertical>
-          <h1 className="text-lg font-semibold text-center my-5">
-            OUR JOURNEY THROUGH TIME
+          <h1 className="text-lg font-semibold text-center mb-10">
+            MILESTONES
           </h1>
         </TransitionVertical>
       </div>
@@ -340,14 +343,14 @@ const CurvedTimeline: React.FC = () => {
                       }}
                     >
                       <TransitionVertical>
-                      <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
-                        {event.title}
-                      </h3>
+                        <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
+                          {event.title}
+                        </h3>
                       </TransitionVertical>
                       <TransitionVertical>
-                      <p className="text-xs text-gray-600 leading-relaxed">
-                        {event.description}
-                      </p>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          {event.description}
+                        </p>
                       </TransitionVertical>
                     </div>
                   </div>

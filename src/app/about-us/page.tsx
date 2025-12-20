@@ -55,24 +55,29 @@ async function page() {
             A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
           <div className="w-full lg:w-1/2">
-            Hotz Group&apos;s journey began in the early 1900s, founded by Swiss
-            nationals who introduced world-class hospitality to India&apos;s
-            northern hills. Over time, the Group evolved from its
-            European-inspired roots into a diversified Indian enterprise, driven
-            by the belief that progress must be built on trust, integrity, and
-            innovation. <br></br>
+            The Hotz Group&apos;s journey began in the early 1900&apos;. Founded
+            by Swiss nationals who introduced world-class hospitality to India
+            with hotels and resorts in Shimla, Delhi, Agra, Jaipur and Kasauli.
+            Over time, the Group evolved from its European inspired roots into a
+            diversified Indian enterprise, driven by the belief that progress
+            must be built on trust, integrity, and innovation <br></br>
             <br></br>Since then, Hotz has expanded its footprint across multiple
-            sectors—real estate, financial services, manufacturing, industrial
-            gases, and warehousing—each venture reflecting a commitment to
-            quality and lasting value. Guided by a vision for tomorrow, we
-            continue to build with purpose, shaping experiences, environments,
-            and opportunities that endure across generations.
+            sectors - real estate and warehousing, financial services,
+            manufacturing of steel, air conditioning and refrigeration, textiles
+            and industrial gases, hospitality including food service retail, art
+            and education, each venture reflecting a commitment to quality and
+            lasting value. Guided by a vision for tomorrow, we continue to build
+            with purpose, shaping experiences, environments, and opportunities
+            that endure across generations.
           </div>
         </div>
       </TransitionVertical>
 
       <TransitionVertical>
-        <div className="flex lg:flex-row flex-col my-7 lg:my-20 lg:h-96 relative z-30 bg-white">
+        <div
+          id="story"
+          className="scroll-mt-28 flex lg:flex-row flex-col my-7 lg:my-20 lg:h-96 relative z-30 bg-white"
+        >
           <div className="lg:w-1/2 w-full">
             <img
               src="/images/about1.png"
@@ -81,16 +86,18 @@ async function page() {
             />
           </div>
 
-          <div className="lg:w-1/2 w-full min-h-96 px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
+          <div className=" lg:w-1/2 w-full min-h-96 px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
               <h1 className="text-xl">OUR STORY</h1>
               <h1 className="text-white/60 mt-3">
-                Established in 1952 as Hotz Industries Limited, the company
-                began with a focus on hospitality before expanding into
-                investment, leasing, industrial gases, and real estate
-                development. This spirit of diversification and reinvention has
-                defined Hotz through every era—enabling the Group to adapt,
-                innovate, and lead across industries. <br></br>
+                Incorporated under the Companies Act as Hotz Hotels Private
+                Limited in 1952, the company began with a focus on hospitality
+                before diversifying into portfolio investments and financial
+                services, manufacturing of various products, food service
+                retail, art, education and real estate development. This spirit
+                of diversification and reinvention has defined Hotz through
+                every era, enabling the Group to adapt, innovate, and lead
+                across industries. <br></br>
                 <br></br> What drives us is a deep respect for people,
                 partnerships, and performance. From creating advanced
                 warehousing and industrial infrastructure to supporting
@@ -104,8 +111,13 @@ async function page() {
         </div>
       </TransitionVertical>
 
+      <Timeline />
+
       <TransitionVertical>
-        <div className="text-center text-xl font-semibold mb-7">
+        <div
+          id="vision"
+          className="scroll-mt-32 text-center text-xl font-semibold mt-12 mb-7"
+        >
           CORE VALUES
         </div>
 
@@ -130,7 +142,7 @@ async function page() {
         </div>
 
         {/* 📱 Mobile View */}
-        <div className="flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
+        <div className="scroll-mt-20 flex md:hidden overflow-x-auto gap-5 px-5 no-scrollbar scroll-smooth snap-x snap-mandatory">
           {values.map((value) => (
             <div
               key={value.id}
@@ -150,14 +162,74 @@ async function page() {
         </div>
       </TransitionVertical>
 
-      <div className="mt-7 lg:mt-24 flex lg:flex-row flex-col justify-between items-center px-10">
+      <img
+        src="/images/about2.png"
+        alt="Footer Image"
+        className="w-full h-96 object-cover mt-10"
+      />
+
+      <div className="my-5 relative bg-white z-30 pt-5 lg:pt-16">
+        <div className="text-center text-xl font-semibold mb-2">
+          Our Commitment Beyond Business
+        </div>
+
+        <div className="px-5 flex justify-center w-full text-center">
+          <div className="max-w-3xl text-[#727272]">
+            At Hotz Group, we believe education is the foundation of progress.
+            Our initiatives focus on providing access to quality learning,
+            scholarships, and skill development programs that empower students
+            to achieve their full potential.
+          </div>
+        </div>
+        <TransitionVertical>
+          <div className="flex lg:flex-row flex-col justify-center mt-16 gap-7 lg:gap-24">
+            <div className="flex flex-col justify-center items-center text-center gap-5">
+              <img
+                src="/images/book-check.png"
+                alt="Book Check"
+                className="w-11"
+              />
+
+              <h1>
+                Scholarships for <br /> underprivileged students
+              </h1>
+            </div>
+
+            <div className="flex flex-col justify-center items-center text-center gap-5">
+              <img
+                src="/images/monitor.png"
+                alt="Book Check"
+                className="w-11"
+              />
+
+              <h1>
+                Support for schools and <br></br>digital learning infrastructure
+              </h1>
+            </div>
+
+            <div className="flex flex-col justify-center items-center text-center gap-5">
+              <img src="/images/person.png" alt="Book Check" className="w-11" />
+
+              <h1>
+                Vocational training & <br></br>skill-building workshops.
+              </h1>
+            </div>
+          </div>
+        </TransitionVertical>
+      </div>
+
+      <div
+        id="chairmans-message"
+        className="scroll-mt-20 mt-16 lg:mt-24 flex lg:flex-row flex-col justify-between items-center px-10"
+      >
         <div className="w-full lg:w-2/5 flex flex-col justify-start items-start">
           <img src="/images/icon.png" alt="About Us" className="w-20 lg:w-24" />
           <TransitionVertical>
             <h1 className="text-2xl font-semibold mt-5">
-              At Hotz Group, our foundation has always been trust. Over the
-              decades, we have grown not just in Business, but in
-              relationships—building legacies that stand the test of time.
+              At Hotz Group, our foundation has always been the trust that our
+              stakeholders have imposed on us. Over the years, we have grown not
+              just in business, but in relationship-building legacies that stand
+              the test of time and setting new standards, everyday.
             </h1>
           </TransitionVertical>
 
@@ -188,63 +260,6 @@ async function page() {
 
       {/* <Stats statsData={stats} /> */}
 
-      <Timeline />
-
-      <img
-        src="/images/about2.png"
-        alt="Footer Image"
-        className="w-full h-96 object-cover"
-      />
-
-      <div className="my-5 relative bg-white z-30 pt-5 lg:pt-16">
-        <div className="text-center text-xl font-semibold mb-2">
-          OUR COMMITMENT BEYOND BUSINESS
-        </div>
-
-        <div className="px-5 flex justify-center w-full text-center">
-          <div className="max-w-3xl text-[#727272]">
-            At Hotz Group, we believe education is the foundation of progress.
-            Our initiatives focus on providing access to quality learning,
-            scholarships, and skill development programs that empower students
-            to achieve their full potential.
-          </div>
-        </div>
-        <TransitionVertical>
-          <div className="flex lg:flex-row flex-col justify-center mt-16 gap-7 lg:gap-24">
-            <div className="flex flex-col justify-center items-center text-center gap-5">
-              <img
-                src="/images/book-check.png"
-                alt="Book Check"
-                className="w-11"
-              />
-
-              <h1>
-                Scholarships for<br></br>underprivileged students
-              </h1>
-            </div>
-
-            <div className="flex flex-col justify-center items-center text-center gap-5">
-              <img
-                src="/images/monitor.png"
-                alt="Book Check"
-                className="w-11"
-              />
-
-              <h1>
-                Support for schools and<br></br>digital learning infrastructure
-              </h1>
-            </div>
-
-            <div className="flex flex-col justify-center items-center text-center gap-5">
-              <img src="/images/person.png" alt="Book Check" className="w-11" />
-
-              <h1>
-                Vocational training &<br></br>skill-building workshops
-              </h1>
-            </div>
-          </div>
-        </TransitionVertical>
-      </div>
       {/* <div>
         <Updates />
       </div> */}

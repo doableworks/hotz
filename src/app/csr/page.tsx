@@ -72,11 +72,11 @@ async function page() {
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-7 lg:pt-24 relative z-30 bg-white">
           <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-            A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
+            A Legacy of Care.<br></br> A Vision for<br></br>Change.
           </div>
           <div className="w-full lg:w-1/2">
-            Since its inception, Hotz Group has believed that true progress is
-            measured not only by business milestones but by the lives it
+            Since its inception, the Hotz Group has believed that true progress
+            is measured not only by business milestones but by the lives it
             touches. Through our CSR initiatives, we continue to create
             opportunities, empower communities, and shape a more inclusive
             tomorrow.
@@ -100,13 +100,13 @@ async function page() {
             <TransitionHorizontal>
               <h1 className="text-lg">Saat Saath Arts Foundation</h1>
               <h1 className="text-white/60 mt-3">
-                Guided by the philosophy of giving back, Hotz Group has long
-                supported initiatives that promote education, inclusion, and
-                cultural development. The Saat Saath Arts Foundation supports
-                international exchange between India and the rest of the world
-                through the visual arts and education. The Foundation is funded
-                by Aparajita Jain as a non-profit initiative and was founded in
-                2010.
+                Guided by the philosophy of giving back, the Hotz Group has long
+                supported initiatives that promote art, handicrafts and local
+                artisans, education, inclusion, and cultural development. The
+                Saat Saath Arts Foundation supports international exchange
+                between India and the rest of the world through the visual arts
+                and education. The Foundation is led by Mrs. Aparajita Jain as a
+                non-profit initiative and was founded in 2010.
               </h1>
 
               <Link href="/csr/saat-saath-arts-foundation">
@@ -125,7 +125,7 @@ async function page() {
           <div className="lg:w-1/2  w-full">
             <img
               src="/images/csrOverview.jpg"
-              alt="Balwant Rai Mehta"
+              alt="Balvantray Mehta"
               className="w-full h-96 object-cover"
             />
           </div>
@@ -133,18 +133,18 @@ async function page() {
           {/* Text Section */}
           <div className="lg:w-1/2 w-full px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
-              <h1 className="text-lg">Balwant Rai Mehta</h1>
+              <h1 className="text-lg">Balvantray Mehta</h1>
               <h1 className="text-white/60 mt-3">
-                Our association with the Servants of the People Society, founded
-                in 1921 by Lala Lajpat Rai and inaugurated by Mahatma Gandhi,
-                reflects our deep commitment to nation-building. Through this
-                collaboration, we contribute to Balvantray Mehta Vidya Bhawan
-                Anguridevi Shersingh Memorial Academy, an integrated school for
-                children with and without disabilities, providing them equal
-                opportunities to learn, grow, and thrive.
+                Our association with the Servants of the People Society,
+                (founded in 1921 by Lala Lajpat Rai and inaugurated by Mahatma
+                Gandhi), reflects our deep commitment to nation-building.
+                Through this collaboration, we contribute to Balvantray Mehta
+                Vidya Bhawan Anguridevi Shersingh Memorial Academy, an
+                integrated school for children with and without disabilities,
+                providing them equal opportunities to learn, grow, and thrive.
               </h1>
 
-              <Link href="/csr/balwant-rai-mehta">
+              <Link href="/csr/balvantray-mehta">
                 <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex items-center gap-2">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </button>
@@ -215,10 +215,10 @@ async function page() {
 
         <div className="px-5 flex justify-center w-full text-center">
           <div className="max-w-3xl text-[#727272]">
-            At Hotz Group, education and empowerment remain at the heart of our
-            CSR philosophy. We believe in creating platforms that nurture
-            potential, build confidence, and prepare individuals for a brighter,
-            self-reliant future.
+            At Hotz Group, we believe education is the foundation of progress.
+            Our initiatives focus on providing access to quality learning,
+            scholarships, and skill development programs that empower students
+            to achieve their full potential.
           </div>
         </div>
         <TransitionVertical>
@@ -231,8 +231,7 @@ async function page() {
               />
 
               <h1>
-                Supporting deserving students <br /> through need-based
-                financial aid
+                Scholarships for <br /> underprivileged students
               </h1>
             </div>
 
@@ -244,8 +243,7 @@ async function page() {
               />
 
               <h1>
-                Strengthening educational systems<br></br>with better facilities
-                and tools.
+                Support for schools and <br></br>digital learning infrastructure
               </h1>
             </div>
 
@@ -253,8 +251,7 @@ async function page() {
               <img src="/images/person.png" alt="Book Check" className="w-11" />
 
               <h1>
-                Equipping youth and women with practical <br></br>skills for
-                sustainable livelihoods.
+                Vocational training & <br></br>skill-building workshops.
               </h1>
             </div>
           </div>
