@@ -2,7 +2,7 @@ import TransitionVertical from "@/animations/TransitionVertical";
 import React from "react";
 
 interface TimelineEvent {
-  year: number;
+  year: string;
   title: string;
   description: string;
   side: "left" | "right";
@@ -13,7 +13,7 @@ interface TimelineEvent {
 const CurvedTimeline: React.FC = () => {
   const events: TimelineEvent[] = [
     {
-      year: 1900,
+      year: "Early 1900's",
       title: "Hotels in Northern State in India",
       description:
         "Hotels Cecil in Shimla, Wildflower Hall in Mashobra, Gables in Agra and Alasia in Kasauli.",
@@ -22,110 +22,119 @@ const CurvedTimeline: React.FC = () => {
       y: 817,
     },
     {
-      year: 1930,
+      year: "1930's",
       title: "Air conditioning & refrigeration ventures",
-      description:
-        "The Hotz/Durant family in the air conditioning and refrigeration space.",
+      description: "Foray into HVAC with Durant.",
       side: "left",
-      x: 220,
+      x: 250,
+      y: 817,
+    },
+
+    {
+      year: "1930's",
+      title: "Air conditioning & refrigeration ventures",
+      description: "Construction of roads and aerodromes pre independence.",
+      side: "left",
+      x: 480,
       y: 817,
     },
     {
-      year: 1950,
+      year: "1940's",
       title: "Durant 'always, a fore-runner'",
       description:
         "In the early 1930 a major player in the refrigeration and air-conditioning industry.",
-      side: "left",
-      x: 440,
-      y: 817,
-    },
-    {
-      year: 1952,
-      title: "Hotz Hotels Private Limited",
-      description: "Hotz Hotels Private Limited was incorporated.",
       side: "right",
-      x: 677,
-      y: 731,
+      x: 670,
+      y: 770,
     },
     {
-      year: 1980,
+      year: "1952",
+      title: "Hotz Hotels Private Limited",
+      description: "Incorporated as Hotz Hotels Private Limited.",
+      side: "right",
+      x: 627,
+      y: 660,
+    },
+    {
+      year: "1980's",
       title: "New controlling shareholders",
-      description: "The Jain family became controlling shareholders.",
+      description:
+        "The Jain family became controlling shareholders and consolidated all activities under the banner of the Hotz Group.",
       side: "left",
       x: 344,
       y: 573,
     },
     {
-      year: 1986,
+      year: "1986",
       title: "Industrial Gases division",
       description:
-        "Established the Industrial Gases division, a leader supplying Oxygen, Nitrogen, Argon and Helium.",
+        "Established the Industrial Gases division with the Surajpur plant that supplied Oxygen, Nitrogen, Argon and other value-added products.",
       side: "left",
       x: 400,
       y: 500,
     },
     {
-      year: 1990,
+      year: "1990",
       title: "Financial services expansion",
       description:
-        "Into Inter Corporate Deposits, Leasing and Hire Purchase, Bill Discounting.",
+        "Foray into Financial Services with Inter Corporate Deposits, Leasing and Hire Purchase, Bill Discounting.",
       side: "right",
       x: 550,
       y: 500,
     },
 
     {
-      year: 1996,
+      year: "1996",
       title: "Textile division established",
 
       description:
-        "One of the largest state-of-the-art Yarn Dyeing and Processing plant, Cotton Knitted Fabric, Fabric Dyeing Machines.",
+        "Established the Textile division at Greater Noida- one of the largest integrated facilities at that time covering various parts of the textile value chain including dyeing and processing, knitting and garmenting. ",
       side: "right",
       x: 885,
       y: 500,
     },
     {
-      year: 1996,
+      year: "1996",
       title: "Securities One - NSE Member",
       description:
-        "Member of National Stock Exchange for Securities Brokerage and Portfolio Management.",
+        "Securities (One) India Limited, a Member of National Stock Exchange, and Invest (One)n India Limited were incorporated for a deeper foray into Financial Services.",
       side: "left",
       x: 800,
       y: 343,
     },
     {
-      year: 1999,
+      year: "1999",
       title: "Round-the-Clock Stores Limited",
       description:
-        "Franchise chain of American Restaurant Ruby Tuesday, along with own brands - Mandarin Trail, Mandarin Express, Haagen Dazs, Ristorante Prego and Indus Grill.",
+        "Round-the-Clock Stores Limited was incorporated as the National Developer for Ruby Tuesday restaurants in India. Over time more than 75 restaurants under various global brands including Ruby Tuesday, Sbarro and Haagen Dazs, and home-grown concepts such as Mircheez, Mandarin Trail, Prego and Indus Grill were established nationwide. ",
       side: "left",
       x: 620,
       y: 270,
     },
 
     {
-      year: 2007,
+      year: "2007",
       title: "Art business establishment",
       description:
-        "Established under Vistaar and Seven Art trademarks. In 2012 acquired majority stake in Gallery Nature Morte, India's leading contemporary art company.",
+        "The art business was established under the Vistaar and Seven Art trademarks. In 2012 the Group acquired a significant majority stake in Gallery Nature Morte and a new joint venture entity, Nature Morte Art Limited, was incorporated. Today Nature Morte is India's leading contemporary art company representing India's iconic contemporary artists with galleries in Delhi and Mumbai.",
       side: "left",
       x: 820,
       y: 193,
     },
     {
-      year: 2012,
+      year: "2014",
       title: "Real estate warehousing, Samsung project",
       description:
-        "A future-ready warehouse 5,75,000 sq. ft. in Greater Noida.",
+        "The early education business under the Playful Minds brand was started in Delhi. ",
       side: "right",
       x: 880,
       y: 40,
     },
     {
-      year: 2019,
+      year: "2019",
       title: "Industrial real estate diversification",
       description:
-        "Built one of India's largest Grade A warehouses for Samsung Electronics, continuing to identify more opportunities in this sector.",
+        "The diversification into industrial real estate was initiated and one of India's largest Grade A warehouses was built by the company for the use of Samsung.",
       side: "left",
       x: 522,
       y: 11,
@@ -201,62 +210,62 @@ const CurvedTimeline: React.FC = () => {
                     <div
                       className="absolute whitespace-nowrap"
                       style={{
-                        ...(event.year === 2012 && {
-                          left: "-70%",
+                        ...(event.year === "2014" && {
+                          right: "90%",
                           transform: "translateX(-50%)",
-                          top: "20px",
+                          top: "-10px",
                         }),
-                        ...(event.year === 2019 && {
+                        ...(event.year === "2019" && {
                           right: "45px",
                           top: "10%",
                           transform: "translateY(-50%)",
                         }),
-                        ...(event.year === 2007 && {
+                        ...(event.year === "2007" && {
                           left: "10%",
                           transform: "translateX(-50%)",
                           bottom: "45px",
                         }),
-                        ...(event.year === 1999 && {
+                        ...(event.year === "1999" && {
                           left: "20px",
                           top: "1%",
                           transform: "translateY(-50%)",
                         }),
-                        ...([1996].includes(event.year) && {
+                        ...(["1996"].includes(event.year) && {
                           right: "0px",
                           bottom: "25px",
                           transform: "translateY(-50%)",
                         }),
-                        ...(event.year === 1990 && {
+                        ...(event.year === "1990" && {
                           bottom: "30px",
                           left: "-80%",
                           transform: "translateY(-50%)",
                         }),
-                        ...(event.year === 1986 && {
+                        ...(event.year === "1986" && {
                           left: "10%",
                           transform: "translateX(-50%)",
                           bottom: "45px",
                         }),
-                        ...(event.year === 1980 && {
+                        ...(event.year === "1980's" && {
                           bottom: "45%",
                           transform: "translateX(-50%)",
                           right: "25px",
                         }),
-                        ...(event.year === 1952 && {
+                        ...(event.year === "1952" && {
                           left: "25px",
                           top: "2%",
                           transform: "translateY(-50%)",
                         }),
-                        ...(event.year === 1950 && {
+                        ...(event.year === "1940's" && {
                           left: "10%",
                           transform: "translateX(-50%)",
                           bottom: "40px",
                         }),
-                        ...(event.year === 1930 && {
+                        ...(event.year === "1930's" && {
                           left: "10%",
                           transform: "translateX(-50%)",
                           top: "15px",
                         }),
-                        ...(event.year === 1900 && {
+                        ...(event.year === "Early 1900's" && {
                           left: "10%",
                           transform: "translateX(-50%)",
                           bottom: "45px",
@@ -272,69 +281,80 @@ const CurvedTimeline: React.FC = () => {
                     <div
                       className={`absolute px-4$`}
                       style={{
-                        ...(event.year === 1986 && {
-                          [isLeft ? "right" : "left"]: "-120px",
-                          bottom: "70px",
+                        ...(event.year === "1986" && {
+                          [isLeft ? "right" : "left"]: "-70px",
+                          bottom: "60px",
                           width: "250px",
                         }),
-                        ...(event.year === 2007 && {
-                          [isLeft ? "right" : "left"]: "-350px",
-                          top: "10px",
-                          width: "350px",
+                        ...(event.year === "2007" && {
+                          [isLeft ? "right" : "left"]: "-400px",
+                          top: "-5px",
+                          width: "400px",
                         }),
-                        ...(event.year === 1950 && {
-                          [isLeft ? "right" : "left"]: "-140px",
-                          top: "20px",
+                        ...(event.year === "1940's" && {
+                          [isLeft ? "right" : "left"]: "30px",
+                          top: "-10px",
                           width: "250px",
                         }),
-                        ...(event.year === 1900 && {
+                        ...(event.year === "Early 1900's" && {
                           [isLeft ? "right" : "left"]: "-140px",
                           top: "30px",
                           width: "250px",
                         }),
-                        ...(event.year === 1930 && {
-                          [isLeft ? "right" : "left"]: "-150px",
+                        ...(event.year === "1930's" && {
+                          [isLeft ? "right" : "left"]: "-120px",
                           bottom: "50px",
-                          width: "250px",
+                          width: "200px",
                         }),
-                        ...(event.year === 1952 && {
+                        ...(event.year === "1952" && {
                           [isLeft ? "right" : "left"]: "90px",
-                          bottom: "-15px",
-                          width: "250px",
+                          bottom: "-5px",
+                          width: "150px",
                         }),
-                        ...(event.year === 1980 && {
-                          [isLeft ? "right" : "left"]: "50px",
+                        ...(event.year === "1980's" && {
+                          [isLeft ? "right" : "left"]: "90px",
                           bottom: "15px",
                           width: "250px",
                         }),
-                        ...(event.year === 1990 && {
-                          [isLeft ? "right" : "left"]: "-80px",
+                        ...(event.year === "1990" && {
+                          [isLeft ? "right" : "left"]: "-50px",
                           top: "20px",
                           width: "250px",
                         }),
-                        ...(event.year === 1999 && {
+                        ...(event.year === "1999" && {
                           [isLeft ? "right" : "left"]: "30px",
                           bottom: "20px",
                           width: "350px",
                         }),
-                        ...(event.year === 2019 && {
-                          [isLeft ? "right" : "left"]: "30px",
+                        ...(event.year === "2019" && {
+                          [isLeft ? "right" : "left"]: "90px",
                           top: "-10px",
-                          width: "350px",
+                          width: "280px",
                         }),
-                        ...(event.year === 2012 && {
+                        ...(event.year === "2014" && {
                           [isLeft ? "right" : "left"]: "40px",
                           top: "-10px",
                           width: "250px",
                         }),
-                        ...([1996].includes(event.year) && {
-                          [isLeft ? "right" : "left"]: "-65px",
+                        ...(["1996"].includes(event.year) && {
+                          [isLeft ? "right" : "left"]: "-45px",
                           top: "20px",
                           width: "250px",
                         }),
                         ...(![
-                          1980, 1990, 1986, 2007, 1950, 1930, 1900, 1952, 1996,
-                          1980, 1999, 2012, 2019,
+                          "1980's",
+                          "1990",
+                          "1986",
+                          "2007",
+                          "1940's",
+                          "1930's",
+                          "Early 1900's",
+                          "1952",
+                          "1996",
+                          "1980's",
+                          "1999",
+                          "2014",
+                          "2019",
                         ].includes(event.year) && {
                           [isLeft ? "right" : "left"]: "20px",
                           top: "-20px",
@@ -343,12 +363,7 @@ const CurvedTimeline: React.FC = () => {
                       }}
                     >
                       <TransitionVertical>
-                        <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
-                          {event.title}
-                        </h3>
-                      </TransitionVertical>
-                      <TransitionVertical>
-                        <p className="text-xs text-gray-600 leading-relaxed">
+                        <p className="text-xs text-black leading-relaxed">
                           {event.description}
                         </p>
                       </TransitionVertical>
@@ -376,10 +391,7 @@ const CurvedTimeline: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
-                  {event.title}
-                </h3>
-                <p className="text-xs text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {event.description}
                 </p>
               </div>
