@@ -25,12 +25,12 @@ const Navbar = () => {
 
   const businessLinks = [
     { name: "All", href: "/business" },
-    { name: "Real Estate & Warehousing", href: "/business/real-estate" },
+    { name: "Real Estate & Warehousing", href: "/business/real-estate-and-warehousing" },
     { name: "Art", href: "/business/art-and-culture" },
     { name: "Hospitality", href: "/business/hospitality" },
     { name: "Financial Services", href: "/business/financial-services" },
     { name: "Education", href: "/business/education" },
-    { name: "New Initiatives", href: "/business/manufacturing-nsez" },
+    { name: "New Initiatives", href: "/business/new-initiatives" },
   ];
 
   useEffect(() => {
