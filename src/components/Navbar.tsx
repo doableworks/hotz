@@ -17,8 +17,8 @@ const Navbar = () => {
 
   const aboutLinks = [
     { name: "Our Story", href: "/about-us#story" },
-    { name: "Milestone", href: "/about-us#milestone" },
-    { name: "Vision", href: "/about-us#vision" },
+    { name: "Milestones", href: "/about-us#milestone" },
+    { name: "Mission and Vision", href: "/about-us#vision" },
     { name: "Chairman's Message", href: "/about-us#chairmans-message" },
     { name: "Management", href: "/about-us#management" },
   ];
@@ -143,7 +143,7 @@ const Navbar = () => {
           href="/career"
           className={page === "/career" ? "text-red-600" : ""}
         >
-          CAREER
+          CAREERS
         </Link>
         <Link
           href="/contact-us"
@@ -252,7 +252,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={page === "/career" ? "text-red-600" : ""}
             >
-              CAREER
+              CAREERS
             </Link>
             <Link
               href="/contact-us"

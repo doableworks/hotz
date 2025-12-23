@@ -22,9 +22,9 @@ const About = () => {
         <div>
           <TransitionVertical>
             <h1 className="text-white text-2xl lg:text-3xl font-light w-4/5">
-              Since 1900, Hotz Group has been at the heart of growth and
-              transformation delivering trust, innovation, and impact across
-              India and beyond.
+              Since the early 1900&apos;s, the hotz Group has been at the heart
+              of growth and transformation delivering trust, innovation, and
+              impact across India and beyond.
             </h1>
           </TransitionVertical>
           <Link href="/about-us">

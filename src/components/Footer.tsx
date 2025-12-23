@@ -74,7 +74,7 @@ const Footer = () => {
 
         <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center text-sm mt-5">
           <h1 className="text-white/80 text-left">
-            Copyright@2025 Hotz group all rights reserved
+            Copyright@2025 Hotz Group all rights reserved
           </h1>
 
           {/* <div className="flex items-center gap-5 lg:mt-0 mt-5">

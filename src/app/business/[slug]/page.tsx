@@ -170,8 +170,8 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
             <div className="px-5 lg:px-10 mt-7 lg:mt-16">
               <h1 className="text-2xl lg:text-3xl text-center font-medium">
                 {business.address && business.address.length > 1
-                  ? "LOCATIONS"
-                  : "LOCATION"}
+                  ? "Locations"
+                  : "Location"}
               </h1>
 
               <div
