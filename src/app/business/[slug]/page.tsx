@@ -183,31 +183,35 @@ async function page({ params }: { params: Promise<{ slug: string }> }) {
                     : "justify-center"
                 }`}
               >
-                <div className="w-full flex flex-col lg:w-1/2 gap-5  mb-7">
+                <div className="w-full flex flex-col lg:w-1/2 gap-5  mb-7 lg:pr-8">
                   {business.address && business.address.length > 0 && (
-                    <div className="w-full flex gap-5 items-start">
-                      <MapPin
-                        strokeWidth={1}
-                        color="#727272"
-                        size={20}
-                        className="mt-1"
-                      />
-
-                      <div className="flex flex-col">
-                        <h1 className="text-sm mb-1">Address</h1>
-                        <h1>
-                          {business.address?.[0]?.address ||
-                            "No address available"}
-                        </h1>
-                        {/* {business.address?.[0]?.url && (
-                      <Link
-                        className="text-[#DB0A0A] flex gap-2 mt-2 items-center"
-                        href={business.address[0].url}
-                      >
-                        View on Map
-                      </Link>
-                    )} */}
-                      </div>
+                    <div className="w-full flex flex-col gap-4">
+                      <h1 className="text-sm">
+                        {business.address.length > 1 ? "Addresses" : "Address"}
+                      </h1>
+                      {business.address.map((addressItem, index) => (
+                        <div key={index} className="w-full flex gap-5 items-start">
+                          <MapPin
+                            strokeWidth={1}
+                            color="#727272"
+                            size={20}
+                            className="mt-1 flex-shrink-0"
+                          />
+                          <div className="flex flex-col">
+                            <h1>
+                              {addressItem?.address || "No address available"}
+                            </h1>
+                            {/* {addressItem?.url && (
+                              <Link
+                                className="text-[#DB0A0A] flex gap-2 mt-2 items-center"
+                                href={addressItem.url}
+                              >
+                                View on Map
+                              </Link>
+                            )} */}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
                   {business.ctaUrl && (
