@@ -9,6 +9,7 @@ import VideoSection from "@/components/pagespecific/about-us/VideoSection";
 import Stats from "@/components/Stats";
 import Updates from "@/components/Updates";
 import { getStats, getTeamLeaders } from "@/lib/sanityQueries";
+import { Check } from "lucide-react";
 import React from "react";
 
 async function page() {
@@ -55,12 +56,13 @@ async function page() {
             A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
           <div className="w-full lg:w-1/2">
-            The Hotz Group&apos;s journey began in the early 1900&apos;. Founded
-            by Swiss nationals who introduced world-class hospitality to India
-            with hotels and resorts in Shimla, Delhi, Agra, Jaipur and Kasauli.
-            Over time, the Group evolved from its European inspired roots into a
-            diversified Indian enterprise, driven by the belief that progress
-            must be built on trust, integrity, and innovation <br></br>
+            The Hotz Group&apos;s journey began in the early 1900&apos;. The
+            Group was founded by Swiss nationals who introduced world-class
+            hospitality to India with hotels and resorts in Shimla, Delhi, Agra,
+            Jaipur and Kasauli. Over time, the Group evolved from its European
+            inspired roots into a diversified Indian enterprise, driven by the
+            belief that progress must be built on trust, integrity, and
+            innovation <br></br>
             <br></br>Since then, Hotz has expanded its footprint across multiple
             sectors - real estate and warehousing, financial services,
             manufacturing of steel, air conditioning and refrigeration, textiles
@@ -89,15 +91,14 @@ async function page() {
           <div className=" lg:w-1/2 w-full min-h-96 px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
             <TransitionHorizontal>
               <h1 className="text-xl">OUR STORY</h1>
-              <h1 className="text-white/60 mt-3">
-                Incorporated under the Companies Act as Hotz Hotels Private
-                Limited in 1952, the company began with a focus on hospitality
-                before diversifying into portfolio investments and financial
-                services, manufacturing of various products, food service
-                retail, art, education and real estate development. This spirit
-                of diversification and reinvention has defined Hotz through
-                every era, enabling the Group to adapt, innovate, and lead
-                across industries. <br></br>
+              <h1 className="text-white/60 mt-1">
+                Incorporated as Hotz Hotels Private Limited in 1952, the company
+                began with a focus on hospitality before diversifying into
+                portfolio investments and financial services, manufacturing of
+                various products, food service retail, art, education and real
+                estate development. This spirit of diversification and
+                reinvention has defined Hotz through every era, enabling the
+                Group to adapt, innovate, and lead across industries. <br></br>
                 <br></br> What drives us is a deep respect for people,
                 partnerships, and performance. From creating advanced
                 warehousing and industrial infrastructure to supporting
@@ -111,13 +112,140 @@ async function page() {
         </div>
       </TransitionVertical>
 
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pb-10 relative z-30 bg-white">
+          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+            Corporate Philosophy.
+          </div>
+          <div className="w-full lg:w-1/2">
+            The spirit of invention and the will to constantly seek newer
+            horizons has helped mankind soar to amazing heights of achievement
+            and discovery, in almost every field of endeavour. By learning from
+            past mistakes and forging ahead relentlessly, man has shaped his own
+            destiny, just like we at Hotz have done, with our single-minded
+            commitment to setting new standards every day. <br></br>
+            <br></br>The Hotz Group, established in the early 1900&apos;s, has
+            its origins in four distinct and disparate cultures the Swiss,
+            British, Australian and Indian. Yet it is a unique, cohesive entity
+            that today is a leader in each of its chosen fields, a name that is
+            synonymous with superior products, reliable services and total
+            customer satisfaction.
+          </div>
+        </div>
+      </TransitionVertical>
+
       <Timeline />
 
       <TransitionVertical>
         <div
           id="vision"
-          className="scroll-mt-32 text-center text-xl font-semibold mt-12 mb-7"
+          className="scroll-mt-32 bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c] px-5 lg:px-10 py-10"
         >
+          <div className="w-full flex lg:flex-row flex-col justify-between items-start lg:gap-10">
+            <div className="w-full lg:w-1/2">
+              <h1 className="text-white text-2xl lg:text-4xl font-medium">
+                Our Mission
+              </h1>
+
+              <h1 className="text-white/80 text-lg mt-3 font-light">
+                Our mission reflects the purpose, values, and commitment that
+                guide every decision we make.
+              </h1>
+            </div>
+
+            <div className="w-full lg:w-1/2  text-white mt-7">
+              <div>
+                <TransitionVertical>
+                  <div className="flex items-center gap-5">
+                    <Check color="#fff" />
+                    <p>To be our client&apos;s first choice </p>
+                  </div>
+                </TransitionVertical>
+                <div className="w-full h-px bg-[#fff]/50 my-5"></div>
+              </div>
+              <div>
+                <TransitionVertical>
+                  <div className="flex items-center gap-5">
+                    <Check color="#fff" />
+                    <p>To be our client&apos;s first choice </p>
+                  </div>
+                </TransitionVertical>
+                <div className="w-full h-px bg-[#fff]/50 my-5"></div>
+              </div>
+
+              <div>
+                <TransitionVertical>
+                  <div className="flex items-center gap-5">
+                    <Check color="#fff" />
+                    <p>To be our client&apos;s first choice </p>
+                  </div>
+                </TransitionVertical>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full h-px bg-white/60 my-7"></div>
+
+          <div className="w-full">
+            <h1 className="text-white text-2xl lg:text-4xl font-medium">
+              Our Vision
+            </h1>
+
+            <h1 className="text-white/80 text-lg mt-3 font-light">
+              There are plans under various stages of development for further
+              expansion of existing ventures and for diversification into new
+              verticals including establishing new manufacturing locations for
+              new age products.
+            </h1>
+          </div>
+        </div>
+      </TransitionVertical>
+
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pb-10 relative z-30 bg-white mt-16">
+          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+            We Care -<br></br> Customer / Quality
+          </div>
+          <div className="w-full lg:w-1/2">
+            We give importance to our customers and to quality. Quality is the
+            perfection of our products. The superiority of our service. The
+            spirit of excellence that is visible in each task we perform.{" "}
+            <br></br>
+            <br></br>The high-quality standards we have set for ourselves are
+            the high standards we want to achieve for our customers, because it
+            is their satisfaction which we are striving for, their care that tis
+            uppermost in our minds.
+            <br></br>
+            <br></br>
+            We will never waver from our goals nor from our commitments to our
+            customers, who will always be supreme.
+          </div>
+        </div>
+      </TransitionVertical>
+
+      <div className="w-full px-5 lg:px-10">
+        <div className="w-full h-px bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c]"></div>
+      </div>
+
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pb-10 relative z-30 bg-white mt-16">
+          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+            We Care -<br></br> Environment
+          </div>
+          <div className="w-full lg:w-1/2">
+            Our environment is our natural habitat, to preserve and to protect
+            for coming generations. <br></br>
+            <br></br>We at Hotz, have embraced the global &apos;green&apos;
+            campaign wholeheartedly making it an intrinsic part of group
+            philosophy, our guiding light into the future.<br></br>
+            <br></br>Our resolve is to care for our environment in every way we
+            can. To build a greener tomorrow. A more promising tomorrow.
+          </div>
+        </div>
+      </TransitionVertical>
+
+      <TransitionVertical>
+        <div className="text-center text-xl font-semibold mt-12 mb-7">
           CORE VALUES
         </div>
 

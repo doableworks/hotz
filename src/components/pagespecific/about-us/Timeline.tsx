@@ -16,7 +16,7 @@ const CurvedTimeline: React.FC = () => {
       year: "Early 1900's",
       title: "Hotels in Northern State in India",
       description:
-        "Hotels Cecil in Shimla, Wildflower Hall in Mashobra, Gables in Agra and Alasia in Kasauli.",
+        "Hotel development in Northern India - Hotel Cecil in Shimla, Wildflower Hall in Mashobra, Lauries in Agra and Delhi and Alasia in Kasauli.",
       side: "left",
       x: 11,
       y: 817,
@@ -24,25 +24,26 @@ const CurvedTimeline: React.FC = () => {
     {
       year: "1930's",
       title: "Air conditioning & refrigeration ventures",
-      description: "Foray into HVAC with Durant.",
-      side: "left",
-      x: 250,
+      description:
+        "Foray into HVAC with Durant, a partnership between the Durant and Jain families.",
+      side: "right",
+      x: 270,
       y: 817,
     },
 
     {
       year: "1930's",
       title: "Air conditioning & refrigeration ventures",
-      description: "Construction of roads and aerodromes pre independence.",
+      description:
+        "The Jain family, led by patriarch Rai Bahadur Phool Chand Jain, establishes the construction business for the construction of roads and aerodromes in various parts of India pre independence.",
       side: "left",
-      x: 480,
+      x: 530,
       y: 817,
     },
     {
       year: "1940's",
       title: "Durant 'always, a fore-runner'",
-      description:
-        "In the early 1930 a major player in the refrigeration and air-conditioning industry.",
+      description: "Mahabir Steel Rolling Mills established in Delhi.",
       side: "right",
       x: 670,
       y: 770,
@@ -77,7 +78,7 @@ const CurvedTimeline: React.FC = () => {
       year: "1990",
       title: "Financial services expansion",
       description:
-        "Foray into Financial Services with Inter Corporate Deposits, Leasing and Hire Purchase, Bill Discounting.",
+        "Foray into Financial Services with Inter Corporate Deposits, Leasing and Hire Purchase and Bill Discounting.",
       side: "right",
       x: 550,
       y: 500,
@@ -263,12 +264,12 @@ const CurvedTimeline: React.FC = () => {
                         ...(event.year === "1930's" && {
                           left: "10%",
                           transform: "translateX(-50%)",
-                          top: "15px",
+                          bottom: "45px",
                         }),
                         ...(event.year === "Early 1900's" && {
                           left: "10%",
                           transform: "translateX(-50%)",
-                          bottom: "45px",
+                          top: "15px",
                         }),
                       }}
                     >
@@ -297,14 +298,14 @@ const CurvedTimeline: React.FC = () => {
                           width: "250px",
                         }),
                         ...(event.year === "Early 1900's" && {
-                          [isLeft ? "right" : "left"]: "-140px",
-                          top: "30px",
-                          width: "250px",
-                        }),
-                        ...(event.year === "1930's" && {
                           [isLeft ? "right" : "left"]: "-120px",
                           bottom: "50px",
                           width: "200px",
+                        }),
+                        ...(event.year === "1930's" && {
+                          [isLeft ? "right" : "left"]: "-120px",
+                          top: "30px",
+                          width: "230px",
                         }),
                         ...(event.year === "1952" && {
                           [isLeft ? "right" : "left"]: "90px",

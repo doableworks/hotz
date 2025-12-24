@@ -127,7 +127,7 @@ const Page = async () => {
         <div className="w-full flex lg:flex-row flex-col gap-7">
           <div className="lg:w-1/3 w-full">
             <img
-              src="/images/career1.jpg"
+              src="/images/career1.png"
               alt="Career"
               className="w-full object-cover"
             />
@@ -141,7 +141,7 @@ const Page = async () => {
           </div>
           <div className="lg:w-1/3 w-full">
             <img
-              src="/images/career3.jpg"
+              src="/images/career4.jpg"
               alt="Career"
               className="w-full object-cover"
             />
