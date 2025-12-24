@@ -40,7 +40,12 @@ const page = () => {
           <div className=" flex gap-5 items-start mt-3">
             <Mail strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
-              <h1>info@hotzinc.com</h1>
+              <a
+                href="mailto:info@hotzinc.com"
+                className="text-black font-medium ml-1"
+              >
+                info@hotzinc.com
+              </a>
             </div>
           </div>
 
@@ -82,7 +87,12 @@ const page = () => {
           <div className=" flex gap-5 items-start mt-3">
             <Mail strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
-              <h1>info@hotz.in</h1>
+              <a
+                href="mailto:info@hotz.in"
+                className="text-black font-medium ml-1"
+              >
+                info@hotz.in
+              </a>
             </div>
           </div>
 
