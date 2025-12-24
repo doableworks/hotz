@@ -1,8 +1,51 @@
-import React, { memo } from "react";
+"use client";
+import React, { useState } from "react";
 import { Instagram, Youtube, Facebook } from "lucide-react";
 import Link from "next/link";
+import toast from "react-hot-toast";
+import ToasterComponent from "./reusable/ToasterComponent";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubscribe = async () => {
+    if (!email.trim()) {
+      toast.error("Please enter your email address");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_GSHEET_NEWSLETTER_API_URL as string,
+        {
+          method: "POST",
+          body: JSON.stringify({ email }),
+        }
+      );
+
+      if (!res.ok) throw new Error("Request failed");
+
+      toast.success("Subscribed successfully!");
+      setEmail("");
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-gradient-footer text-center text-white pt-7 lg:pt-16 pb-5 lg:pb-5 px-5 lg:px-10 mt-7 lg:mt-24">
       <div className="w-full flex lg:flex-row flex-col items-start">
@@ -22,12 +65,19 @@ const Footer = () => {
 
           <div className="flex justify-baseline mt-5 w-full py-2 pl-6 pr-2 border-white/10 rounded-full border-2 ">
             <input
-              type="text"
+              type="email"
               placeholder="Enter your email address"
-              className=" rounded-md w-full text-black placeholder:text-white/80"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="rounded-md w-full text-white placeholder:text-white/80 focus:outline-none"
             />
-            <div className="bg-white px-6 py-4 rounded-full text-xs font-medium text-[#DB0A0A]">
-              SUBSCRIBE
+
+            <div
+              onClick={!loading ? handleSubscribe : undefined}
+              className={`bg-white px-6 py-4 rounded-full text-xs font-medium text-[#DB0A0A] 
+    ${loading ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
+            >
+              {loading ? "PLEASE WAIT..." : "SUBSCRIBE"}
             </div>
           </div>
         </div>
@@ -58,12 +108,19 @@ const Footer = () => {
 
           <div className="flex justify-baseline mt-5 w-full py-2 pl-6 pr-2 border-white/10 rounded-full border-2 ">
             <input
-              type="text"
+              type="email"
               placeholder="Enter your email address"
-              className=" rounded-md w-full text-black placeholder:text-white/80"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="rounded-md w-full text-white placeholder:text-white/80 focus:outline-none"
             />
-            <div className="bg-white px-6 py-4 rounded-full text-xs font-medium text-[#DB0A0A]">
-              SUBSCRIBE
+
+            <div
+              onClick={!loading ? handleSubscribe : undefined}
+              className={`bg-white px-7 py-4 rounded-full text-xs font-medium text-[#DB0A0A] 
+    ${loading ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
+            >
+              {loading ? "PLEASE WAIT..." : "SUBSCRIBE"}
             </div>
           </div>
         </div>
@@ -84,8 +141,9 @@ const Footer = () => {
           </div> */}
         </div>
       </div>
+      <ToasterComponent />
     </div>
   );
 };
 
-export default memo(Footer);
+export default Footer;
