@@ -180,8 +180,11 @@ const Page = async () => {
         </h1>
         <h1 className="text-center text-[#727272] text-base lg:text-lg mt-3">
           You may share your CV on this email ID:
-          <a href="mailto:jobs@hotz.in" className="text-black font-medium ml-1">
-            jobs@hotz.in
+          <a
+            href="mailto:careers@hotz.in"
+            className="text-black font-medium ml-1"
+          >
+            careers@hotz.in
           </a>
           ,
           <br className="hidden md:block" /> and we will reach out when there is

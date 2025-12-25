@@ -56,7 +56,7 @@ async function page() {
             A Legacy of Trust.<br></br> A Vision for<br></br>Tomorrow.
           </div>
           <div className="w-full lg:w-1/2">
-            The Hotz Group&apos;s journey began in the early 1900&apos;. The
+            The Hotz Group&apos;s journey began in the early 1900&apos;s. The
             Group was founded by Swiss nationals who introduced world-class
             hospitality to India with hotels and resorts in Shimla, Delhi, Agra,
             Jaipur and Kasauli. Over time, the Group evolved from its European

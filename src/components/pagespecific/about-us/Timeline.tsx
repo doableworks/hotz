@@ -16,7 +16,7 @@ const CurvedTimeline: React.FC = () => {
       year: "Early 1900's",
       title: "Hotels in Northern State in India",
       description:
-        "Hotel development in Northern India - Hotel Cecil in Shimla, Wildflower Hall in Mashobra, Lauries in Agra and Delhi and Alasia in Kasauli.",
+        "Hotel development in Northern India - Hotel Cecil in Shimla, Wildflower Hall in Mashobra, Lauries in Agra and Delhi and Hotel Alasia in Kasauli.",
       side: "left",
       x: 11,
       y: 817,
