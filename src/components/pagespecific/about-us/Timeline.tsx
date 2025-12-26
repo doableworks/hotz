@@ -25,7 +25,7 @@ const CurvedTimeline: React.FC = () => {
       year: "1930's",
       title: "Air conditioning & refrigeration ventures",
       description:
-        "Foray into HVAC with Durant, a partnership between the Durant and Jain families.",
+        "The Jain family, led by patriarch Rai Bahadur Phool Chand Jain, establishes the construction business for the construction of roads and aerodromes in various parts of India pre independence.",
       side: "right",
       x: 270,
       y: 817,
@@ -35,7 +35,7 @@ const CurvedTimeline: React.FC = () => {
       year: "1930's",
       title: "Air conditioning & refrigeration ventures",
       description:
-        "The Jain family, led by patriarch Rai Bahadur Phool Chand Jain, establishes the construction business for the construction of roads and aerodromes in various parts of India pre independence.",
+        "Foray into HVAC with Durant, a partnership between the Durant and Jain families.",
       side: "left",
       x: 530,
       y: 817,
