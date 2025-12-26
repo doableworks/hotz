@@ -184,7 +184,7 @@ async function page() {
             </div>
           </div>
 
-          <div className="w-full h-px bg-white/60 my-7"></div>
+          {/* <div className="w-full h-px bg-white/60 my-7"></div>
 
           <div className="w-full">
             <h1 className="text-white text-2xl lg:text-4xl font-medium">
@@ -197,50 +197,52 @@ async function page() {
               verticals including establishing new manufacturing locations for
               new age products.
             </h1>
-          </div>
-        </div>
-      </TransitionVertical>
+          </div> */}
 
-      <TransitionVertical>
-        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pb-10 relative z-30 bg-white mt-16">
-          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-            We Care -<br></br> Customer / Quality
-          </div>
-          <div className="w-full lg:w-1/2">
-            We give importance to our customers and to quality. Quality is the
-            perfection of our products. The superiority of our service. The
-            spirit of excellence that is visible in each task we perform.{" "}
-            <br></br>
-            <br></br>The high-quality standards we have set for ourselves are
-            the high standards we want to achieve for our customers, because it
-            is their satisfaction which we are striving for, their care that tis
-            uppermost in our minds.
-            <br></br>
-            <br></br>
-            We will never waver from our goals nor from our commitments to our
-            customers, who will always be supreme.
-          </div>
-        </div>
-      </TransitionVertical>
+          <div className="w-full h-px bg-white/70 my-10 lg:my-16"></div>
 
-      <div className="w-full px-5 lg:px-10">
-        <div className="w-full h-px bg-linear-to-br from-[#DB0A0A] to-[#dd2c2c]"></div>
-      </div>
+          <TransitionVertical>
+            <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 relative z-30 ">
+              <div className="w-full lg:w-1/2 text-2xl lg:text-4xl font-semibold text-white">
+                We Care -<br></br> Customer / Quality
+              </div>
+              <div className="w-full lg:w-1/2 text-white">
+                We give importance to our customers and to quality. Quality is
+                the perfection of our products. The superiority of our service.
+                The spirit of excellence that is visible in each task we
+                perform. <br></br>
+                <br></br>The high-quality standards we have set for ourselves
+                are the high standards we want to achieve for our customers,
+                because it is their satisfaction which we are striving for,
+                their care that tis uppermost in our minds.
+                <br></br>
+                <br></br>
+                We will never waver from our goals nor from our commitments to
+                our customers, who will always be supreme.
+              </div>
+            </div>
+          </TransitionVertical>
 
-      <TransitionVertical>
-        <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pb-10 relative z-30 bg-white mt-16">
-          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-            We Care -<br></br> Environment
+          <div className="w-full">
+            <div className="w-full h-px bg-white/70 my-10 lg:my-16"></div>
           </div>
-          <div className="w-full lg:w-1/2">
-            Our environment is our natural habitat, to preserve and to protect
-            for coming generations. <br></br>
-            <br></br>We at Hotz, have embraced the global &apos;green&apos;
-            campaign wholeheartedly making it an intrinsic part of group
-            philosophy, our guiding light into the future.<br></br>
-            <br></br>Our resolve is to care for our environment in every way we
-            can. To build a greener tomorrow. A more promising tomorrow.
-          </div>
+
+          <TransitionVertical>
+            <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 pb-10 relative z-30 ">
+              <div className="w-full lg:w-1/2 text-2xl lg:text-4xl font-semibold text-white">
+                We Care -<br></br> Environment
+              </div>
+              <div className="w-full lg:w-1/2 text-white">
+                Our environment is our natural habitat, to preserve and to
+                protect for coming generations. <br></br>
+                <br></br>We at Hotz, have embraced the global &apos;green&apos;
+                campaign wholeheartedly making it an intrinsic part of group
+                philosophy, our guiding light into the future.<br></br>
+                <br></br>Our resolve is to care for our environment in every way
+                we can. To build a greener tomorrow. A more promising tomorrow.
+              </div>
+            </div>
+          </TransitionVertical>
         </div>
       </TransitionVertical>
 

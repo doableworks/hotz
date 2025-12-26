@@ -18,14 +18,17 @@ const Navbar = () => {
   const aboutLinks = [
     { name: "Our Story", href: "/about-us#story" },
     { name: "Milestones", href: "/about-us#milestone" },
-    { name: "Mission and Vision", href: "/about-us#vision" },
+    { name: "Mission", href: "/about-us#vision" },
     { name: "Chairman's Message", href: "/about-us#chairmans-message" },
     { name: "Management", href: "/about-us#management" },
   ];
 
   const businessLinks = [
     { name: "All", href: "/business" },
-    { name: "Real Estate & Warehousing", href: "/business/real-estate-and-warehousing" },
+    {
+      name: "Real Estate & Warehousing",
+      href: "/business/real-estate-and-warehousing",
+    },
     { name: "Art", href: "/business/art-and-culture" },
     { name: "Hospitality", href: "/business/hospitality" },
     { name: "Financial Services", href: "/business/financial-services" },
