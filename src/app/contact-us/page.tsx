@@ -8,14 +8,14 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <div className="w-full h-[80vh] md:h-80 bg-gray-400">
+      <div className="w-full h-[50vh] md:h-80 bg-gray-400 mt-16">
         <img
-          src="/images/contactMobile.jpg"
+          src="/images/Contact-us.png"
           className="h-full w-full object-cover md:hidden"
         />
-                <img
+        <img
           src="/images/Contact-us.png"
-          className="h-80 w-full object-cover hidden md:block"
+          className="h-80 w-full hidden md:block"
         />
       </div>
 
