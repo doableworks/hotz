@@ -13,11 +13,11 @@ const Hero = () => {
             Setting New Standards<br className="md:hidden"></br> Everyday
           </h1>
 
-          <Link href="/business">
+          {/* <Link href="/business">
             <button className="mt-6 px-8 py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-bold cursor-pointer">
               EXPLORE OUR BUSINESS
             </button>
-          </Link>
+          </Link> */}
         </TransitionVertical>
       </div>
     </div>
