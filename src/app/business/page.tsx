@@ -73,7 +73,7 @@ async function page() {
             alt="Business"
             className="object-cover w-full h-full md:h-96 hidden md:block"
           />
-                    <img
+          <img
             src="/images/businessListingMobile.jpg"
             alt="Business"
             className="object-cover w-full h-full block md:hidden"
@@ -81,7 +81,7 @@ async function page() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
           <div className="absolute bottom-7 left-5 lg:left-10">
             <TransitionHorizontal>
-              <h1 className="text-white text-xl lg:text-3xl font-medium">
+              <h1 className="text-white text-2xl lg:text-3xl font-medium">
                 Diverse Business.<br className="md:hidden"></br> One Trusted
                 Group.
               </h1>

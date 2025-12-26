@@ -167,7 +167,7 @@ async function page() {
                 <TransitionVertical>
                   <div className="flex items-center gap-5">
                     <Check color="#fff" />
-                    <p>To be our client&apos;s first choice </p>
+                    <p>To be a great place to work </p>
                   </div>
                 </TransitionVertical>
                 <div className="w-full h-px bg-[#fff]/50 my-5"></div>
@@ -177,7 +177,7 @@ async function page() {
                 <TransitionVertical>
                   <div className="flex items-center gap-5">
                     <Check color="#fff" />
-                    <p>To be our client&apos;s first choice </p>
+                    <p>To be a great investment</p>
                   </div>
                 </TransitionVertical>
               </div>
