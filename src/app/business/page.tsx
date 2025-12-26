@@ -67,11 +67,16 @@ async function page() {
         <Navbar />
 
         {/* Hero Section */}
-        <div className="relative w-full h-96">
+        <div className="relative w-full h-[80vh] md:h-96">
           <img
             src="/images/businessImage.png"
             alt="Business"
-            className="object-cover w-full h-96"
+            className="object-cover w-full h-full md:h-96 hidden md:block"
+          />
+                    <img
+            src="/images/businessListingMobile.jpg"
+            alt="Business"
+            className="object-cover w-full h-full block md:hidden"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
           <div className="absolute bottom-7 left-5 lg:left-10">

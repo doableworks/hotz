@@ -48,8 +48,9 @@ const CSRDetailPage = async ({ params }: CSRPageProps) => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-80 mt-16">
-        <img src={entry.bannerImage} className="w-full h-80 object-cover" />
+      <div className="w-full h-[80vh] md:h-80 mt-16">
+        <img src={entry.bannerImage} className="w-full h-80 object-cover hidden md:block" />
+        <img src={entry.mobileBannerImage} className="w-full h-full object-cover md:hidden" />
       </div>
 
       <TransitionVertical>

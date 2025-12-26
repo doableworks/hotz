@@ -4,11 +4,11 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full w-full bg-[url('/images/Homepage.jpg')] bg-cover bg-no-repeat text-white">
+    <div className="flex flex-col justify-center items-center h-full w-full bg-[url('/images/mobileHome.jpg')] md:bg-[url('/images/Homepage.jpg')] bg-cover bg-no-repeat text-white">
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="text-center z-30">
-        <TransitionVertical>
+        <TransitionVertical safariMobileFix={true}>
           <h1 className=" font-bold text-4xl lg:text-5xl">
             Setting New Standards<br className="md:hidden"></br> Everyday
           </h1>

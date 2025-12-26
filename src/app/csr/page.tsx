@@ -60,11 +60,17 @@ async function page() {
     <>
       <div className="h-full flex flex-col">
         <Navbar />
-        <div className="relative w-full h-[65vh] z-40">
+        <div className="relative w-full h-[80vh] md:h-[65vh] z-40">
           <Image
             src="/images/csrBanner.jpg"
             alt="About Us"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full hidden md:block"
+            fill
+          />
+                    <Image
+            src="/images/csrBannerMobile.jpg"
+            alt="About Us"
+            className="object-cover w-full h-full md:hidden scale-100"
             fill
           />
         </div>

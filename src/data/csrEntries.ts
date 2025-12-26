@@ -4,6 +4,7 @@ export type CSRDetail = {
   subtitle?: string;
   heroImage: string;
   bannerImage: string;
+  mobileBannerImage?: string;
   intro: string;
   overview: string;
   projectNote?: string;
@@ -19,6 +20,7 @@ export const csrEntries: CSRDetail[] = [
     subtitle: "International exchange through visual arts and education",
     heroImage: "/images/csrOverview2.JPG",
     bannerImage: "/images/saathsaathbanner.jpg",
+    mobileBannerImage:"/images/csrBannermobile.jpg",
     intro:
       "Guided by the philosophy of giving back, the Hotz Group has long supported initiatives that promote art, handicrafts and local artisans, education, inclusion, and cultural development. The Saat Saath Arts Foundation supports international exchange between India and the rest of the world through the visual arts and education. The Foundation is led by Mrs. Aparajita Jain as a non-profit initiative and was founded in 2010.",
     overview: `Saath Saath Arts Foundation, founded and led by Mrs. Aparajita Jain, has been instrumental in shaping India's contemporary art landscape through its visionary public initiatives.
@@ -51,6 +53,7 @@ With Saath Saath Arts at its core, the initiative stands as a testament to how h
     subtitle: "Inclusive learning through Servants of the People Society",
     heroImage: "/images/csrOverview.jpg",
     bannerImage: "/images/balwantbanner.jpg",
+    mobileBannerImage:"/images/BalwantmobileBanner.jpg",
     intro:
       "Our association with the Servants of the People Society, (founded in 1921 by Lala Lajpat Rai and inaugurated by Mahatma Gandhi), reflects our deep commitment to nation-building. Through this collaboration, we contribute to Balvantray Mehta Vidya Bhawan Anguridevi Shersingh Memorial Academy, an integrated school for children with and without disabilities, providing them equal opportunities to learn, grow, and thrive.",
     overview: `Balvantray Mehta Vidhya Bhawan Anguridevi Shersingh Memorial Academy operates under the esteemed Servants of the People Society—an institution founded in 1921 by Sher-e-Punjab Lala Lajpat Rai and inaugurated by Mahatma Gandhi. With a legacy of over 88 years of public service, the Society has consistently worked toward social upliftment, education, and community welfare.
