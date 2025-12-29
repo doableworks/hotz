@@ -67,7 +67,7 @@ async function page() {
             className="object-cover w-full h-full hidden md:block"
             fill
           />
-                    <Image
+          <Image
             src="/images/csrBannerMobile.jpg"
             alt="About Us"
             className="object-cover w-full h-full md:hidden scale-100"
@@ -86,41 +86,6 @@ async function page() {
             touches. Through our CSR initiatives, we continue to create
             opportunities, empower communities, and shape a more inclusive
             tomorrow.
-          </div>
-        </div>
-      </TransitionVertical>
-
-      <TransitionVertical>
-        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
-          {/* Image Section */}
-          <div className="lg:w-1/2  w-full">
-            <img
-              src="/images/csrOverview2.JPG"
-              alt="Saat Saath Arts Foundation"
-              className="w-full h-96 object-cover"
-            />
-          </div>
-
-          {/* Text Section */}
-          <div className="lg:w-1/2 w-full px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
-            <TransitionHorizontal>
-              <h1 className="text-lg">Saat Saath Arts Foundation</h1>
-              <h1 className="text-white/60 mt-3">
-                Guided by the philosophy of giving back, the Hotz Group has long
-                supported initiatives that promote art, handicrafts and local
-                artisans, education, inclusion, and cultural development. The
-                Saat Saath Arts Foundation supports international exchange
-                between India and the rest of the world through the visual arts
-                and education. The Foundation is led by Mrs. Aparajita Jain as a
-                non-profit initiative and was founded in 2010.
-              </h1>
-
-              <Link href="/csr/saat-saath-arts-foundation">
-                <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex items-center gap-2">
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </button>
-              </Link>
-            </TransitionHorizontal>
           </div>
         </div>
       </TransitionVertical>
@@ -151,6 +116,41 @@ async function page() {
               </h1>
 
               <Link href="/csr/balvantray-mehta">
+                <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex items-center gap-2">
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </TransitionHorizontal>
+          </div>
+        </div>
+      </TransitionVertical>
+
+      <TransitionVertical>
+        <div className="flex lg:flex-row flex-col items-stretch justify-center my-7 lg:my-24 relative z-30 bg-white">
+          {/* Image Section */}
+          <div className="lg:w-1/2  w-full">
+            <img
+              src="/images/csrOverview2.JPG"
+              alt="Saat Saath Arts Foundation"
+              className="w-full h-96 object-cover"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="lg:w-1/2 w-full px-7 py-5 text-white flex flex-col justify-center bg-[#BC1F1F]">
+            <TransitionHorizontal>
+              <h1 className="text-lg">Saat Saath Arts Foundation</h1>
+              <h1 className="text-white/60 mt-3">
+                Guided by the philosophy of giving back, the Hotz Group has long
+                supported initiatives that promote art, handicrafts and local
+                artisans, education, inclusion, and cultural development. The
+                Saat Saath Arts Foundation supports international exchange
+                between India and the rest of the world through the visual arts
+                and education. The Foundation is led by Mrs. Aparajita Jain as a
+                non-profit initiative and was founded in 2010.
+              </h1>
+
+              <Link href="/csr/saat-saath-arts-foundation">
                 <button className="mt-5 px-5 lg:px-8 py-3 lg:py-4 bg-white text-[#DB0A0A] rounded-full hover:bg-opacity-80 transition font-semibold text-sm flex items-center gap-2">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </button>
