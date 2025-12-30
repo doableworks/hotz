@@ -9,8 +9,9 @@ const Hero = () => {
 
       <div className="text-center z-30">
         <TransitionVertical safariMobileFix={true}>
-          <h1 className=" font-bold text-4xl lg:text-5xl">
-            Setting New Standards<br className="md:hidden"></br> Everyday
+          <h1 className=" font-bold text-4xl lg:text-5xl text-center leading-tight">
+            Hotz Group.<br></br> Setting New Standards
+            <br className="md:hidden"></br> Everyday
           </h1>
 
           {/* <Link href="/business">

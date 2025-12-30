@@ -98,7 +98,7 @@ const CurvedTimeline: React.FC = () => {
       year: "1996",
       title: "Securities One - NSE Member",
       description:
-        "Securities (One) India Limited, a Member of National Stock Exchange, and Invest (One)n India Limited were incorporated for a deeper foray into Financial Services.",
+        "Securities (One) India Limited, a Member of National Stock Exchange, and Invest (One) India Limited were incorporated for a deeper foray into Financial Services.",
       side: "left",
       x: 800,
       y: 343,

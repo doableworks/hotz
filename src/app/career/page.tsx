@@ -24,7 +24,7 @@ const Page = async () => {
       id: 1,
       name: "Legacy & Stability",
       icon: <Goal size={40} className="text-[#DB0A0A]" />,
-      text: "Be part of a group with 40+ years of trust.",
+      text: "Be part of a group trusted for more than 100 years.",
     },
     {
       id: 2,
