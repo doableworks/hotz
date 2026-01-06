@@ -20,7 +20,7 @@ export const csrEntries: CSRDetail[] = [
     subtitle: "International exchange through visual arts and education",
     heroImage: "/images/csrOverview2.JPG",
     bannerImage: "/images/saathsaathbanner.jpg",
-    mobileBannerImage:"/images/csrBannermobile.jpg",
+    mobileBannerImage:"/images/csrBannerMobile.jpg",
     intro:
       "Guided by the philosophy of giving back, the Hotz Group has long supported initiatives that promote art, handicrafts and local artisans, education, inclusion, and cultural development. The Saat Saath Arts Foundation supports international exchange between India and the rest of the world through the visual arts and education. The Foundation is led by Mrs. Aparajita Jain as a non-profit initiative and was founded in 2010.",
     overview: `Saath Saath Arts Foundation, founded and led by Mrs. Aparajita Jain, has been instrumental in shaping India's contemporary art landscape through its visionary public initiatives.

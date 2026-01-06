@@ -134,7 +134,7 @@ const Page = async () => {
           </div>
           <div className="lg:w-1/3 w-full">
             <img
-              src="/images/career6.jpg"
+              src="/images/career5.jpg"
               alt="Career"
               className="w-full object-cover"
             />
