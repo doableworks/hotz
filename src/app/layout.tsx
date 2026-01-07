@@ -8,7 +8,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   // title: "Hotz Group - Building Tomorrow with Trust & Innovation",
-  title: "Setting New Standards Everyday",
+  title: "Hotz Group - Setting New Standards Everyday",
   description:
     "A legacy of trust and innovation across real estate, hospitality, art and education",
 };
