@@ -19,25 +19,25 @@ async function page() {
     {
       id: 1,
       name: "Education",
-      text: "Empowering children through inclusive learning.",
+      text: "Creating pathways to learning, growth, and opportunity.",
       image: "/images/values1.png",
     },
     {
       id: 2,
       name: "Empathy",
-      text: "Reaching communities with compassion and care.",
+      text: "Approaching communities with compassion, dignity, and care.",
       image: "/images/values2.png",
     },
     {
       id: 3,
       name: "Empowerment",
-      text: "Supporting arts, skills, and education for a stronger tomorrow.",
+      text: "Equipping people with the support and skills to thrive.",
       image: "/images/values3.png",
     },
     {
       id: 4,
       name: "Equality",
-      text: "Ensuring opportunities for all, beyond boundaries.",
+      text: "Advancing inclusion and opportunity for all.",
       image: "/images/values4.png",
     },
   ];
@@ -58,9 +58,9 @@ async function page() {
 
   return (
     <>
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col pt-16">
         <Navbar />
-        <div className="relative w-full h-[80vh] md:h-[65vh] z-40">
+        <div className=" relative w-full h-[80vh] md:h-[80vh] z-40">
           <Image
             src="/images/csrBanner.jpg"
             alt="About Us"
@@ -77,15 +77,15 @@ async function page() {
       </div>
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-7 lg:pt-24 relative z-30 bg-white">
-          <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-            A Legacy of Care.<br></br> A Vision for<br></br>Change.
+          <div className="w-full lg:w-1/2 pb-2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
+            A Legacy of Care.<br></br> A Commitment<br></br>to Change.
           </div>
           <div className="w-full lg:w-1/2">
             Since its inception, the Hotz Group has believed that true progress
-            is measured not only by business milestones but by the lives it
-            touches. Through our CSR initiatives, we continue to create
-            opportunities, empower communities, and shape a more inclusive
-            tomorrow.
+            is measured not only by business milestones, but by the impact
+            created beyond business. Through our CSR initiatives, we continue to
+            support communities, create opportunities, and contribute to a more
+            inclusive future.
           </div>
         </div>
       </TransitionVertical>
@@ -106,13 +106,16 @@ async function page() {
             <TransitionHorizontal>
               <h1 className="text-lg">Balvantray Mehta</h1>
               <h1 className="text-white/60 mt-3">
-                Our association with the Servants of the People Society,
-                (founded in 1921 by Lala Lajpat Rai and inaugurated by Mahatma
-                Gandhi), reflects our deep commitment to nation-building.
-                Through this collaboration, we contribute to Balvantray Mehta
-                Vidya Bhawan Anguridevi Shersingh Memorial Academy, an
-                integrated school for children with and without disabilities,
-                providing them equal opportunities to learn, grow, and thrive.
+                Our association with the Servants of the People Society, founded
+                by Lala Lajpat Rai in 1921 and inaugurated by Mahatma Gandhi,
+                reflects our commitment to nation-building and inclusive
+                education.
+                <br />
+                <br />
+                Through this collaboration, Hotz supports Balvantray Mehta Vidya
+                Bhawan Anguridevi Shersingh Memorial Academy, an integrated
+                school for children with and without disabilities, creating
+                equal opportunities to learn, grow, and thrive.
               </h1>
 
               <Link href="/csr/balvantray-mehta">
@@ -141,13 +144,13 @@ async function page() {
             <TransitionHorizontal>
               <h1 className="text-lg">Saat Saath Arts Foundation</h1>
               <h1 className="text-white/60 mt-3">
-                Guided by the philosophy of giving back, the Hotz Group has long
-                supported initiatives that promote art, handicrafts and local
-                artisans, education, inclusion, and cultural development. The
-                Saat Saath Arts Foundation supports international exchange
-                between India and the rest of the world through the visual arts
-                and education. The Foundation is led by Mrs. Aparajita Jain as a
-                non-profit initiative and was founded in 2010.
+                Guided by a philosophy of giving back, the Hotz Group has long
+                supported initiatives across art, handicrafts, local artisans,
+                education, inclusion, and cultural development. <br /> <br />{" "}
+                Founded in 2010 as a non-profit initiative led by Mrs. Aparajita
+                Jain, the Saat Saath Arts Foundation supports international
+                exchange between India and the world through visual arts and
+                education.
               </h1>
 
               <Link href="/csr/saat-saath-arts-foundation">
@@ -215,16 +218,17 @@ async function page() {
       />
 
       <div className="my-5 relative bg-white z-30 pt-5 lg:pt-16">
-        <div className="text-center text-xl font-semibold mb-2">
-          OUR COMMITMENT BEYOND BUSINESS
+        <div className="text-center text-xl font-semibold mb-2 uppercase">
+          Empowering Through Education
         </div>
 
         <div className="px-5 flex justify-center w-full text-center">
           <div className="max-w-3xl text-[#727272]">
-            At Hotz Group, we believe education is the foundation of progress.
-            Our initiatives focus on providing access to quality learning,
-            scholarships, and skill development programs that empower students
-            to achieve their full potential.
+            At Hotz, we believe meaningful progress begins with access to
+            education. Through scholarships, school support, digital learning
+            infrastructure, and vocational training, we aim to create
+            opportunities that help students learn, grow, and reach their full
+            potential.
           </div>
         </div>
         <TransitionVertical>
@@ -257,7 +261,7 @@ async function page() {
               <img src="/images/person.png" alt="Book Check" className="w-11" />
 
               <h1>
-                Vocational training & <br></br>skill-building workshops.
+                Vocational training and <br></br>skill building workshops
               </h1>
             </div>
           </div>
