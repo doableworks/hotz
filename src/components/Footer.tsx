@@ -94,7 +94,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-2 items-start pr-16">
             <h1 className=" text-white/70">Information</h1>
-            <Link href="/sitemap.xml">Sitemap</Link>
+            {/* <Link href="/sitemap.xml">Sitemap</Link> */}
             <Link href="/terms-and-conditions">Terms and Conditions</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
@@ -102,8 +102,7 @@ const Footer = () => {
 
         <div className="hidden w-1/3 lg:flex flex-col items-start text-sm mt-7">
           <h1 className="text-start">
-            Be the first to know about our new <br></br>updates and
-            announcements.
+            Be the first to know about our updates and announcements.
           </h1>
 
           <div className="flex justify-baseline mt-5 w-full py-2 pl-6 pr-2 border-white/10 rounded-full border-2 ">

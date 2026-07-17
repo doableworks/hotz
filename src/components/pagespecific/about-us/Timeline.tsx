@@ -13,37 +13,36 @@ interface TimelineEvent {
 const CurvedTimeline: React.FC = () => {
   const events: TimelineEvent[] = [
     {
-      year: "Early 1900's",
-      title: "Hotels in Northern State in India",
+      year: "Early 1900s",
+      title: "Hotels in Northern India",
       description:
-        "Hotel development in Northern India - Hotel Cecil in Shimla, Wildflower Hall in Mashobra, Lauries in Agra and Delhi and Hotel Alasia in Kasauli.",
+        "Hotz’s journey began with hotel development in Northern India, including Hotel Cecil in Shimla, Wildflower Hall in Mashobra, Lauries in Agra and Delhi, and Hotel Alasia in Kasauli.",
       side: "left",
       x: 11,
       y: 817,
     },
     {
-      year: "1930's",
-      title: "Air conditioning & refrigeration ventures",
+      year: "1930s",
+      title: "Construction across pre-Independence India",
       description:
-        "The Jain family, led by patriarch Rai Bahadur Phool Chand Jain, establishes the construction business for the construction of roads and aerodromes in various parts of India pre independence.",
+        "The Jain family, led by Rai Bahadur Phool Chand Jain, entered the construction business, building roads and aerodromes across pre-Independence India.",
       side: "right",
       x: 270,
       y: 817,
     },
-
     {
-      year: "1930's",
-      title: "Air conditioning & refrigeration ventures",
+      year: "1930s",
+      title: "HVAC sector through Durant",
       description:
-        "Foray into HVAC with Durant, a partnership between the Durant and Jain families.",
-      side: "left",
+        "Hotz entered the HVAC sector through Durant, a partnership between the Durant and Jain families.",
+      side: "right",
       x: 530,
-      y: 817,
+      y: 827,
     },
     {
-      year: "1940's",
-      title: "Durant 'always, a fore-runner'",
-      description: "Mahabir Steel Rolling Mills established in Delhi.",
+      year: "1940s",
+      title: "Mahabir Steel Rolling Mills",
+      description: "Mahabir Steel Rolling Mills was established in Delhi, marking an early step into industrial manufacturing.",
       side: "right",
       x: 670,
       y: 770,
@@ -51,16 +50,16 @@ const CurvedTimeline: React.FC = () => {
     {
       year: "1952",
       title: "Hotz Hotels Private Limited",
-      description: "Incorporated as Hotz Hotels Private Limited.",
+      description: "Hotz Hotels Private Limited was incorporated.",
       side: "right",
       x: 627,
       y: 660,
     },
     {
-      year: "1980's",
+      year: "1980s",
       title: "New controlling shareholders",
       description:
-        "The Jain family became controlling shareholders and consolidated all activities under the banner of the Hotz Group.",
+        "The Jain family became controlling shareholders and consolidated the Group’s activities under the Hotz banner.",
       side: "left",
       x: 344,
       y: 573,
@@ -69,7 +68,7 @@ const CurvedTimeline: React.FC = () => {
       year: "1986",
       title: "Industrial Gases division",
       description:
-        "Established the Industrial Gases division with the Surajpur plant that supplied Oxygen, Nitrogen, Argon and other value-added products.",
+        "The Industrial Gases division was established with the Surajpur plant, supplying oxygen, nitrogen, argon, and other value-added products.",
       side: "left",
       x: 400,
       y: 500,
@@ -78,18 +77,16 @@ const CurvedTimeline: React.FC = () => {
       year: "1990",
       title: "Financial services expansion",
       description:
-        "Foray into Financial Services with Inter Corporate Deposits, Leasing and Hire Purchase and Bill Discounting.",
+        "Hotz expanded into financial services through inter-corporate deposits, leasing, hire purchase, and bill discounting.",
       side: "right",
       x: 550,
       y: 500,
     },
-
     {
       year: "1996",
       title: "Textile division established",
-
       description:
-        "Established the Textile division at Greater Noida- one of the largest integrated facilities at that time covering various parts of the textile value chain including dyeing and processing, knitting and garmenting. ",
+        "The Group established its textile division in Greater Noida, with one of the largest integrated facilities at the time across dyeing, processing, knitting, and garmenting.",
       side: "right",
       x: 885,
       y: 500,
@@ -98,7 +95,7 @@ const CurvedTimeline: React.FC = () => {
       year: "1996",
       title: "Securities One - NSE Member",
       description:
-        "Securities (One) India Limited, a Member of National Stock Exchange, and Invest (One) India Limited were incorporated for a deeper foray into Financial Services.",
+        "Securities One India Limited, a member of the National Stock Exchange, and Invest One India Limited were incorporated, deepening Hotz’s presence in financial services.",
       side: "left",
       x: 800,
       y: 343,
@@ -107,35 +104,43 @@ const CurvedTimeline: React.FC = () => {
       year: "1999",
       title: "Round-the-Clock Stores Limited",
       description:
-        "Round-the-Clock Stores Limited was incorporated as the National Developer for Ruby Tuesday restaurants in India. Over time more than 75 restaurants under various global brands including Ruby Tuesday, Sbarro and Haagen Dazs, and home-grown concepts such as Mircheez, Mandarin Trail, Prego and Indus Grill were established nationwide. ",
+        "Round-the-Clock Stores Limited was incorporated as the national developer for Ruby Tuesday restaurants in India. Over time, the Group established more than 75 restaurants across global and home-grown brands, including Ruby Tuesday, Sbarro, Haagen-Dazs, Mircheez, Mandarin Trail, Prego, and Indus Grill.",
       side: "left",
       x: 620,
       y: 270,
     },
-
     {
       year: "2007",
       title: "Art business establishment",
       description:
-        "The art business was established under the Vistaar and Seven Art trademarks. In 2012 the Group acquired a significant majority stake in Gallery Nature Morte and a new joint venture entity, Nature Morte Art Limited, was incorporated. Today Nature Morte is India's leading contemporary art company representing India's iconic contemporary artists with galleries in Delhi and Mumbai.",
+        "The art business was established under the Vistaar and Seven Art trademarks, laying the foundation for the Group’s presence in contemporary Indian art.",
       side: "left",
       x: 820,
       y: 193,
     },
     {
-      year: "2014",
-      title: "Real estate warehousing, Samsung project",
+      year: "2012",
+      title: "Gallery Nature Morte",
       description:
-        "The early education business under the Playful Minds brand was started in Delhi. ",
+        "The Group acquired a significant majority stake in Gallery Nature Morte and incorporated Nature Morte Art Limited, helping build one of India’s leading contemporary art platforms.",
       side: "right",
-      x: 880,
-      y: 40,
+      x: 890,
+      y: 140,
+    },
+    {
+      year: "2014",
+      title: "Early education – Playful Minds",
+      description:
+        "The early education business was launched in Delhi under the Playful Minds brand.",
+      side: "right",
+      x: 845,
+      y: 20,
     },
     {
       year: "2019",
       title: "Industrial real estate diversification",
       description:
-        "The diversification into industrial real estate was initiated and one of India's largest Grade A warehouses was built by the company for the use of Samsung.",
+        "Hotz diversified into industrial real estate and developed one of India’s largest Grade-A warehouses, built for Samsung.",
       side: "left",
       x: 522,
       y: 11,
@@ -153,7 +158,7 @@ const CurvedTimeline: React.FC = () => {
       <div>
         <TransitionVertical>
           <h1 className="text-lg font-semibold text-center mb-10">
-            MILESTONES
+            A Journey Across Generations
           </h1>
         </TransitionVertical>
       </div>
@@ -211,10 +216,31 @@ const CurvedTimeline: React.FC = () => {
                     <div
                       className="absolute whitespace-nowrap"
                       style={{
+                        ...(event.year === "Early 1900s" && {
+                          left: "0px",
+                          bottom: "35px",
+                        }),
+                        ...(index === 1 && {
+                          left: "-20px",
+                          bottom: "35px",
+                        }),
+                        ...(index === 2 && {
+                          right: "0px",
+                          bottom: "40px",
+                        }),
+                        ...(index === 3 && {
+                          right: "45px",
+                          bottom: "10px",}),
+                        ...(event.year === "2012" && {
+                          left: "25px",
+                          top: "2%",
+                          transform: "translateY(-50%)",
+                        }),
                         ...(event.year === "2014" && {
-                          right: "90%",
-                          transform: "translateX(-50%)",
-                          top: "-10px",
+                          right: "20%",
+                          transform: "translateY(-50%)",
+                          // transform: "translateX(50%)",
+                          top: "-24px",
                         }),
                         ...(event.year === "2019" && {
                           right: "45px",
@@ -244,7 +270,7 @@ const CurvedTimeline: React.FC = () => {
                         ...(event.year === "1986" && {
                           left: "10%",
                           transform: "translateX(-50%)",
-                          bottom: "45px",
+                          bottom: "30px",
                         }),
                         ...(event.year === "1980's" && {
                           bottom: "45%",
@@ -282,6 +308,21 @@ const CurvedTimeline: React.FC = () => {
                     <div
                       className={`absolute px-4$`}
                       style={{
+                        ...(event.year === "Early 1900s" && {
+                          left: "-10px",
+                          top: "20px",
+                          width: "180px",
+                        }),
+                        ...(index === 1 && {
+                          left: "-10px",
+                          top: "20px",
+                          width: "220px",
+                        }),
+                        ...(index === 2 && {
+                          left: "0px",
+                          top: "20px",
+                          width: "200px",
+                        }),
                         ...(event.year === "1986" && {
                           [isLeft ? "right" : "left"]: "-70px",
                           bottom: "60px",
@@ -332,6 +373,11 @@ const CurvedTimeline: React.FC = () => {
                           top: "-10px",
                           width: "280px",
                         }),
+                        ...(event.year === "2012" && {
+                          [isLeft ? "right" : "left"]: "90px",
+                          bottom: "-5px",
+                          width: "250px",
+                        }),
                         ...(event.year === "2014" && {
                           [isLeft ? "right" : "left"]: "40px",
                           top: "-10px",
@@ -349,11 +395,14 @@ const CurvedTimeline: React.FC = () => {
                           "2007",
                           "1940's",
                           "1930's",
+                          "1930s",
                           "Early 1900's",
+                          "Early 1900s",
                           "1952",
                           "1996",
                           "1980's",
                           "1999",
+                          "2012",
                           "2014",
                           "2019",
                         ].includes(event.year) && {
