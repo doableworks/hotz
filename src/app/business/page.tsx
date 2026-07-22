@@ -82,8 +82,8 @@ async function page() {
           <div className="absolute bottom-7 left-5 lg:left-10">
             <TransitionHorizontal>
               <h1 className="text-white text-2xl lg:text-3xl font-medium">
-                Diverse Business.<br className="md:hidden"></br> One Trusted
-                Group.
+                Diversified Across Sectors.<br className="md:hidden"></br>{" "}
+                United by Trust Group.
               </h1>
             </TransitionHorizontal>
           </div>

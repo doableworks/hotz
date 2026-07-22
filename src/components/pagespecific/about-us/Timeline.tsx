@@ -373,12 +373,12 @@ const CurvedTimeline: React.FC = () => {
                         ...(event.year === "2019" && {
                           [isLeft ? "right" : "left"]: "90px",
                           top: "-10px",
-                          width: "280px",
+                          width: "230px",
                         }),
                         ...(event.year === "2012" && {
                           [isLeft ? "right" : "left"]: "90px",
-                          top: "-30px",
-                          width: "300px",
+                          top: "-45px",
+                          width: "250px",
                         }),
                         ...(event.year === "2014" && {
                           [isLeft ? "right" : "left"]: "40px",

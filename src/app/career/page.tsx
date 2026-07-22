@@ -24,28 +24,28 @@ const Page = async () => {
       id: 1,
       name: "Legacy & Stability",
       icon: <Goal size={40} className="text-[#DB0A0A]" />,
-      text: "Be part of a group trusted for more than 100 years.",
+      text: "Be part of a trusted group with a legacy spanning more than a century.",
     },
     {
       id: 2,
       name: "Diverse Opportunities",
       icon: <Grid size={40} className="text-[#DB0A0A]" />,
 
-      text: "Work across industries from finance to real estate.",
+      text: "Work across industries including finance, real estate, art, education, hospitality, and manufacturing.",
     },
     {
       id: 3,
       name: "Growth & Learning",
       icon: <ChartSpline size={40} className="text-[#DB0A0A]" />,
 
-      text: "Access training, mentorship, and leadership programs.",
+      text: "Gain exposure, mentorship, and opportunities to develop your skills.",
     },
     {
       id: 4,
       name: "Values-Driven",
       icon: <Atom size={40} className="text-[#DB0A0A]" />,
 
-      text: "Integrity, innovation, and impact at the core.",
+      text: "Grow in a culture guided by integrity, innovation, excellence, and impact.",
     },
   ];
 
@@ -57,14 +57,15 @@ const Page = async () => {
           <div className="px-5 flex-1 h-full w-full justify-center items-center flex flex-col">
             <TransitionVertical>
               <h1 className=" text-center text-4xl lg:text-6xl font-medium bg-gradient-to-r from-[#3B2C89]  to-[#F86565] bg-clip-text  text-transparent">
-                Grow With Us.<br></br>Build The Future.
+                Grow With Us.<br></br>Build What&apos;s Next
               </h1>
             </TransitionVertical>
             <TransitionVertical>
               <h1 className="text-center lg:w-xl mt-4 lg:mt-8 text-lg">
-                At Hotz Group, we believe our people are the driving force
-                behind our success. We empower talent with opportunities,
-                learning, and a culture of trust.
+                At Hotz Group, we believe our people drive our success. We offer
+                a workplace where talent is supported, ideas are valued, and
+                individuals are empowered to learn, grow, and make a meaningful
+                impact.
               </h1>
             </TransitionVertical>
 
@@ -88,7 +89,7 @@ const Page = async () => {
               {values.map((value) => (
                 <div
                   key={value.id}
-                  className="flex flex-col justify-between w-1/4 p-5 h-64 bg-white"
+                  className="flex flex-col justify-between w-1/4 p-5 min-h-64 bg-white"
                 >
                   <div>{value.icon}</div>
 
@@ -156,40 +157,49 @@ const Page = async () => {
           <img
             src="/images/iconWhite.png"
             alt="Career"
-            className="h-32 lg:h-48 left-12 lg:left-28 absolute"
+            className="h-32 lg:h-40 left-20 lg:left-28 absolute opacity-70"
           />
         </div>
 
         <div className="lg:mt-0 mt-16 flex flex-col justify-center text-white items-center gap-6">
           <div>
-            <div className="mb-5 italic font-extralight">
+            <div className="mb-2 italic font-extralight">
               Voices of Our People
             </div>
 
             <div className="text-2xl lg:text-3xl">
-              At Hotz Group, I have found not just a
-              <br className="hidden lg:flex"></br>career, but a community that
-              values<br className="hidden lg:flex"></br>growth and impact.”
+              "Hotz Group has given me the opportunity to grow
+              <br className="hidden lg:flex"></br>with purpose, work across
+              meaningful projects, values<br className="hidden lg:flex"></br>and
+              be part of a culture built on trust and impact."
             </div>
           </div>
         </div>
       </div>
-      <div className=" px-5 w-full flex flex-col items-center justify-center mt-24 py-7">
-        <h1 className="text-2xl lg:text-4xl font-medium text-center">
-          Did not find a role that fits?
-        </h1>
-        <h1 className="text-center text-[#727272] text-base lg:text-lg mt-3">
-          You may share your CV on this email ID:
+      <div className="px-5 w-full flex justify-center mt-24 mb-10 py-7">
+        <div className="w-full max-w-3xl bg-[#F3F3F3] rounded-2xl px-6 py-10 lg:px-12 lg:py-14 flex flex-col items-center text-center">
+          <h1 className="text-2xl lg:text-4xl font-medium">
+            Don&apos;t see the right role?
+          </h1>
+          <h1 className="text-center text-[#727272] text-base lg:text-lg mt-3">
+            Share your CV with us at
+            <a
+              href="mailto:careers@hotz.in"
+              className="text-black font-medium ml-1"
+            >
+              careers@hotz.in
+            </a>
+            ,
+            <br className="hidden md:block" /> and we will reach out when a
+            suitable opportunity becomes available.
+          </h1>
           <a
             href="mailto:careers@hotz.in"
-            className="text-black font-medium ml-1"
+            className="mt-8 flex items-center gap-2 px-8 py-4 rounded-full bg-[#DB0A0A] text-white text-sm font-medium hover:bg-opacity-90 transition"
           >
-            careers@hotz.in
+            Share Your CV <ArrowRight size={16} />
           </a>
-          ,
-          <br className="hidden md:block" /> and we will reach out when there is
-          a suitable opportunity.
-        </h1>
+        </div>
       </div>
       <Footer />
     </>

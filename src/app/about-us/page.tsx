@@ -30,7 +30,7 @@ async function page() {
     {
       id: 3,
       name: "Innovation",
-      text: "Striving for the highest standards.",
+      text: "Adapting, evolving, and creating solutions for the future.",
       image: "/images/values3.png",
     },
     {
