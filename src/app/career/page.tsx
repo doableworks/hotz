@@ -89,9 +89,9 @@ const Page = async () => {
               {values.map((value) => (
                 <div
                   key={value.id}
-                  className="flex flex-col justify-between w-1/4 p-5 min-h-64 bg-white"
+                  className="flex flex-col justify-start w-1/4 p-7 bg-white"
                 >
-                  <div>{value.icon}</div>
+                  <div className="mb-7">{value.icon}</div>
 
                   <TransitionHorizontal>
                     <h1 className="text-xl mb-1">{value.name}</h1>

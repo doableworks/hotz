@@ -172,12 +172,12 @@ async function page() {
           {values.map((value) => (
             <div
               key={value.id}
-              className="flex flex-col justify-between w-1/4 p-5 h-64 border border-black/20"
+              className="flex flex-col justify-between w-1/4 p-5 border border-black/20"
             >
               <img
                 src={value.image}
                 alt={value.name}
-                className="w-16 object-cover"
+                className="w-16 object-cover mb-7"
               />
               <TransitionHorizontal>
                 <h1 className="text-xl mb-1">{value.name}</h1>
@@ -191,12 +191,12 @@ async function page() {
           {values.map((value) => (
             <div
               key={value.id}
-              className="w-[80%] snap-center flex-shrink-0 border border-black/20 p-5 h-64 flex flex-col justify-between"
+              className="w-[80%] snap-center flex-shrink-0 border border-black/20 p-5 flex flex-col justify-between"
             >
               <img
                 src={value.image}
                 alt={value.name}
-                className="w-16 object-cover"
+                className="w-16 object-cover mb-7"
               />
               <TransitionHorizontal>
                 <h1 className="text-lg mb-1">{value.name}</h1>
