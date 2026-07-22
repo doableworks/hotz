@@ -30,7 +30,7 @@ const page = () => {
               className="mt-1"
             />
             <div>
-              <h1>703 Chiranjiv Tower, 43 Nehru Place New Delhi 110019, IN</h1>
+              <h1>703 Chiranjiv Tower, 43 Nehru Place, New Delhi 110019, IN</h1>
             </div>
           </div>
 
@@ -45,10 +45,10 @@ const page = () => {
             <Mail strokeWidth={1} color="#727272" size={20} className="mt-1" />
             <div>
               <a
-                href="mailto:info@hotzinc.com"
+                href="mailto:info@hotz.in"
                 className="text-black font-medium ml-1"
               >
-                info@hotzinc.com
+                info@hotz.in
               </a>
             </div>
           </div>

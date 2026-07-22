@@ -245,10 +245,9 @@ async function page() {
                 long-term progress. We are committed to protecting and
                 preserving our natural surroundings through responsible
                 practices across our businesses. <br></br>
-                <br></br>At Hotz, we believe environmental responsibility is
-                essential to long-term progress. We are committed to protecting
-                and preserving our natural surroundings through responsible
-                practices across our businesses.
+                <br></br>Guided by this commitment, we continue to work towards
+                a cleaner, greener, and more sustainable future for generations
+                to come.
               </div>
             </div>
           </TransitionVertical>
@@ -265,7 +264,7 @@ async function page() {
           {values.map((value) => (
             <div
               key={value.id}
-              className="flex flex-col justify-start gap-14 w-1/4 p-5 h-64 border border-black/20"
+              className="flex flex-col justify-start gap-14 w-1/4 p-5 min-h-64 border border-black/20"
             >
               <img
                 src={value.image}
