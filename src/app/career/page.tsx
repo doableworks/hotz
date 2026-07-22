@@ -168,10 +168,10 @@ const Page = async () => {
             </div>
 
             <div className="text-2xl lg:text-3xl">
-              "Hotz Group has given me the opportunity to grow
+              &ldquo;Hotz Group has given me the opportunity to grow
               <br className="hidden lg:flex"></br>with purpose, work across
               meaningful projects, values<br className="hidden lg:flex"></br>and
-              be part of a culture built on trust and impact."
+              be part of a culture built on trust and impact.&rdquo;
             </div>
           </div>
         </div>
