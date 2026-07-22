@@ -42,7 +42,8 @@ const CurvedTimeline: React.FC = () => {
     {
       year: "1940s",
       title: "Mahabir Steel Rolling Mills",
-      description: "Mahabir Steel Rolling Mills was established in Delhi, marking an early step into industrial manufacturing.",
+      description:
+        "Mahabir Steel Rolling Mills was established in Delhi, marking an early step into industrial manufacturing.",
       side: "right",
       x: 670,
       y: 770,
@@ -122,10 +123,10 @@ const CurvedTimeline: React.FC = () => {
       year: "2012",
       title: "Gallery Nature Morte",
       description:
-        "The Group acquired a significant majority stake in Gallery Nature Morte and incorporated Nature Morte Art Limited, helping build one of India’s leading contemporary art platforms.",
+        "The Group acquired a significant majority stake in the gallery, Nature Morte, and incorporated Nature Morte Art Limited, helping build one of India’s leading contemporary art platforms.",
       side: "right",
-      x: 890,
-      y: 140,
+      x: 900,
+      y: 105,
     },
     {
       year: "2014",
@@ -230,7 +231,8 @@ const CurvedTimeline: React.FC = () => {
                         }),
                         ...(index === 3 && {
                           right: "45px",
-                          bottom: "10px",}),
+                          bottom: "10px",
+                        }),
                         ...(event.year === "2012" && {
                           left: "25px",
                           top: "2%",
@@ -270,12 +272,12 @@ const CurvedTimeline: React.FC = () => {
                         ...(event.year === "1986" && {
                           left: "10%",
                           transform: "translateX(-50%)",
-                          bottom: "30px",
+                          bottom: "37px",
                         }),
-                        ...(event.year === "1980's" && {
-                          bottom: "45%",
+                        ...(event.year === "1980s" && {
+                          top: "-50%",
                           transform: "translateX(-50%)",
-                          right: "25px",
+                          left: "45px",
                         }),
                         ...(event.year === "1952" && {
                           left: "25px",
@@ -375,12 +377,12 @@ const CurvedTimeline: React.FC = () => {
                         }),
                         ...(event.year === "2012" && {
                           [isLeft ? "right" : "left"]: "90px",
-                          bottom: "-5px",
-                          width: "250px",
+                          top: "-30px",
+                          width: "300px",
                         }),
                         ...(event.year === "2014" && {
                           [isLeft ? "right" : "left"]: "40px",
-                          top: "-10px",
+                          top: "-25px",
                           width: "250px",
                         }),
                         ...(["1996"].includes(event.year) && {

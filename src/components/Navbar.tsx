@@ -33,7 +33,7 @@ const Navbar = () => {
     { name: "Hospitality", href: "/business/hospitality" },
     { name: "Financial Services", href: "/business/financial-services" },
     { name: "Education", href: "/business/education" },
-    { name: "Semi Conductors", href: "/business/semiconductor" },
+    { name: "Semiconductors", href: "/business/semiconductor" },
   ];
 
   useEffect(() => {

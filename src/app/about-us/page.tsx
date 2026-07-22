@@ -53,11 +53,24 @@ async function page() {
       <TransitionVertical>
         <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 px-5 lg:px-10 pt-7 lg:pt-16 relative z-30 bg-white">
           <div className="w-full lg:w-1/2 text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#3B2C89] via-[#F86565] to-[#F86565] bg-clip-text text-transparent">
-            A Century of Trust.<br/> A Future of Possibility.
+            A Century of Trust.
+            <br /> A Future of Possibility.
           </div>
           <div className="w-full lg:w-1/2">
-            The Hotz Group&apos;s journey began in the early 1900s, when Swiss founders introduced worldclass hospitality to India through hotels and resorts in Shimla, Delhi, Agra, Jaipur, and Kasauli. From its European-inspired roots, the Group has evolved into a diversified Indian enterprise built on trust, integrity, and innovation.<br></br>
-            <br></br>Over the decades, Hotz has expanded across real estate and warehousing, financial services, and manufacturing businesses spanning steel, air conditioning and refrigeration, textiles, and industrial gases, alongside ventures in hospitality, retail food service, art, and education. Across every venture, the Group remains guided by a commitment to quality, long-term value, and purposeful growth - shaping experiences, environments, and opportunities that endure across generations. 
+            The Hotz Group&apos;s journey began in the early 1900s, when Swiss
+            founders introduced worldclass hospitality to India through hotels
+            and resorts in Shimla, Delhi, Agra, Jaipur, and Kasauli. From its
+            European-inspired roots, the Group has evolved into a diversified
+            Indian enterprise built on trust, integrity, and innovation.
+            <br></br>
+            <br></br>Over the decades, Hotz has expanded across real estate and
+            warehousing, financial services, and manufacturing businesses
+            spanning steel, air conditioning and refrigeration, textiles, and
+            industrial gases, alongside ventures in hospitality, retail food
+            service, art, and education. Across every venture, the Group remains
+            guided by a commitment to quality, long-term value, and purposeful
+            growth - shaping experiences, environments, and opportunities that
+            endure across generations.
           </div>
         </div>
       </TransitionVertical>
@@ -79,8 +92,22 @@ async function page() {
             <TransitionHorizontal>
               <h1 className="text-xl">OUR STORY</h1>
               <h1 className="text-white/60 mt-1">
-                Incorporated as Hotz Hotels Private Limited in 1952, Hotz began with a strong foundation in hospitality before expanding into a diversified portfolio across financial services, manufacturing, retail food service, art, education, and real estate development. Over the decades, this ability to diversify and reinvent has defined the Group&apos;s journey, allowing Hotz to evolve with changing times while remaining anchored in trust, quality, and long-term value. <br></br>
-                <br></br> Guided by a deep respect for people, partnerships, and performance, Hotz continues to build enterprises that serve both business and society. From advanced warehousing and industrial infrastructure to initiatives in education and the arts, the Group brings together commercial excellence and social responsibility. Today, Hotz is a future-ready enterprise - rooted in legacy, driven by innovation, and committed to creating meaningful impact across generations.
+                Incorporated as Hotz Hotels Private Limited in 1952, Hotz began
+                with a strong foundation in hospitality before expanding into a
+                diversified portfolio across financial services, manufacturing,
+                retail food service, art, education, and real estate
+                development. Over the decades, this ability to diversify and
+                reinvent has defined the Group&apos;s journey, allowing Hotz to
+                evolve with changing times while remaining anchored in trust,
+                quality, and long-term value. <br></br>
+                <br></br> Guided by a deep respect for people, partnerships, and
+                performance, Hotz continues to build enterprises that serve both
+                business and society. From advanced warehousing and industrial
+                infrastructure to initiatives in education and the arts, the
+                Group brings together commercial excellence and social
+                responsibility. Today, Hotz is a future-ready enterprise -
+                rooted in legacy, driven by innovation, and committed to
+                creating meaningful impact across generations.
               </h1>
             </TransitionHorizontal>
           </div>
@@ -93,8 +120,17 @@ async function page() {
             Corporate Philosophy.
           </div>
           <div className="w-full lg:w-1/2">
-            At Hotz, progress begins with the belief that every generation must imagine further, learn continuously, and build with purpose. This philosophy has guided the Group for over a century, shaping our commitment to innovation, excellence, and the pursuit of higher standards in everything we do.  <br></br>
-            <br></br>Rooted in Swiss, British, Australian, and Indian influences, the Hotz Group brings together diverse cultures and perspectives into one cohesive enterprise. Established in the early 1900s, Hotz has grown into a trusted name across its chosen fields, recognised for quality, reliability, and an enduring commitment to customer satisfaction. 
+            At Hotz, progress begins with the belief that every generation must
+            imagine further, learn continuously, and build with purpose. This
+            philosophy has guided the Group for over a century, shaping our
+            commitment to innovation, excellence, and the pursuit of higher
+            standards in everything we do. <br></br>
+            <br></br>Rooted in Swiss, British, Australian, and Indian
+            influences, the Hotz Group brings together diverse cultures and
+            perspectives into one cohesive enterprise. Established in the early
+            1900s, Hotz has grown into a trusted name across its chosen fields,
+            recognised for quality, reliability, and an enduring commitment to
+            customer satisfaction.
           </div>
         </div>
       </TransitionVertical>
@@ -113,7 +149,8 @@ async function page() {
               </h1>
 
               <h1 className="text-white/80 text-lg mt-3 font-light">
-                Our mission reflects the values and commitments that guide every decision we make.
+                Our mission reflects the values and commitments that guide every
+                decision we make.
               </h1>
             </div>
 
@@ -131,7 +168,10 @@ async function page() {
                 <TransitionVertical>
                   <div className="flex items-center gap-5">
                     <Check color="#fff" />
-                    <p>To create a workplace defined by respect, growth, and excellence </p>
+                    <p>
+                      To create a workplace defined by respect, growth, and
+                      excellence{" "}
+                    </p>
                   </div>
                 </TransitionVertical>
                 <div className="w-full h-px bg-[#fff]/50 my-5"></div>
@@ -141,7 +181,10 @@ async function page() {
                 <TransitionVertical>
                   <div className="flex items-center gap-5">
                     <Check color="#fff" />
-                    <p>To deliver sustainable returns and long-term value across every venture</p>
+                    <p>
+                      To deliver sustainable returns and long-term value across
+                      every venture
+                    </p>
                   </div>
                 </TransitionVertical>
               </div>
@@ -168,14 +211,21 @@ async function page() {
           <TransitionVertical>
             <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 relative z-30 ">
               <div className="w-full lg:w-1/2 text-2xl lg:text-4xl font-semibold text-white">
-               Customer First.<br></br> Quality Always. 
+                Customer First.<br></br> Quality Always.
               </div>
               <div className="w-full lg:w-1/2 text-white">
-                Our customers are at the heart of our pursuit of quality. Across every product, service, and interaction, we are committed to delivering excellence with consistency, care, and integrity.<br></br>
-                <br></br>We hold ourselves to high standards because we believe lasting relationships are built through reliability, responsiveness, and trust. 
+                Our customers are at the heart of our pursuit of quality. Across
+                every product, service, and interaction, we are committed to
+                delivering excellence with consistency, care, and integrity.
+                <br></br>
+                <br></br>We hold ourselves to high standards because we believe
+                lasting relationships are built through reliability,
+                responsiveness, and trust.
                 <br></br>
                 <br></br>
-                Guided by this belief, we remain committed to creating value for our customers and ensuring their satisfaction remains central to everything we do. 
+                Guided by this belief, we remain committed to creating value for
+                our customers and ensuring their satisfaction remains central to
+                everything we do.
               </div>
             </div>
           </TransitionVertical>
@@ -187,11 +237,18 @@ async function page() {
           <TransitionVertical>
             <div className="flex lg:flex-row flex-col gap-5 lg:gap-12 pb-10 relative z-30 ">
               <div className="w-full lg:w-1/2 text-2xl lg:text-4xl font-semibold text-white">
-                Building a <br/>Sustainable Future
+                Building a <br />
+                Sustainable Future
               </div>
               <div className="w-full lg:w-1/2 text-white">
-                At Hotz, we believe environmental responsibility is essential to long-term progress. We are committed to protecting and preserving our natural surroundings through responsible practices across our businesses. <br></br>
-                <br></br>At Hotz, we believe environmental responsibility is essential to long-term progress. We are committed to protecting and preserving our natural surroundings through responsible practices across our businesses. 
+                At Hotz, we believe environmental responsibility is essential to
+                long-term progress. We are committed to protecting and
+                preserving our natural surroundings through responsible
+                practices across our businesses. <br></br>
+                <br></br>At Hotz, we believe environmental responsibility is
+                essential to long-term progress. We are committed to protecting
+                and preserving our natural surroundings through responsible
+                practices across our businesses.
               </div>
             </div>
           </TransitionVertical>
@@ -252,12 +309,16 @@ async function page() {
 
       <div className="my-5 relative bg-white z-30 pt-5 lg:pt-16">
         <div className="text-center text-xl font-semibold mb-2">
-          Empowering Through Education 
+          Empowering Through Education
         </div>
 
         <div className="px-5 flex justify-center w-full text-center">
           <div className="max-w-3xl text-[#727272]">
-            At Hotz, we believe meaningful progress begins with access to education. Through scholarships, school support, digital learning infrastructure, and vocational training, we aim to create opportunities that help students learn, grow, and reach their full potential. 
+            At Hotz, we believe meaningful progress begins with access to
+            education. Through scholarships, school support, digital learning
+            infrastructure, and vocational training, we aim to create
+            opportunities that help students learn, grow, and reach their full
+            potential.
           </div>
         </div>
         <TransitionVertical>
@@ -290,7 +351,7 @@ async function page() {
               <img src="/images/person.png" alt="Book Check" className="w-11" />
 
               <h1>
-                Vocational training & <br></br>skill-building workshops.
+                Vocational training & <br></br>skill-building workshops
               </h1>
             </div>
           </div>
@@ -305,7 +366,10 @@ async function page() {
           <img src="/images/icon.png" alt="About Us" className="w-20 lg:w-24" />
           <TransitionVertical>
             <h1 className="text-2xl font-semibold mt-5">
-              At Hotz Group, our foundation has always been the trust placed in us by our stakeholders. Over the years, we have grown not only as a business, but as a builder of enduring relationships, lasting legacies, and new standards of excellence. 
+              At Hotz Group, our foundation has always been the trust placed in
+              us by our stakeholders. Over the years, we have grown not only as
+              a business, but as a builder of enduring relationships, lasting
+              legacies, and new standards of excellence.
             </h1>
           </TransitionVertical>
 
