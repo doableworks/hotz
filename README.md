@@ -3,7 +3,7 @@
 A modern, website for Hotz Group built with Next.js 15, showcasing their diverse business portfolio across real estate, hospitality, art, and education sectors.
 
 ## 🌟 Features  
- 
+  
 - **Modern Design**: Clean, professional interface with smooth animations
 - **Responsive Layout**: Optimized for all device sizes (desktop, tablet, mobile)
 - **Dynamic Content**: Integrated with Sanity CMS for easy content management
