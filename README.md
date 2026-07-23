@@ -1,4 +1,4 @@
-# Hotz Group - Frontend 
+# Hotz Group - Frontend Development
 
 A modern, website for Hotz Group built with Next.js 15, showcasing their diverse business portfolio across real estate, hospitality, art, and education sectors.
 
