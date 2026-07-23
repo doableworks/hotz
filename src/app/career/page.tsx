@@ -170,7 +170,7 @@ const Page = async () => {
             <div className="text-2xl lg:text-3xl">
               &ldquo;Hotz Group has given me the opportunity to grow
               <br className="hidden lg:flex"></br>with purpose, work across
-              meaningful projects, values<br className="hidden lg:flex"></br>and
+              meaningful projects<br className="hidden lg:flex"></br>and
               be part of a culture built on trust and impact.&rdquo;
             </div>
           </div>
